@@ -1,0 +1,146 @@
+﻿namespace A2_Reg_A_Lot_2017
+{
+    partial class AddCourse
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.gbxCourseDescription = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnRegisterP = new System.Windows.Forms.Button();
+            this.gbxCourseSelectP = new System.Windows.Forms.GroupBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.gbxCourseDescription.SuspendLayout();
+            this.gbxCourseSelectP.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // gbxCourseDescription
+            // 
+            this.gbxCourseDescription.Controls.Add(this.label1);
+            this.gbxCourseDescription.Location = new System.Drawing.Point(21, 199);
+            this.gbxCourseDescription.Name = "gbxCourseDescription";
+            this.gbxCourseDescription.Size = new System.Drawing.Size(504, 100);
+            this.gbxCourseDescription.TabIndex = 76;
+            this.gbxCourseDescription.TabStop = false;
+            this.gbxCourseDescription.Text = "Course Description";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(112, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(281, 13);
+            this.label1.TabIndex = 72;
+            this.label1.Text = "Course Description should be displayed here idk with what";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(275, 305);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 35);
+            this.btnCancel.TabIndex = 75;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // btnRegisterP
+            // 
+            this.btnRegisterP.Location = new System.Drawing.Point(194, 305);
+            this.btnRegisterP.Name = "btnRegisterP";
+            this.btnRegisterP.Size = new System.Drawing.Size(75, 35);
+            this.btnRegisterP.TabIndex = 74;
+            this.btnRegisterP.Text = "Register";
+            this.btnRegisterP.UseVisualStyleBackColor = true;
+            // 
+            // gbxCourseSelectP
+            // 
+            this.gbxCourseSelectP.Controls.Add(this.checkedListBox1);
+            this.gbxCourseSelectP.Location = new System.Drawing.Point(12, 47);
+            this.gbxCourseSelectP.Name = "gbxCourseSelectP";
+            this.gbxCourseSelectP.Size = new System.Drawing.Size(519, 145);
+            this.gbxCourseSelectP.TabIndex = 73;
+            this.gbxCourseSelectP.TabStop = false;
+            this.gbxCourseSelectP.Text = "Course Selection";
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "A Course 1",
+            "A Course 2",
+            "A Course 3",
+            "A Course 4",
+            "A Course 5",
+            "A Course 6",
+            "A Course 7",
+            "A Course 8"});
+            this.checkedListBox1.Location = new System.Drawing.Point(9, 19);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(504, 109);
+            this.checkedListBox1.TabIndex = 0;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(12, 9);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(339, 25);
+            this.label13.TabIndex = 72;
+            this.label13.Text = "Register to teach a new course";
+            // 
+            // AddCourse
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(544, 351);
+            this.Controls.Add(this.gbxCourseDescription);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnRegisterP);
+            this.Controls.Add(this.gbxCourseSelectP);
+            this.Controls.Add(this.label13);
+            this.Name = "AddCourse";
+            this.Text = "Add Course";
+            this.gbxCourseDescription.ResumeLayout(false);
+            this.gbxCourseDescription.PerformLayout();
+            this.gbxCourseSelectP.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.GroupBox gbxCourseDescription;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnRegisterP;
+        private System.Windows.Forms.GroupBox gbxCourseSelectP;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Label label13;
+    }
+}

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace A2_Reg_A_Lot_2017
 {
-    public partial class Form1 : Form
+    public partial class AddCourse : Form
     {
-        public Form1()
+        public AddCourse()
         {
             InitializeComponent();
         }
