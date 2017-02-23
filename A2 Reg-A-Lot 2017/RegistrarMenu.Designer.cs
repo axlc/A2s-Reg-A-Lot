@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbxMyCourses = new System.Windows.Forms.GroupBox();
+            this.lblProfessors = new System.Windows.Forms.Label();
             this.lblTotalStudents = new System.Windows.Forms.Label();
             this.lblSchedule = new System.Windows.Forms.Label();
             this.lblSection = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.btnStudentSearch = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnManageCourses = new System.Windows.Forms.Button();
-            this.lblProfessors = new System.Windows.Forms.Label();
             this.gbxMyCourses.SuspendLayout();
             this.gbxRegistrarOptions.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +58,15 @@
             this.gbxMyCourses.TabIndex = 74;
             this.gbxMyCourses.TabStop = false;
             this.gbxMyCourses.Text = "My Courses";
+            // 
+            // lblProfessors
+            // 
+            this.lblProfessors.AutoSize = true;
+            this.lblProfessors.Location = new System.Drawing.Point(274, 21);
+            this.lblProfessors.Name = "lblProfessors";
+            this.lblProfessors.Size = new System.Drawing.Size(51, 13);
+            this.lblProfessors.TabIndex = 7;
+            this.lblProfessors.Text = "Professor";
             // 
             // lblTotalStudents
             // 
@@ -127,6 +136,7 @@
             this.btnProfessorSearch.TabIndex = 74;
             this.btnProfessorSearch.Text = "View Professors";
             this.btnProfessorSearch.UseVisualStyleBackColor = true;
+            this.btnProfessorSearch.Click += new System.EventHandler(this.btnProfessorSearch_Click);
             // 
             // btnStudentSearch
             // 
@@ -136,6 +146,7 @@
             this.btnStudentSearch.TabIndex = 73;
             this.btnStudentSearch.Text = "View Students";
             this.btnStudentSearch.UseVisualStyleBackColor = true;
+            this.btnStudentSearch.Click += new System.EventHandler(this.btnStudentSearch_Click);
             // 
             // label6
             // 
@@ -154,15 +165,7 @@
             this.btnManageCourses.TabIndex = 66;
             this.btnManageCourses.Text = "Manage Courses";
             this.btnManageCourses.UseVisualStyleBackColor = true;
-            // 
-            // lblProfessors
-            // 
-            this.lblProfessors.AutoSize = true;
-            this.lblProfessors.Location = new System.Drawing.Point(274, 21);
-            this.lblProfessors.Name = "lblProfessors";
-            this.lblProfessors.Size = new System.Drawing.Size(51, 13);
-            this.lblProfessors.TabIndex = 7;
-            this.lblProfessors.Text = "Professor";
+            this.btnManageCourses.Click += new System.EventHandler(this.btnManageCourses_Click);
             // 
             // RegistrarMenu
             // 

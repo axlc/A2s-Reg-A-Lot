@@ -16,5 +16,11 @@ namespace A2_Reg_A_Lot_2017
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            // Back button closes the My Students Window
+            this.Hide();
+        }
     }
 }

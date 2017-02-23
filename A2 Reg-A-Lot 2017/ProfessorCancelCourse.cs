@@ -16,5 +16,18 @@ namespace A2_Reg_A_Lot_2017
         {
             InitializeComponent();
         }
+
+        private void btnCancelCourseP_Click(object sender, EventArgs e)
+        {
+            //Cancel a selected course. The courses that should be listed are ones registered to the specific professor.
+            MessageBox.Show("A course from this Professor's personal list will be canceled.");
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            //Go back to ProfessorMenu
+            MessageBox.Show("Take end-user back to Professor Main Menu");
+
+        }
     }
 }

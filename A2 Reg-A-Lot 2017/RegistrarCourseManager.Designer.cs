@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.lblCourseManager = new System.Windows.Forms.Label();
-            this.btnRegister = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbxCourseOptions = new System.Windows.Forms.GroupBox();
             this.btnCreateCourse = new System.Windows.Forms.Button();
             this.btnDeleteCourse = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
@@ -55,7 +54,7 @@
             this.lstProfessors = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.groupBox2.SuspendLayout();
+            this.gbxCourseOptions.SuspendLayout();
             this.gboxCourseSearch.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,37 +68,28 @@
             this.lblCourseManager.TabIndex = 21;
             this.lblCourseManager.Text = "Course Manager";
             // 
-            // btnRegister
+            // gbxCourseOptions
             // 
-            this.btnRegister.Location = new System.Drawing.Point(365, 580);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(138, 36);
-            this.btnRegister.TabIndex = 18;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnCreateCourse);
-            this.groupBox2.Controls.Add(this.btnDeleteCourse);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.lblChoosecourse);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.btnResumeCourse);
-            this.groupBox2.Controls.Add(this.listBox5);
-            this.groupBox2.Controls.Add(this.listBox4);
-            this.groupBox2.Controls.Add(this.btnCancelCourse);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(12, 160);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(513, 414);
-            this.groupBox2.TabIndex = 20;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Course Options";
+            this.gbxCourseOptions.Controls.Add(this.btnCreateCourse);
+            this.gbxCourseOptions.Controls.Add(this.btnDeleteCourse);
+            this.gbxCourseOptions.Controls.Add(this.label12);
+            this.gbxCourseOptions.Controls.Add(this.label11);
+            this.gbxCourseOptions.Controls.Add(this.label10);
+            this.gbxCourseOptions.Controls.Add(this.label9);
+            this.gbxCourseOptions.Controls.Add(this.label8);
+            this.gbxCourseOptions.Controls.Add(this.lblChoosecourse);
+            this.gbxCourseOptions.Controls.Add(this.label6);
+            this.gbxCourseOptions.Controls.Add(this.btnResumeCourse);
+            this.gbxCourseOptions.Controls.Add(this.listBox5);
+            this.gbxCourseOptions.Controls.Add(this.listBox4);
+            this.gbxCourseOptions.Controls.Add(this.btnCancelCourse);
+            this.gbxCourseOptions.Controls.Add(this.label5);
+            this.gbxCourseOptions.Location = new System.Drawing.Point(12, 160);
+            this.gbxCourseOptions.Name = "gbxCourseOptions";
+            this.gbxCourseOptions.Size = new System.Drawing.Size(513, 414);
+            this.gbxCourseOptions.TabIndex = 20;
+            this.gbxCourseOptions.TabStop = false;
+            this.gbxCourseOptions.Text = "Course Options";
             // 
             // btnCreateCourse
             // 
@@ -109,6 +99,7 @@
             this.btnCreateCourse.TabIndex = 16;
             this.btnCreateCourse.Text = "Create New Course";
             this.btnCreateCourse.UseVisualStyleBackColor = true;
+            this.btnCreateCourse.Click += new System.EventHandler(this.btnCreateCourse_Click);
             // 
             // btnDeleteCourse
             // 
@@ -118,6 +109,7 @@
             this.btnDeleteCourse.TabIndex = 15;
             this.btnDeleteCourse.Text = "Delete Course";
             this.btnDeleteCourse.UseVisualStyleBackColor = true;
+            this.btnDeleteCourse.Click += new System.EventHandler(this.btnDeleteCourse_Click);
             // 
             // label12
             // 
@@ -192,6 +184,7 @@
             this.btnResumeCourse.TabIndex = 7;
             this.btnResumeCourse.Text = "Resume Course";
             this.btnResumeCourse.UseVisualStyleBackColor = true;
+            this.btnResumeCourse.Click += new System.EventHandler(this.btnResumeCourse_Click);
             // 
             // listBox5
             // 
@@ -223,6 +216,7 @@
             this.btnCancelCourse.TabIndex = 2;
             this.btnCancelCourse.Text = "Cancel Course";
             this.btnCancelCourse.UseVisualStyleBackColor = true;
+            this.btnCancelCourse.Click += new System.EventHandler(this.btnCancelCourse_Click);
             // 
             // label5
             // 
@@ -345,6 +339,7 @@
             this.btnBack.TabIndex = 17;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // RegistrarCourseManager
             // 
@@ -352,14 +347,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 626);
             this.Controls.Add(this.lblCourseManager);
-            this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbxCourseOptions);
             this.Controls.Add(this.gboxCourseSearch);
             this.Controls.Add(this.btnBack);
             this.Name = "RegistrarCourseManager";
             this.Text = "Course Manager";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbxCourseOptions.ResumeLayout(false);
+            this.gbxCourseOptions.PerformLayout();
             this.gboxCourseSearch.ResumeLayout(false);
             this.gboxCourseSearch.PerformLayout();
             this.ResumeLayout(false);
@@ -370,8 +364,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblCourseManager;
-        private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbxCourseOptions;
         private System.Windows.Forms.Button btnCreateCourse;
         private System.Windows.Forms.Button btnDeleteCourse;
         private System.Windows.Forms.Label label12;

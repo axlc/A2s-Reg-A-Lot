@@ -16,5 +16,16 @@ namespace A2_Reg_A_Lot_2017
         {
             InitializeComponent();
         }
+
+        private void btnSearchProfessors_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Attempt to search for professors using specified details.");
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            //Back button hides thsi window
+            this.Hide();
+        }
     }
 }
