@@ -16,5 +16,10 @@ namespace A2_Reg_A_Lot_2017
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sign up was clicked. Do appropriate actions");
+        }
     }
 }

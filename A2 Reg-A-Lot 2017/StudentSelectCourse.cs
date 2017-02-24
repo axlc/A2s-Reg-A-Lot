@@ -16,5 +16,18 @@ namespace A2_Reg_A_Lot_2017
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Closes the Select Courses window
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Move on to the confirm registration window
+            StudentCourseRegistration frm = new StudentCourseRegistration();
+            frm.Show();
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbxMyCourses = new System.Windows.Forms.GroupBox();
+            this.lblTotalStudents = new System.Windows.Forms.Label();
             this.lblStartDate = new System.Windows.Forms.Label();
             this.lblSchedule = new System.Windows.Forms.Label();
             this.lblSection = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.lblDisplayZipCode = new System.Windows.Forms.Label();
             this.lblDisplayFax = new System.Windows.Forms.Label();
             this.lblAddress1 = new System.Windows.Forms.Label();
-            this.lblTotalStudents = new System.Windows.Forms.Label();
             this.gbxProfessorOptions = new System.Windows.Forms.GroupBox();
             this.btnStudentSearch = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -82,6 +82,15 @@
             this.gbxMyCourses.TabIndex = 72;
             this.gbxMyCourses.TabStop = false;
             this.gbxMyCourses.Text = "My Courses";
+            // 
+            // lblTotalStudents
+            // 
+            this.lblTotalStudents.AutoSize = true;
+            this.lblTotalStudents.Location = new System.Drawing.Point(277, 21);
+            this.lblTotalStudents.Name = "lblTotalStudents";
+            this.lblTotalStudents.Size = new System.Drawing.Size(76, 13);
+            this.lblTotalStudents.TabIndex = 6;
+            this.lblTotalStudents.Text = "Total Students";
             // 
             // lblStartDate
             // 
@@ -175,6 +184,7 @@
             this.btnUpdateInfo.TabIndex = 44;
             this.btnUpdateInfo.Text = "Update my information";
             this.btnUpdateInfo.UseVisualStyleBackColor = true;
+            this.btnUpdateInfo.Click += new System.EventHandler(this.btnUpdateInfo_Click);
             // 
             // lblFirstName
             // 
@@ -338,15 +348,6 @@
             this.lblAddress1.TabIndex = 60;
             this.lblAddress1.Text = "DisplayAddress1";
             // 
-            // lblTotalStudents
-            // 
-            this.lblTotalStudents.AutoSize = true;
-            this.lblTotalStudents.Location = new System.Drawing.Point(277, 21);
-            this.lblTotalStudents.Name = "lblTotalStudents";
-            this.lblTotalStudents.Size = new System.Drawing.Size(76, 13);
-            this.lblTotalStudents.TabIndex = 6;
-            this.lblTotalStudents.Text = "Total Students";
-            // 
             // gbxProfessorOptions
             // 
             this.gbxProfessorOptions.Controls.Add(this.btnStudentSearch);
@@ -369,6 +370,7 @@
             this.btnStudentSearch.TabIndex = 73;
             this.btnStudentSearch.Text = "View All Students";
             this.btnStudentSearch.UseVisualStyleBackColor = true;
+            this.btnStudentSearch.Click += new System.EventHandler(this.btnStudentSearch_Click);
             // 
             // label6
             // 
@@ -387,6 +389,7 @@
             this.btnMyStudents.TabIndex = 67;
             this.btnMyStudents.Text = "View My Students";
             this.btnMyStudents.UseVisualStyleBackColor = true;
+            this.btnMyStudents.Click += new System.EventHandler(this.btnMyStudents_Click);
             // 
             // btnCancelCourses
             // 
@@ -396,6 +399,7 @@
             this.btnCancelCourses.TabIndex = 66;
             this.btnCancelCourses.Text = "Cancel Courses";
             this.btnCancelCourses.UseVisualStyleBackColor = true;
+            this.btnCancelCourses.Click += new System.EventHandler(this.btnCancelCourses_Click);
             // 
             // btnAddCourses
             // 
@@ -405,6 +409,7 @@
             this.btnAddCourses.TabIndex = 65;
             this.btnAddCourses.Text = "Add Course";
             this.btnAddCourses.UseVisualStyleBackColor = true;
+            this.btnAddCourses.Click += new System.EventHandler(this.btnAddCourses_Click);
             // 
             // ProfessorMenu
             // 
@@ -415,7 +420,7 @@
             this.Controls.Add(this.gbxMyCourses);
             this.Controls.Add(this.gbxProfessorInfo);
             this.Name = "ProfessorMenu";
-            this.Text = "ProfessorMenu";
+            this.Text = "Professor Menu";
             this.gbxMyCourses.ResumeLayout(false);
             this.gbxMyCourses.PerformLayout();
             this.gbxProfessorInfo.ResumeLayout(false);

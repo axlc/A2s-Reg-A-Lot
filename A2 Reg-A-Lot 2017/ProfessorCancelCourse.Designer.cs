@@ -66,6 +66,7 @@
             this.btnCancel.TabIndex = 80;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnCancelCourseP
             // 
@@ -75,6 +76,7 @@
             this.btnCancelCourseP.TabIndex = 79;
             this.btnCancelCourseP.Text = "Confirm";
             this.btnCancelCourseP.UseVisualStyleBackColor = true;
+            this.btnCancelCourseP.Click += new System.EventHandler(this.btnCancelCourseP_Click);
             // 
             // groupBox1
             // 

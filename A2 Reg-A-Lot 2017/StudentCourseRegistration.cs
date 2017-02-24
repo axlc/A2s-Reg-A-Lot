@@ -16,5 +16,28 @@ namespace A2_Reg_A_Lot_2017
         {
             InitializeComponent();
         }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            // Confirm and register courses the student has selected and send thsoe courses to their registered list of courses
+            MessageBox.Show("The courses you've selected will be registered to your courses.");
+            /* NEEDS:
+             - Are you sure? Y/N window
+             - To send selected courses to the student's list of courses is YES^
+             - To possibly state the total in this window
+             */
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            // Closes the Confirm Registration window and takes user back to course select
+            this.Hide();
+        }
+
+        private void btnRemoveCourse_Click(object sender, EventArgs e)
+        {
+            // Removes the selected checklisted course(s) from the cart
+            MessageBox.Show("Selected courses have been removed from the cart.");
+        }
     }
 }

@@ -55,6 +55,7 @@
             this.lblDisplayZipCode = new System.Windows.Forms.Label();
             this.lblDisplayFax = new System.Windows.Forms.Label();
             this.lblAddress1 = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.gbxProfessorSearch.SuspendLayout();
             this.gbxProfessorInfo.SuspendLayout();
             this.SuspendLayout();
@@ -118,6 +119,7 @@
             this.btnSearchProfessors.TabIndex = 65;
             this.btnSearchProfessors.Text = "Search";
             this.btnSearchProfessors.UseVisualStyleBackColor = true;
+            this.btnSearchProfessors.Click += new System.EventHandler(this.btnSearchProfessors_Click);
             // 
             // lblByName
             // 
@@ -349,11 +351,22 @@
             this.lblAddress1.TabIndex = 60;
             this.lblAddress1.Text = "DisplayAddress1";
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(392, 328);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 73;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // SearchProfessors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 363);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.gbxProfessorInfo);
             this.Controls.Add(this.lbxProfessors);
             this.Controls.Add(this.label13);
@@ -398,5 +411,6 @@
         private System.Windows.Forms.Label lblDisplayZipCode;
         private System.Windows.Forms.Label lblDisplayFax;
         private System.Windows.Forms.Label lblAddress1;
+        private System.Windows.Forms.Button btnBack;
     }
 }

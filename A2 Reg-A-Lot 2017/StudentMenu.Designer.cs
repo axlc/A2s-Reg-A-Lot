@@ -179,6 +179,7 @@
             this.btnUpdateInfo.TabIndex = 44;
             this.btnUpdateInfo.Text = "Update my information";
             this.btnUpdateInfo.UseVisualStyleBackColor = true;
+            this.btnUpdateInfo.Click += new System.EventHandler(this.btnUpdateInfo_Click);
             // 
             // lblFirstName
             // 
@@ -350,6 +351,7 @@
             this.btnDropCourse.TabIndex = 66;
             this.btnDropCourse.Text = "Drop Courses";
             this.btnDropCourse.UseVisualStyleBackColor = true;
+            this.btnDropCourse.Click += new System.EventHandler(this.btnDropCourse_Click);
             // 
             // btnRegisterCourse
             // 
@@ -359,6 +361,7 @@
             this.btnRegisterCourse.TabIndex = 65;
             this.btnRegisterCourse.Text = "Search or Register for Courses";
             this.btnRegisterCourse.UseVisualStyleBackColor = true;
+            this.btnRegisterCourse.Click += new System.EventHandler(this.btnRegisterCourse_Click);
             // 
             // StudentMenu
             // 

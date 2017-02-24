@@ -35,6 +35,10 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
+            this.btnTestRegistrar = new System.Windows.Forms.Button();
+            this.btnTestProfessor = new System.Windows.Forms.Button();
+            this.btnTestStudent = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -45,6 +49,7 @@
             this.btnLogin.TabIndex = 13;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // linkCreateAccount
             // 
@@ -55,6 +60,7 @@
             this.linkCreateAccount.TabIndex = 12;
             this.linkCreateAccount.TabStop = true;
             this.linkCreateAccount.Text = "Don\'t have an account? Click here to sign up!";
+            this.linkCreateAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCreateAccount_LinkClicked);
             // 
             // txtPassword
             // 
@@ -99,11 +105,54 @@
             this.lblLogin.TabIndex = 7;
             this.lblLogin.Text = "Login to Made-Up College";
             // 
+            // btnTestRegistrar
+            // 
+            this.btnTestRegistrar.Location = new System.Drawing.Point(391, 49);
+            this.btnTestRegistrar.Name = "btnTestRegistrar";
+            this.btnTestRegistrar.Size = new System.Drawing.Size(75, 54);
+            this.btnTestRegistrar.TabIndex = 14;
+            this.btnTestRegistrar.Text = "Test Registrar Login";
+            this.btnTestRegistrar.UseVisualStyleBackColor = true;
+            this.btnTestRegistrar.Click += new System.EventHandler(this.btnTestRegistrar_Click);
+            // 
+            // btnTestProfessor
+            // 
+            this.btnTestProfessor.Location = new System.Drawing.Point(391, 115);
+            this.btnTestProfessor.Name = "btnTestProfessor";
+            this.btnTestProfessor.Size = new System.Drawing.Size(75, 54);
+            this.btnTestProfessor.TabIndex = 15;
+            this.btnTestProfessor.Text = "Test  Professor Login";
+            this.btnTestProfessor.UseVisualStyleBackColor = true;
+            this.btnTestProfessor.Click += new System.EventHandler(this.btnTestProfessor_Click);
+            // 
+            // btnTestStudent
+            // 
+            this.btnTestStudent.Location = new System.Drawing.Point(391, 182);
+            this.btnTestStudent.Name = "btnTestStudent";
+            this.btnTestStudent.Size = new System.Drawing.Size(75, 54);
+            this.btnTestStudent.TabIndex = 16;
+            this.btnTestStudent.Text = "Test Student Login";
+            this.btnTestStudent.UseVisualStyleBackColor = true;
+            this.btnTestStudent.Click += new System.EventHandler(this.btnTestStudent_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(362, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Buttons for testing user login";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 262);
+            this.ClientSize = new System.Drawing.Size(532, 262);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnTestStudent);
+            this.Controls.Add(this.btnTestProfessor);
+            this.Controls.Add(this.btnTestRegistrar);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.linkCreateAccount);
             this.Controls.Add(this.txtPassword);
@@ -127,6 +176,10 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.Button btnTestRegistrar;
+        private System.Windows.Forms.Button btnTestProfessor;
+        private System.Windows.Forms.Button btnTestStudent;
+        private System.Windows.Forms.Label label1;
     }
 }
 
