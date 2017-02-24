@@ -40,5 +40,95 @@ namespace A2_Reg_A_Lot_2017
             StudentSelectCourse frm = new StudentSelectCourse();
             frm.Show();
         }
+
+        private void lblFname_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLastName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblAddressA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDisplayCity_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDisplayState_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtState_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDisplayZipCode_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtZipcode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDisplayFax_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtFax_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDisplayEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

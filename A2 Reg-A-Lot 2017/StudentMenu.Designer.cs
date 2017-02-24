@@ -36,28 +36,30 @@
             this.lblCourse = new System.Windows.Forms.Label();
             this.lstPLACEHOLDER1 = new System.Windows.Forms.ListBox();
             this.gbxStudentInfo = new System.Windows.Forms.GroupBox();
-            this.imgStudentPhoto = new System.Windows.Forms.PictureBox();
-            this.btnUpdateInfo = new System.Windows.Forms.Button();
-            this.btnDropCourse = new System.Windows.Forms.Button();
-            this.btnRegisterCourse = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtFax = new System.Windows.Forms.TextBox();
             this.txtZipcode = new System.Windows.Forms.TextBox();
             this.txtState = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
-            this.txtAddress2 = new System.Windows.Forms.TextBox();
-            this.txtAddress1 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.lblFname = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.lblDisplayEmail = new System.Windows.Forms.Label();
-            this.lblAddressB = new System.Windows.Forms.Label();
             this.lblDisplayCity = new System.Windows.Forms.Label();
             this.lblAddressA = new System.Windows.Forms.Label();
             this.lblDisplayState = new System.Windows.Forms.Label();
             this.lblDisplayZipCode = new System.Windows.Forms.Label();
             this.lblDisplayFax = new System.Windows.Forms.Label();
+            this.imgStudentPhoto = new System.Windows.Forms.PictureBox();
+            this.btnUpdateInfo = new System.Windows.Forms.Button();
+            this.btnDropCourse = new System.Windows.Forms.Button();
+            this.btnRegisterCourse = new System.Windows.Forms.Button();
             this.gbxMyCourses.SuspendLayout();
             this.gbxStudentInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgStudentPhoto)).BeginInit();
@@ -136,19 +138,21 @@
             // 
             // gbxStudentInfo
             // 
+            this.gbxStudentInfo.Controls.Add(this.textBox2);
+            this.gbxStudentInfo.Controls.Add(this.lblPhone);
+            this.gbxStudentInfo.Controls.Add(this.textBox1);
+            this.gbxStudentInfo.Controls.Add(this.label1);
             this.gbxStudentInfo.Controls.Add(this.txtEmail);
             this.gbxStudentInfo.Controls.Add(this.txtFax);
             this.gbxStudentInfo.Controls.Add(this.txtZipcode);
             this.gbxStudentInfo.Controls.Add(this.txtState);
             this.gbxStudentInfo.Controls.Add(this.txtCity);
-            this.gbxStudentInfo.Controls.Add(this.txtAddress2);
-            this.gbxStudentInfo.Controls.Add(this.txtAddress1);
+            this.gbxStudentInfo.Controls.Add(this.txtAddress);
             this.gbxStudentInfo.Controls.Add(this.txtLastName);
             this.gbxStudentInfo.Controls.Add(this.txtFirstName);
             this.gbxStudentInfo.Controls.Add(this.lblFname);
             this.gbxStudentInfo.Controls.Add(this.label30);
             this.gbxStudentInfo.Controls.Add(this.lblDisplayEmail);
-            this.gbxStudentInfo.Controls.Add(this.lblAddressB);
             this.gbxStudentInfo.Controls.Add(this.lblDisplayCity);
             this.gbxStudentInfo.Controls.Add(this.lblAddressA);
             this.gbxStudentInfo.Controls.Add(this.lblDisplayState);
@@ -162,6 +166,214 @@
             this.gbxStudentInfo.TabIndex = 67;
             this.gbxStudentInfo.TabStop = false;
             this.gbxStudentInfo.Text = "Student Information";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(128, 360);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(100, 13);
+            this.textBox2.TabIndex = 123;
+            // 
+            // lblPhone
+            // 
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Location = new System.Drawing.Point(32, 360);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(41, 13);
+            this.lblPhone.TabIndex = 122;
+            this.lblPhone.Text = "Phone:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(128, 192);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(100, 13);
+            this.textBox1.TabIndex = 121;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(32, 192);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.TabIndex = 120;
+            this.label1.Text = "Gender:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Control;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Location = new System.Drawing.Point(128, 336);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
+            this.txtEmail.Size = new System.Drawing.Size(100, 13);
+            this.txtEmail.TabIndex = 117;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            // 
+            // txtFax
+            // 
+            this.txtFax.BackColor = System.Drawing.SystemColors.Control;
+            this.txtFax.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFax.Location = new System.Drawing.Point(128, 312);
+            this.txtFax.Name = "txtFax";
+            this.txtFax.ReadOnly = true;
+            this.txtFax.Size = new System.Drawing.Size(100, 13);
+            this.txtFax.TabIndex = 116;
+            this.txtFax.TextChanged += new System.EventHandler(this.txtFax_TextChanged);
+            // 
+            // txtZipcode
+            // 
+            this.txtZipcode.BackColor = System.Drawing.SystemColors.Control;
+            this.txtZipcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtZipcode.Location = new System.Drawing.Point(128, 288);
+            this.txtZipcode.Name = "txtZipcode";
+            this.txtZipcode.ReadOnly = true;
+            this.txtZipcode.Size = new System.Drawing.Size(100, 13);
+            this.txtZipcode.TabIndex = 115;
+            this.txtZipcode.TextChanged += new System.EventHandler(this.txtZipcode_TextChanged);
+            // 
+            // txtState
+            // 
+            this.txtState.BackColor = System.Drawing.SystemColors.Control;
+            this.txtState.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtState.Location = new System.Drawing.Point(128, 264);
+            this.txtState.Name = "txtState";
+            this.txtState.ReadOnly = true;
+            this.txtState.Size = new System.Drawing.Size(100, 13);
+            this.txtState.TabIndex = 114;
+            this.txtState.TextChanged += new System.EventHandler(this.txtState_TextChanged);
+            // 
+            // txtCity
+            // 
+            this.txtCity.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCity.Location = new System.Drawing.Point(128, 240);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.ReadOnly = true;
+            this.txtCity.Size = new System.Drawing.Size(100, 13);
+            this.txtCity.TabIndex = 113;
+            this.txtCity.TextChanged += new System.EventHandler(this.txtCity_TextChanged);
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.BackColor = System.Drawing.SystemColors.Control;
+            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAddress.Location = new System.Drawing.Point(128, 216);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.ReadOnly = true;
+            this.txtAddress.Size = new System.Drawing.Size(100, 13);
+            this.txtAddress.TabIndex = 111;
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.BackColor = System.Drawing.SystemColors.Control;
+            this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLastName.Location = new System.Drawing.Point(128, 166);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.ReadOnly = true;
+            this.txtLastName.Size = new System.Drawing.Size(100, 13);
+            this.txtLastName.TabIndex = 110;
+            this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.BackColor = System.Drawing.SystemColors.Control;
+            this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFirstName.Location = new System.Drawing.Point(128, 142);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.ReadOnly = true;
+            this.txtFirstName.Size = new System.Drawing.Size(100, 13);
+            this.txtFirstName.TabIndex = 109;
+            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
+            // 
+            // lblFname
+            // 
+            this.lblFname.AutoSize = true;
+            this.lblFname.Location = new System.Drawing.Point(32, 144);
+            this.lblFname.Name = "lblFname";
+            this.lblFname.Size = new System.Drawing.Size(58, 13);
+            this.lblFname.TabIndex = 100;
+            this.lblFname.Text = "First name:";
+            this.lblFname.Click += new System.EventHandler(this.lblFname_Click);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(32, 166);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(59, 13);
+            this.label30.TabIndex = 101;
+            this.label30.Text = "Last name:";
+            this.label30.Click += new System.EventHandler(this.label30_Click);
+            // 
+            // lblDisplayEmail
+            // 
+            this.lblDisplayEmail.AutoSize = true;
+            this.lblDisplayEmail.Location = new System.Drawing.Point(35, 334);
+            this.lblDisplayEmail.Name = "lblDisplayEmail";
+            this.lblDisplayEmail.Size = new System.Drawing.Size(35, 13);
+            this.lblDisplayEmail.TabIndex = 108;
+            this.lblDisplayEmail.Text = "Email:";
+            this.lblDisplayEmail.Click += new System.EventHandler(this.lblDisplayEmail_Click);
+            // 
+            // lblDisplayCity
+            // 
+            this.lblDisplayCity.AutoSize = true;
+            this.lblDisplayCity.Location = new System.Drawing.Point(35, 238);
+            this.lblDisplayCity.Name = "lblDisplayCity";
+            this.lblDisplayCity.Size = new System.Drawing.Size(27, 13);
+            this.lblDisplayCity.TabIndex = 102;
+            this.lblDisplayCity.Text = "City:";
+            this.lblDisplayCity.Click += new System.EventHandler(this.lblDisplayCity_Click);
+            // 
+            // lblAddressA
+            // 
+            this.lblAddressA.AutoSize = true;
+            this.lblAddressA.Location = new System.Drawing.Point(32, 216);
+            this.lblAddressA.Name = "lblAddressA";
+            this.lblAddressA.Size = new System.Drawing.Size(48, 13);
+            this.lblAddressA.TabIndex = 106;
+            this.lblAddressA.Text = "Address:";
+            this.lblAddressA.Click += new System.EventHandler(this.lblAddressA_Click);
+            // 
+            // lblDisplayState
+            // 
+            this.lblDisplayState.AutoSize = true;
+            this.lblDisplayState.Location = new System.Drawing.Point(35, 262);
+            this.lblDisplayState.Name = "lblDisplayState";
+            this.lblDisplayState.Size = new System.Drawing.Size(35, 13);
+            this.lblDisplayState.TabIndex = 103;
+            this.lblDisplayState.Text = "State:";
+            this.lblDisplayState.Click += new System.EventHandler(this.lblDisplayState_Click);
+            // 
+            // lblDisplayZipCode
+            // 
+            this.lblDisplayZipCode.AutoSize = true;
+            this.lblDisplayZipCode.Location = new System.Drawing.Point(35, 286);
+            this.lblDisplayZipCode.Name = "lblDisplayZipCode";
+            this.lblDisplayZipCode.Size = new System.Drawing.Size(49, 13);
+            this.lblDisplayZipCode.TabIndex = 104;
+            this.lblDisplayZipCode.Text = "Zipcode:";
+            this.lblDisplayZipCode.Click += new System.EventHandler(this.lblDisplayZipCode_Click);
+            // 
+            // lblDisplayFax
+            // 
+            this.lblDisplayFax.AutoSize = true;
+            this.lblDisplayFax.Location = new System.Drawing.Point(35, 310);
+            this.lblDisplayFax.Name = "lblDisplayFax";
+            this.lblDisplayFax.Size = new System.Drawing.Size(27, 13);
+            this.lblDisplayFax.TabIndex = 105;
+            this.lblDisplayFax.Text = "Fax:";
+            this.lblDisplayFax.Click += new System.EventHandler(this.lblDisplayFax_Click);
             // 
             // imgStudentPhoto
             // 
@@ -201,182 +413,11 @@
             this.btnRegisterCourse.UseVisualStyleBackColor = true;
             this.btnRegisterCourse.Click += new System.EventHandler(this.btnRegisterCourse_Click);
             // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Control;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Location = new System.Drawing.Point(128, 352);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(100, 13);
-            this.txtEmail.TabIndex = 117;
-            // 
-            // txtFax
-            // 
-            this.txtFax.BackColor = System.Drawing.SystemColors.Control;
-            this.txtFax.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFax.Location = new System.Drawing.Point(128, 328);
-            this.txtFax.Name = "txtFax";
-            this.txtFax.ReadOnly = true;
-            this.txtFax.Size = new System.Drawing.Size(100, 13);
-            this.txtFax.TabIndex = 116;
-            // 
-            // txtZipcode
-            // 
-            this.txtZipcode.BackColor = System.Drawing.SystemColors.Control;
-            this.txtZipcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtZipcode.Location = new System.Drawing.Point(128, 304);
-            this.txtZipcode.Name = "txtZipcode";
-            this.txtZipcode.ReadOnly = true;
-            this.txtZipcode.Size = new System.Drawing.Size(100, 13);
-            this.txtZipcode.TabIndex = 115;
-            // 
-            // txtState
-            // 
-            this.txtState.BackColor = System.Drawing.SystemColors.Control;
-            this.txtState.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtState.Location = new System.Drawing.Point(128, 280);
-            this.txtState.Name = "txtState";
-            this.txtState.ReadOnly = true;
-            this.txtState.Size = new System.Drawing.Size(100, 13);
-            this.txtState.TabIndex = 114;
-            // 
-            // txtCity
-            // 
-            this.txtCity.BackColor = System.Drawing.SystemColors.Control;
-            this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCity.Location = new System.Drawing.Point(128, 256);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.ReadOnly = true;
-            this.txtCity.Size = new System.Drawing.Size(100, 13);
-            this.txtCity.TabIndex = 113;
-            // 
-            // txtAddress2
-            // 
-            this.txtAddress2.BackColor = System.Drawing.SystemColors.Control;
-            this.txtAddress2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAddress2.Location = new System.Drawing.Point(128, 232);
-            this.txtAddress2.Name = "txtAddress2";
-            this.txtAddress2.ReadOnly = true;
-            this.txtAddress2.Size = new System.Drawing.Size(100, 13);
-            this.txtAddress2.TabIndex = 112;
-            // 
-            // txtAddress1
-            // 
-            this.txtAddress1.BackColor = System.Drawing.SystemColors.Control;
-            this.txtAddress1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAddress1.Location = new System.Drawing.Point(128, 206);
-            this.txtAddress1.Name = "txtAddress1";
-            this.txtAddress1.ReadOnly = true;
-            this.txtAddress1.Size = new System.Drawing.Size(100, 13);
-            this.txtAddress1.TabIndex = 111;
-            // 
-            // txtLastName
-            // 
-            this.txtLastName.BackColor = System.Drawing.SystemColors.Control;
-            this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLastName.Location = new System.Drawing.Point(128, 182);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.ReadOnly = true;
-            this.txtLastName.Size = new System.Drawing.Size(100, 13);
-            this.txtLastName.TabIndex = 110;
-            // 
-            // txtFirstName
-            // 
-            this.txtFirstName.BackColor = System.Drawing.SystemColors.Control;
-            this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFirstName.Location = new System.Drawing.Point(128, 158);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.ReadOnly = true;
-            this.txtFirstName.Size = new System.Drawing.Size(100, 13);
-            this.txtFirstName.TabIndex = 109;
-            // 
-            // lblFname
-            // 
-            this.lblFname.AutoSize = true;
-            this.lblFname.Location = new System.Drawing.Point(32, 160);
-            this.lblFname.Name = "lblFname";
-            this.lblFname.Size = new System.Drawing.Size(58, 13);
-            this.lblFname.TabIndex = 100;
-            this.lblFname.Text = "First name:";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(32, 182);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(59, 13);
-            this.label30.TabIndex = 101;
-            this.label30.Text = "Last name:";
-            // 
-            // lblDisplayEmail
-            // 
-            this.lblDisplayEmail.AutoSize = true;
-            this.lblDisplayEmail.Location = new System.Drawing.Point(35, 350);
-            this.lblDisplayEmail.Name = "lblDisplayEmail";
-            this.lblDisplayEmail.Size = new System.Drawing.Size(35, 13);
-            this.lblDisplayEmail.TabIndex = 108;
-            this.lblDisplayEmail.Text = "Email:";
-            // 
-            // lblAddressB
-            // 
-            this.lblAddressB.AutoSize = true;
-            this.lblAddressB.Location = new System.Drawing.Point(35, 230);
-            this.lblAddressB.Name = "lblAddressB";
-            this.lblAddressB.Size = new System.Drawing.Size(80, 13);
-            this.lblAddressB.TabIndex = 107;
-            this.lblAddressB.Text = "Address Line 2:";
-            // 
-            // lblDisplayCity
-            // 
-            this.lblDisplayCity.AutoSize = true;
-            this.lblDisplayCity.Location = new System.Drawing.Point(35, 254);
-            this.lblDisplayCity.Name = "lblDisplayCity";
-            this.lblDisplayCity.Size = new System.Drawing.Size(27, 13);
-            this.lblDisplayCity.TabIndex = 102;
-            this.lblDisplayCity.Text = "City:";
-            // 
-            // lblAddressA
-            // 
-            this.lblAddressA.AutoSize = true;
-            this.lblAddressA.Location = new System.Drawing.Point(32, 206);
-            this.lblAddressA.Name = "lblAddressA";
-            this.lblAddressA.Size = new System.Drawing.Size(80, 13);
-            this.lblAddressA.TabIndex = 106;
-            this.lblAddressA.Text = "Address Line 1:";
-            // 
-            // lblDisplayState
-            // 
-            this.lblDisplayState.AutoSize = true;
-            this.lblDisplayState.Location = new System.Drawing.Point(35, 278);
-            this.lblDisplayState.Name = "lblDisplayState";
-            this.lblDisplayState.Size = new System.Drawing.Size(35, 13);
-            this.lblDisplayState.TabIndex = 103;
-            this.lblDisplayState.Text = "State:";
-            // 
-            // lblDisplayZipCode
-            // 
-            this.lblDisplayZipCode.AutoSize = true;
-            this.lblDisplayZipCode.Location = new System.Drawing.Point(35, 302);
-            this.lblDisplayZipCode.Name = "lblDisplayZipCode";
-            this.lblDisplayZipCode.Size = new System.Drawing.Size(49, 13);
-            this.lblDisplayZipCode.TabIndex = 104;
-            this.lblDisplayZipCode.Text = "Zipcode:";
-            // 
-            // lblDisplayFax
-            // 
-            this.lblDisplayFax.AutoSize = true;
-            this.lblDisplayFax.Location = new System.Drawing.Point(35, 326);
-            this.lblDisplayFax.Name = "lblDisplayFax";
-            this.lblDisplayFax.Size = new System.Drawing.Size(27, 13);
-            this.lblDisplayFax.TabIndex = 105;
-            this.lblDisplayFax.Text = "Fax:";
-            // 
             // StudentMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(744, 445);
+            this.ClientSize = new System.Drawing.Size(744, 449);
             this.Controls.Add(this.gbxMyCourses);
             this.Controls.Add(this.gbxStudentInfo);
             this.Controls.Add(this.btnDropCourse);
@@ -411,18 +452,20 @@
         private System.Windows.Forms.TextBox txtZipcode;
         private System.Windows.Forms.TextBox txtState;
         private System.Windows.Forms.TextBox txtCity;
-        private System.Windows.Forms.TextBox txtAddress2;
-        private System.Windows.Forms.TextBox txtAddress1;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.Label lblFname;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label lblDisplayEmail;
-        private System.Windows.Forms.Label lblAddressB;
         private System.Windows.Forms.Label lblDisplayCity;
         private System.Windows.Forms.Label lblAddressA;
         private System.Windows.Forms.Label lblDisplayState;
         private System.Windows.Forms.Label lblDisplayZipCode;
         private System.Windows.Forms.Label lblDisplayFax;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblPhone;
     }
 }
