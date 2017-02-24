@@ -31,7 +31,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.clbCourseCart = new System.Windows.Forms.CheckedListBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkedListBox1);
+            this.groupBox2.Controls.Add(this.clbCourseCart);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
@@ -98,15 +98,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Select Classes";
             // 
-            // checkedListBox1
+            // clbCourseCart
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.clbCourseCart.FormattingEnabled = true;
+            this.clbCourseCart.Items.AddRange(new object[] {
             "Show courses added from above"});
-            this.checkedListBox1.Location = new System.Drawing.Point(23, 303);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(465, 64);
-            this.checkedListBox1.TabIndex = 15;
+            this.clbCourseCart.Location = new System.Drawing.Point(23, 303);
+            this.clbCourseCart.Name = "clbCourseCart";
+            this.clbCourseCart.Size = new System.Drawing.Size(465, 64);
+            this.clbCourseCart.TabIndex = 15;
             // 
             // label12
             // 
@@ -201,6 +201,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Add Course";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -372,6 +373,6 @@
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox clbCourseCart;
     }
 }

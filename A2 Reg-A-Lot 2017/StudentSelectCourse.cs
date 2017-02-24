@@ -29,5 +29,11 @@ namespace A2_Reg_A_Lot_2017
             StudentCourseRegistration frm = new StudentCourseRegistration();
             frm.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Add selected courses to the courses to be added to the cart (Bottom window)
+            MessageBox.Show("Add courses to the cart.");
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace A2_Reg_A_Lot_2017
 {
-    partial class SearchProfessors
+    partial class CreateUpdateProfessor
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbxProfessors = new System.Windows.Forms.ListBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.gbxProfessorSearch = new System.Windows.Forms.GroupBox();
-            this.btnSearchProfessors = new System.Windows.Forms.Button();
-            this.lblByName = new System.Windows.Forms.Label();
-            this.txtProfessorName = new System.Windows.Forms.TextBox();
-            this.lstCourses = new System.Windows.Forms.ListBox();
-            this.lblByCourse = new System.Windows.Forms.Label();
-            this.gbxProfessorInfo = new System.Windows.Forms.GroupBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.gbxProfessorInfo = new System.Windows.Forms.GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtFax = new System.Windows.Forms.TextBox();
             this.txtZipcode = new System.Windows.Forms.TextBox();
@@ -56,111 +48,29 @@
             this.lblDisplayState = new System.Windows.Forms.Label();
             this.lblDisplayZipCode = new System.Windows.Forms.Label();
             this.lblDisplayFax = new System.Windows.Forms.Label();
-            this.gbxProfessorSearch.SuspendLayout();
+            this.lbxProfessors = new System.Windows.Forms.ListBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.gbxProfessorSearch = new System.Windows.Forms.GroupBox();
+            this.btnSearchProfessors = new System.Windows.Forms.Button();
+            this.lblByName = new System.Windows.Forms.Label();
+            this.txtProfessorName = new System.Windows.Forms.TextBox();
+            this.lstCourses = new System.Windows.Forms.ListBox();
+            this.lblByCourse = new System.Windows.Forms.Label();
+            this.btnEditProfessor = new System.Windows.Forms.Button();
+            this.btnCreateProfessor = new System.Windows.Forms.Button();
             this.gbxProfessorInfo.SuspendLayout();
+            this.gbxProfessorSearch.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbxProfessors
+            // btnBack
             // 
-            this.lbxProfessors.FormattingEnabled = true;
-            this.lbxProfessors.Items.AddRange(new object[] {
-            "Professor Name 1",
-            "Professor Name 2",
-            "Professor Name 3",
-            "Professor Name 4",
-            "Professor Name 5",
-            "Professor Name 6",
-            "Professor Name 7",
-            "Professor Name 8",
-            "Professor Name 9",
-            "Professor Name 10",
-            "Professor Name 11",
-            "Professor Name 12",
-            "Professor Name 13",
-            "Professor Name 14",
-            "Professor Name 15",
-            "Professor Name 16",
-            "Professor Name 17"});
-            this.lbxProfessors.Location = new System.Drawing.Point(17, 144);
-            this.lbxProfessors.Name = "lbxProfessors";
-            this.lbxProfessors.Size = new System.Drawing.Size(279, 199);
-            this.lbxProfessors.TabIndex = 70;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(12, 9);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(178, 25);
-            this.label13.TabIndex = 69;
-            this.label13.Text = "Find Professors";
-            // 
-            // gbxProfessorSearch
-            // 
-            this.gbxProfessorSearch.Controls.Add(this.btnSearchProfessors);
-            this.gbxProfessorSearch.Controls.Add(this.lblByName);
-            this.gbxProfessorSearch.Controls.Add(this.txtProfessorName);
-            this.gbxProfessorSearch.Controls.Add(this.lstCourses);
-            this.gbxProfessorSearch.Controls.Add(this.lblByCourse);
-            this.gbxProfessorSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxProfessorSearch.Location = new System.Drawing.Point(17, 39);
-            this.gbxProfessorSearch.Name = "gbxProfessorSearch";
-            this.gbxProfessorSearch.Size = new System.Drawing.Size(279, 99);
-            this.gbxProfessorSearch.TabIndex = 68;
-            this.gbxProfessorSearch.TabStop = false;
-            this.gbxProfessorSearch.Text = "Search for a Professor";
-            // 
-            // btnSearchProfessors
-            // 
-            this.btnSearchProfessors.Location = new System.Drawing.Point(142, 68);
-            this.btnSearchProfessors.Name = "btnSearchProfessors";
-            this.btnSearchProfessors.Size = new System.Drawing.Size(75, 23);
-            this.btnSearchProfessors.TabIndex = 65;
-            this.btnSearchProfessors.Text = "Search";
-            this.btnSearchProfessors.UseVisualStyleBackColor = true;
-            this.btnSearchProfessors.Click += new System.EventHandler(this.btnSearchProfessors_Click);
-            // 
-            // lblByName
-            // 
-            this.lblByName.AutoSize = true;
-            this.lblByName.Location = new System.Drawing.Point(22, 22);
-            this.lblByName.Name = "lblByName";
-            this.lblByName.Size = new System.Drawing.Size(87, 13);
-            this.lblByName.TabIndex = 0;
-            this.lblByName.Text = "Search by name:";
-            // 
-            // txtProfessorName
-            // 
-            this.txtProfessorName.Location = new System.Drawing.Point(115, 19);
-            this.txtProfessorName.Name = "txtProfessorName";
-            this.txtProfessorName.Size = new System.Drawing.Size(138, 20);
-            this.txtProfessorName.TabIndex = 1;
-            // 
-            // lstCourses
-            // 
-            this.lstCourses.FormattingEnabled = true;
-            this.lstCourses.Items.AddRange(new object[] {
-            "CourseName 1",
-            "CourseName 2",
-            "CourseName 3",
-            "CourseName 4",
-            "CourseName 5",
-            "CourseName 6",
-            "CourseName 7"});
-            this.lstCourses.Location = new System.Drawing.Point(115, 45);
-            this.lstCourses.Name = "lstCourses";
-            this.lstCourses.Size = new System.Drawing.Size(138, 17);
-            this.lstCourses.TabIndex = 7;
-            // 
-            // lblByCourse
-            // 
-            this.lblByCourse.AutoSize = true;
-            this.lblByCourse.Location = new System.Drawing.Point(22, 46);
-            this.lblByCourse.Name = "lblByCourse";
-            this.lblByCourse.Size = new System.Drawing.Size(78, 13);
-            this.lblByCourse.TabIndex = 6;
-            this.lblByCourse.Text = "Filter by course";
+            this.btnBack.Location = new System.Drawing.Point(496, 304);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(43, 40);
+            this.btnBack.TabIndex = 78;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // gbxProfessorInfo
             // 
@@ -182,22 +92,12 @@
             this.gbxProfessorInfo.Controls.Add(this.lblDisplayState);
             this.gbxProfessorInfo.Controls.Add(this.lblDisplayZipCode);
             this.gbxProfessorInfo.Controls.Add(this.lblDisplayFax);
-            this.gbxProfessorInfo.Location = new System.Drawing.Point(312, 40);
+            this.gbxProfessorInfo.Location = new System.Drawing.Point(308, 39);
             this.gbxProfessorInfo.Name = "gbxProfessorInfo";
-            this.gbxProfessorInfo.Size = new System.Drawing.Size(235, 257);
-            this.gbxProfessorInfo.TabIndex = 72;
+            this.gbxProfessorInfo.Size = new System.Drawing.Size(236, 257);
+            this.gbxProfessorInfo.TabIndex = 77;
             this.gbxProfessorInfo.TabStop = false;
             this.gbxProfessorInfo.Text = "Professor Information";
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(392, 320);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 73;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // txtEmail
             // 
@@ -370,22 +270,129 @@
             this.lblDisplayFax.TabIndex = 87;
             this.lblDisplayFax.Text = "Fax:";
             // 
-            // SearchProfessors
+            // lbxProfessors
+            // 
+            this.lbxProfessors.FormattingEnabled = true;
+            this.lbxProfessors.Items.AddRange(new object[] {
+            "Should list all Professors"});
+            this.lbxProfessors.Location = new System.Drawing.Point(13, 143);
+            this.lbxProfessors.Name = "lbxProfessors";
+            this.lbxProfessors.Size = new System.Drawing.Size(279, 199);
+            this.lbxProfessors.TabIndex = 76;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(8, 8);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(216, 25);
+            this.label13.TabIndex = 75;
+            this.label13.Text = "Manage Professors";
+            // 
+            // gbxProfessorSearch
+            // 
+            this.gbxProfessorSearch.Controls.Add(this.btnSearchProfessors);
+            this.gbxProfessorSearch.Controls.Add(this.lblByName);
+            this.gbxProfessorSearch.Controls.Add(this.txtProfessorName);
+            this.gbxProfessorSearch.Controls.Add(this.lstCourses);
+            this.gbxProfessorSearch.Controls.Add(this.lblByCourse);
+            this.gbxProfessorSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxProfessorSearch.Location = new System.Drawing.Point(13, 38);
+            this.gbxProfessorSearch.Name = "gbxProfessorSearch";
+            this.gbxProfessorSearch.Size = new System.Drawing.Size(279, 99);
+            this.gbxProfessorSearch.TabIndex = 74;
+            this.gbxProfessorSearch.TabStop = false;
+            this.gbxProfessorSearch.Text = "Search for a Professor";
+            // 
+            // btnSearchProfessors
+            // 
+            this.btnSearchProfessors.Location = new System.Drawing.Point(142, 68);
+            this.btnSearchProfessors.Name = "btnSearchProfessors";
+            this.btnSearchProfessors.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchProfessors.TabIndex = 65;
+            this.btnSearchProfessors.Text = "Search";
+            this.btnSearchProfessors.UseVisualStyleBackColor = true;
+            // 
+            // lblByName
+            // 
+            this.lblByName.AutoSize = true;
+            this.lblByName.Location = new System.Drawing.Point(22, 22);
+            this.lblByName.Name = "lblByName";
+            this.lblByName.Size = new System.Drawing.Size(87, 13);
+            this.lblByName.TabIndex = 0;
+            this.lblByName.Text = "Search by name:";
+            // 
+            // txtProfessorName
+            // 
+            this.txtProfessorName.Location = new System.Drawing.Point(115, 19);
+            this.txtProfessorName.Name = "txtProfessorName";
+            this.txtProfessorName.Size = new System.Drawing.Size(138, 20);
+            this.txtProfessorName.TabIndex = 1;
+            // 
+            // lstCourses
+            // 
+            this.lstCourses.FormattingEnabled = true;
+            this.lstCourses.Items.AddRange(new object[] {
+            "CourseName 1",
+            "CourseName 2",
+            "CourseName 3",
+            "CourseName 4",
+            "CourseName 5",
+            "CourseName 6",
+            "CourseName 7"});
+            this.lstCourses.Location = new System.Drawing.Point(115, 45);
+            this.lstCourses.Name = "lstCourses";
+            this.lstCourses.Size = new System.Drawing.Size(138, 17);
+            this.lstCourses.TabIndex = 7;
+            // 
+            // lblByCourse
+            // 
+            this.lblByCourse.AutoSize = true;
+            this.lblByCourse.Location = new System.Drawing.Point(22, 46);
+            this.lblByCourse.Name = "lblByCourse";
+            this.lblByCourse.Size = new System.Drawing.Size(78, 13);
+            this.lblByCourse.TabIndex = 6;
+            this.lblByCourse.Text = "Filter by course";
+            // 
+            // btnEditProfessor
+            // 
+            this.btnEditProfessor.Location = new System.Drawing.Point(312, 304);
+            this.btnEditProfessor.Name = "btnEditProfessor";
+            this.btnEditProfessor.Size = new System.Drawing.Size(75, 40);
+            this.btnEditProfessor.TabIndex = 79;
+            this.btnEditProfessor.Text = "Edit Info";
+            this.btnEditProfessor.UseVisualStyleBackColor = true;
+            this.btnEditProfessor.Click += new System.EventHandler(this.btnEditProfessor_Click);
+            // 
+            // btnCreateProfessor
+            // 
+            this.btnCreateProfessor.Location = new System.Drawing.Point(400, 304);
+            this.btnCreateProfessor.Name = "btnCreateProfessor";
+            this.btnCreateProfessor.Size = new System.Drawing.Size(75, 41);
+            this.btnCreateProfessor.TabIndex = 80;
+            this.btnCreateProfessor.Text = "Add New Professor";
+            this.btnCreateProfessor.UseVisualStyleBackColor = true;
+            this.btnCreateProfessor.Click += new System.EventHandler(this.btnCreateProfessor_Click);
+            // 
+            // CreateUpdateProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 362);
+            this.ClientSize = new System.Drawing.Size(562, 359);
+            this.Controls.Add(this.btnCreateProfessor);
+            this.Controls.Add(this.btnEditProfessor);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.gbxProfessorInfo);
             this.Controls.Add(this.lbxProfessors);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.gbxProfessorSearch);
-            this.Name = "SearchProfessors";
-            this.Text = "SearchProfessors";
-            this.gbxProfessorSearch.ResumeLayout(false);
-            this.gbxProfessorSearch.PerformLayout();
+            this.Name = "CreateUpdateProfessor";
+            this.Text = "Add or Update Professor";
             this.gbxProfessorInfo.ResumeLayout(false);
             this.gbxProfessorInfo.PerformLayout();
+            this.gbxProfessorSearch.ResumeLayout(false);
+            this.gbxProfessorSearch.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,16 +400,8 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox lbxProfessors;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.GroupBox gbxProfessorSearch;
-        private System.Windows.Forms.Button btnSearchProfessors;
-        private System.Windows.Forms.Label lblByName;
-        private System.Windows.Forms.TextBox txtProfessorName;
-        private System.Windows.Forms.ListBox lstCourses;
-        private System.Windows.Forms.Label lblByCourse;
-        private System.Windows.Forms.GroupBox gbxProfessorInfo;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.GroupBox gbxProfessorInfo;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtFax;
         private System.Windows.Forms.TextBox txtZipcode;
@@ -421,5 +420,15 @@
         private System.Windows.Forms.Label lblDisplayState;
         private System.Windows.Forms.Label lblDisplayZipCode;
         private System.Windows.Forms.Label lblDisplayFax;
+        private System.Windows.Forms.ListBox lbxProfessors;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox gbxProfessorSearch;
+        private System.Windows.Forms.Button btnSearchProfessors;
+        private System.Windows.Forms.Label lblByName;
+        private System.Windows.Forms.TextBox txtProfessorName;
+        private System.Windows.Forms.ListBox lstCourses;
+        private System.Windows.Forms.Label lblByCourse;
+        private System.Windows.Forms.Button btnEditProfessor;
+        private System.Windows.Forms.Button btnCreateProfessor;
     }
 }

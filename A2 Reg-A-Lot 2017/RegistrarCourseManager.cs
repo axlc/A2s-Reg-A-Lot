@@ -31,7 +31,8 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnCreateCourse_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("A 'create new course' window should appear.");
+            CreateCourse frm = new CreateCourse();
+            frm.Show();
         }
 
         private void btnResumeCourse_Click(object sender, EventArgs e)

@@ -12,6 +12,9 @@ namespace A2_Reg_A_Lot_2017
 {
     public partial class Login : Form
     {
+
+
+       
         public Login()
         {
             InitializeComponent();
@@ -31,10 +34,11 @@ namespace A2_Reg_A_Lot_2017
 // ----------------------- TESTING BUTTONS (Login as Student, Professor, or Registrar)  ----------------------------- Kavin \\
         private void btnTestRegistrar_Click(object sender, EventArgs e)
         {
-            // TEST BUTTON: REGISTRAR
+            // TEST BUTTON: REGISTRAR         
 
             RegistrarMenu frm = new RegistrarMenu();
             frm.Show();
+            
         }
 
         private void btnTestProfessor_Click(object sender, EventArgs e)

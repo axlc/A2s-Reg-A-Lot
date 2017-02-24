@@ -12,6 +12,7 @@ namespace A2_Reg_A_Lot_2017
 {
     public partial class RegistrarMenu : Form
     {
+       
         public RegistrarMenu()
         {
             InitializeComponent();
@@ -37,5 +38,25 @@ namespace A2_Reg_A_Lot_2017
             SearchStudents frm = new SearchStudents();
             frm.Show();
         }
+
+        private void btnModifyProfessor_Click(object sender, EventArgs e)
+        {
+            //Opens window to create new professors or modify existing ones
+            CreateUpdateProfessor frm = new CreateUpdateProfessor();
+            frm.Show();
+        }
+
+        private void btnModifyStudent_Click(object sender, EventArgs e)
+        {
+            // Opens the CreateUpdateStudent window to allow for editing of student info or creationg of a new student
+            CreateUpdateStudent frm = new CreateUpdateStudent();
+            frm.Show();
+        }
+
+        private void RegistrarMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

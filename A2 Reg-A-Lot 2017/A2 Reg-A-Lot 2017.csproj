@@ -58,6 +58,24 @@
     <Compile Include="CreateAccount.Designer.cs">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateCourse.Designer.cs">
+      <DependentUpon>CreateCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateUpdateProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateUpdateProfessor.Designer.cs">
+      <DependentUpon>CreateUpdateProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateUpdateStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateUpdateStudent.Designer.cs">
+      <DependentUpon>CreateUpdateStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +161,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateCourse.resx">
+      <DependentUpon>CreateCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateUpdateProfessor.resx">
+      <DependentUpon>CreateUpdateProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateUpdateStudent.resx">
+      <DependentUpon>CreateUpdateStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

@@ -36,6 +36,8 @@
             this.lblCourse = new System.Windows.Forms.Label();
             this.lstPLACEHOLDER1 = new System.Windows.Forms.ListBox();
             this.gbxRegistrarOptions = new System.Windows.Forms.GroupBox();
+            this.btnModifyProfessor = new System.Windows.Forms.Button();
+            this.btnModifyStudent = new System.Windows.Forms.Button();
             this.btnProfessorSearch = new System.Windows.Forms.Button();
             this.btnStudentSearch = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -117,20 +119,42 @@
             // 
             // gbxRegistrarOptions
             // 
+            this.gbxRegistrarOptions.Controls.Add(this.btnModifyProfessor);
+            this.gbxRegistrarOptions.Controls.Add(this.btnModifyStudent);
             this.gbxRegistrarOptions.Controls.Add(this.btnProfessorSearch);
             this.gbxRegistrarOptions.Controls.Add(this.btnStudentSearch);
             this.gbxRegistrarOptions.Controls.Add(this.label6);
             this.gbxRegistrarOptions.Controls.Add(this.btnManageCourses);
             this.gbxRegistrarOptions.Location = new System.Drawing.Point(12, 367);
             this.gbxRegistrarOptions.Name = "gbxRegistrarOptions";
-            this.gbxRegistrarOptions.Size = new System.Drawing.Size(452, 67);
+            this.gbxRegistrarOptions.Size = new System.Drawing.Size(452, 113);
             this.gbxRegistrarOptions.TabIndex = 75;
             this.gbxRegistrarOptions.TabStop = false;
             this.gbxRegistrarOptions.Text = "Course Options";
             // 
+            // btnModifyProfessor
+            // 
+            this.btnModifyProfessor.Location = new System.Drawing.Point(232, 64);
+            this.btnModifyProfessor.Name = "btnModifyProfessor";
+            this.btnModifyProfessor.Size = new System.Drawing.Size(99, 40);
+            this.btnModifyProfessor.TabIndex = 76;
+            this.btnModifyProfessor.Text = "Add/Update Professor";
+            this.btnModifyProfessor.UseVisualStyleBackColor = true;
+            this.btnModifyProfessor.Click += new System.EventHandler(this.btnModifyProfessor_Click);
+            // 
+            // btnModifyStudent
+            // 
+            this.btnModifyStudent.Location = new System.Drawing.Point(337, 64);
+            this.btnModifyStudent.Name = "btnModifyStudent";
+            this.btnModifyStudent.Size = new System.Drawing.Size(99, 40);
+            this.btnModifyStudent.TabIndex = 75;
+            this.btnModifyStudent.Text = "Add/Update Student";
+            this.btnModifyStudent.UseVisualStyleBackColor = true;
+            this.btnModifyStudent.Click += new System.EventHandler(this.btnModifyStudent_Click);
+            // 
             // btnProfessorSearch
             // 
-            this.btnProfessorSearch.Location = new System.Drawing.Point(237, 23);
+            this.btnProfessorSearch.Location = new System.Drawing.Point(232, 24);
             this.btnProfessorSearch.Name = "btnProfessorSearch";
             this.btnProfessorSearch.Size = new System.Drawing.Size(99, 30);
             this.btnProfessorSearch.TabIndex = 74;
@@ -140,7 +164,7 @@
             // 
             // btnStudentSearch
             // 
-            this.btnStudentSearch.Location = new System.Drawing.Point(342, 23);
+            this.btnStudentSearch.Location = new System.Drawing.Point(337, 24);
             this.btnStudentSearch.Name = "btnStudentSearch";
             this.btnStudentSearch.Size = new System.Drawing.Size(99, 30);
             this.btnStudentSearch.TabIndex = 73;
@@ -159,7 +183,7 @@
             // 
             // btnManageCourses
             // 
-            this.btnManageCourses.Location = new System.Drawing.Point(25, 23);
+            this.btnManageCourses.Location = new System.Drawing.Point(24, 24);
             this.btnManageCourses.Name = "btnManageCourses";
             this.btnManageCourses.Size = new System.Drawing.Size(114, 30);
             this.btnManageCourses.TabIndex = 66;
@@ -171,11 +195,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 443);
+            this.ClientSize = new System.Drawing.Size(475, 489);
             this.Controls.Add(this.gbxRegistrarOptions);
             this.Controls.Add(this.gbxMyCourses);
             this.Name = "RegistrarMenu";
             this.Text = "Course Registrar Menu";
+            this.Load += new System.EventHandler(this.RegistrarMenu_Load);
             this.gbxMyCourses.ResumeLayout(false);
             this.gbxMyCourses.PerformLayout();
             this.gbxRegistrarOptions.ResumeLayout(false);
@@ -198,5 +223,7 @@
         private System.Windows.Forms.Button btnStudentSearch;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnManageCourses;
+        private System.Windows.Forms.Button btnModifyProfessor;
+        private System.Windows.Forms.Button btnModifyStudent;
     }
 }
