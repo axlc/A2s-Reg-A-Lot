@@ -48,6 +48,16 @@ namespace A2_Reg_A_Lot_2017
             Connection.ConnectionString = string.Format("Server={0};Database={1};User ID={2};Password={3}", server, databaseName, userID, password);
         }
 
-        //TODO: Add functions to handle opening and closing the connection.
+        public void InsertInto(string tableName, params string[] values)
+        {
+            if(tableName == "ContactDetails")
+            {
+                // See if the method was called with the proper number of arguments for each table.
+                if (values.Length != 11)
+                {
+                    throw new System.ArgumentException("To insert a record into the ContactDetails table, you must have exactly 11 string arguments. Reference the ERD on Trello, and use \"NULL\" as necessary.", "values");
+                }
+            }
+        }
     }
 }
