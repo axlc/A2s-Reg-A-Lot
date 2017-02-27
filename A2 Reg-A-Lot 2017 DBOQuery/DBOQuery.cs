@@ -34,7 +34,7 @@ namespace A2_Reg_A_Lot_2017
         public DBOQuery()
         {
             Connection = new SqlConnection();
-            Connection.ConnectionString = "Server=cis1.actx.edu;Database=project;User Id=db2;Password=db20;";
+            Connection.ConnectionString = "Server=cis1.actx.edu;Database=Project2;User Id=db2;Password=db20;";
         }
         
         /// <summary>
@@ -48,16 +48,141 @@ namespace A2_Reg_A_Lot_2017
             Connection.ConnectionString = string.Format("Server={0};Database={1};User ID={2};Password={3}", server, databaseName, userID, password);
         }
 
-        public void InsertInto(string tableName, params string[] values)
+        public int InsertIntoContactDetails(int User_ID, string FirstName, string LastName,
+                                             string AddressLine1, string AddressLine2, string AddressCity,
+                                             string AddressState, string AddressZipCode, string PhoneNumber,
+                                             string FaxNumber, string Email)
         {
-            if(tableName == "ContactDetails")
+            // Open the connection
+            Connection.Open();
+
+            // Create the command string
+            string CommandString = string.Format("INSERT INTO dbo.ContactDetails " +
+                                                 "OUTPUT INSERTED.ContactDetails_ID " +
+                                                 "VALUES ('{0}', '{1}', '{2}', " +
+                                                         "'{3}', '{4}', '{5}', " +
+                                                         "'{6}', '{7}', '{8}', " +
+                                                         "'{9}', '{10}');",
+                                                         User_ID, FirstName, LastName,
+                                                         AddressLine1, AddressLine2, AddressCity,
+                                                         AddressState, AddressZipCode, PhoneNumber,
+                                                         FaxNumber, Email);
+
+            // To get the ID of the inserted row
+            int newRow_ID = 0;
+
+            // Do the insertion
+            using (SqlCommand insertNewContactDetails = Connection.CreateCommand())
             {
-                // See if the method was called with the proper number of arguments for each table.
-                if (values.Length != 11)
-                {
-                    throw new System.ArgumentException("To insert a record into the ContactDetails table, you must have exactly 11 string arguments. Reference the ERD on Trello, and use \"NULL\" as necessary.", "values");
-                }
+                insertNewContactDetails.CommandText = CommandString;
+                insertNewContactDetails.ExecuteNonQuery();
+                int.TryParse(insertNewContactDetails.Parameters["@ContactDetails_ID"].Value.ToString(), out newRow_ID);
             }
+
+            // Close the connection
+            Connection.Close();
+
+            // And we're done.
+            return newRow_ID;
+        }
+        public int InsertIntoCourses(string CourseTitle, string CourseRubric, 
+                                      string CourseSection, string CourseDescription, 
+                                      string CourseStartTime, string CourseDuration,
+                                      double Tuition)
+        {
+            // Open the connection
+            Connection.Open();
+
+            // Create the command string
+            string CommandString = string.Format("INSERT INTO dbo.Courses " +
+                                                 "OUTPUT INSERTED.Course_ID " +
+                                                 "VALUES ('{0}', '{1}', " +
+                                                         "'{2}', '{3}', " +
+                                                         "'{4}', '{5}', " +
+                                                         "'{6}');",
+                                                         CourseTitle, CourseRubric,
+                                                         CourseSection, CourseDescription,
+                                                         CourseStartTime, CourseDuration,
+                                                         Tuition);
+
+            // To get the ID of the inserted row
+            int newRow_ID = 0;
+            // Do the insertion
+            using (SqlCommand insertNewContactDetails = Connection.CreateCommand())
+            {
+                insertNewContactDetails.CommandText = CommandString;
+                insertNewContactDetails.ExecuteNonQuery();
+                int.TryParse(insertNewContactDetails.Parameters["@Course_ID"].Value.ToString(), out newRow_ID);
+            }
+
+            // Close the connection
+            Connection.Close();
+
+            // And we're done.
+            return newRow_ID;
+        }
+        /// <summary>
+        /// Insert a new user into the Users Table
+        /// </summary>
+        /// <param name="UserPassword">A string, no more than 30 characters</param>
+        /// <param name="UserType">1 for student, 2 for professor, 3 for registrar, anything else for error.</param>
+        public int InsertIntoUsers(string UserPassword, int UserType)
+        {
+            if (UserType < 1 || UserType > 3)
+            {
+                throw new System.ArgumentException("UserType must be 1, 2 or 3 for Student, Professor or Registrar", "UserType");
+            }
+            
+            // Open the connection
+            Connection.Open();
+
+            // Create the command string
+            string CommandString = string.Format("INSERT INTO dbo.Users " +
+                                                 "OUTPUT INSERTED.User_ID " +
+                                                 "VALUES ('{0}', '{1}');",
+                                                  UserPassword, UserType);
+
+            // To get the ID of the inserted row
+            int newRow_ID = 0;
+            // Do the insertion
+            using (SqlCommand insertNewContactDetails = Connection.CreateCommand())
+            {
+                insertNewContactDetails.CommandText = CommandString;
+                insertNewContactDetails.ExecuteNonQuery();
+                int.TryParse(insertNewContactDetails.Parameters["@User_ID"].Value.ToString(), out newRow_ID);
+            }
+
+            // Close the connection
+            Connection.Close();
+
+            // And we're done.
+            return newRow_ID;
+        }
+        public int InsertIntoUserCourses(int User_ID, int Course_ID)
+        {
+            // Open the connection
+            Connection.Open();
+
+            // Create the command string
+            string CommandString = string.Format("INSERT INTO dbo.UserCourses " +
+                                                 "OUTPUT INSERTED.UserCourse_ID " +
+                                                 "VALUES ('{0}', '{1}');",
+                                                  User_ID, Course_ID);
+            // To get the ID of the inserted row
+            int newRow_ID = 0;
+            // Do the insertion
+            using (SqlCommand insertNewContactDetails = Connection.CreateCommand())
+            {
+                insertNewContactDetails.CommandText = CommandString;
+                insertNewContactDetails.ExecuteNonQuery();
+                int.TryParse(insertNewContactDetails.Parameters["@UserCourse_ID"].Value.ToString(), out newRow_ID);
+            }
+
+            // Close the connection
+            Connection.Close();
+
+            // And we're done.
+            return newRow_ID;
         }
     }
 }
