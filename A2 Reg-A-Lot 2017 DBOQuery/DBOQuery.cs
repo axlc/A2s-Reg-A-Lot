@@ -48,6 +48,21 @@ namespace A2_Reg_A_Lot_2017
             Connection.ConnectionString = string.Format("Server={0};Database={1};User ID={2};Password={3}", server, databaseName, userID, password);
         }
 
+        /// <summary>
+        /// Insert a new record into the ContactDetails Table
+        /// </summary>
+        /// <param name="User_ID">An int value for the user you are adding contact details to.</param>
+        /// <param name="FirstName">String value for first name.</param>
+        /// <param name="LastName">String value for last name.</param>
+        /// <param name="AddressLine1">String value for Address Line 1.</param>
+        /// <param name="AddressLine2">String value for Address Line 2.</param>
+        /// <param name="AddressCity">String value for City</param>
+        /// <param name="AddressState">String value for 2 letter abbreviation for state.</param>
+        /// <param name="AddressZipCode">79101-1123</param>
+        /// <param name="PhoneNumber">String value for Phone Number</param>
+        /// <param name="FaxNumber">String value for Fax Number</param>
+        /// <param name="Email">String value for Email</param>   
+        /// <returns>Returns an integer value corresponding to the new records ContactDetails_ID</returns>
         public int InsertIntoContactDetails(int User_ID, string FirstName, string LastName,
                                              string AddressLine1, string AddressLine2, string AddressCity,
                                              string AddressState, string AddressZipCode, string PhoneNumber,
@@ -70,13 +85,13 @@ namespace A2_Reg_A_Lot_2017
 
             // To get the ID of the inserted row
             int newRow_ID = 0;
-
             // Do the insertion
             using (SqlCommand insertNewContactDetails = Connection.CreateCommand())
             {
                 insertNewContactDetails.CommandText = CommandString;
-                insertNewContactDetails.ExecuteNonQuery();
-                int.TryParse(insertNewContactDetails.Parameters["@ContactDetails_ID"].Value.ToString(), out newRow_ID);
+                string id = insertNewContactDetails.ExecuteScalar().ToString();
+                int.TryParse(id, out newRow_ID);
+                // int.TryParse(insertNewContactDetails.Parameters["@UserCourse_ID"].Value.ToString(), out newRow_ID);
             }
 
             // Close the connection
@@ -85,10 +100,10 @@ namespace A2_Reg_A_Lot_2017
             // And we're done.
             return newRow_ID;
         }
-        public int InsertIntoCourses(string CourseTitle, string CourseRubric, 
-                                      string CourseSection, string CourseDescription, 
-                                      string CourseStartTime, string CourseDuration,
-                                      double Tuition)
+        public int InsertIntoCourses(string CourseTitle, string CourseRubric,
+                                     string CourseSection, string CourseDescription,
+                                     string CourseStartTime, string CourseDuration,
+                                     double Tuition)
         {
             // Open the connection
             Connection.Open();
@@ -102,7 +117,7 @@ namespace A2_Reg_A_Lot_2017
                                                          "'{6}');",
                                                          CourseTitle, CourseRubric,
                                                          CourseSection, CourseDescription,
-                                                         CourseStartTime, CourseDuration,
+                                                         CourseStartTime, CourseDuration, // Use: StartTime - "3:30PM" CourseDuration - "3:00"
                                                          Tuition);
 
             // To get the ID of the inserted row
@@ -111,8 +126,9 @@ namespace A2_Reg_A_Lot_2017
             using (SqlCommand insertNewContactDetails = Connection.CreateCommand())
             {
                 insertNewContactDetails.CommandText = CommandString;
-                insertNewContactDetails.ExecuteNonQuery();
-                int.TryParse(insertNewContactDetails.Parameters["@Course_ID"].Value.ToString(), out newRow_ID);
+                string id = insertNewContactDetails.ExecuteScalar().ToString();
+                int.TryParse(id, out newRow_ID);
+                // int.TryParse(insertNewContactDetails.Parameters["@UserCourse_ID"].Value.ToString(), out newRow_ID);
             }
 
             // Close the connection
@@ -148,8 +164,9 @@ namespace A2_Reg_A_Lot_2017
             using (SqlCommand insertNewContactDetails = Connection.CreateCommand())
             {
                 insertNewContactDetails.CommandText = CommandString;
-                insertNewContactDetails.ExecuteNonQuery();
-                int.TryParse(insertNewContactDetails.Parameters["@User_ID"].Value.ToString(), out newRow_ID);
+                string id = insertNewContactDetails.ExecuteScalar().ToString();
+                int.TryParse(id, out newRow_ID);
+                // int.TryParse(insertNewContactDetails.Parameters["@UserCourse_ID"].Value.ToString(), out newRow_ID);
             }
 
             // Close the connection
@@ -165,7 +182,7 @@ namespace A2_Reg_A_Lot_2017
 
             // Create the command string
             string CommandString = string.Format("INSERT INTO dbo.UserCourses " +
-                                                 "OUTPUT INSERTED.UserCourse_ID " +
+                                                 "OUTPUT INSERTED.UserCourses_ID " +
                                                  "VALUES ('{0}', '{1}');",
                                                   User_ID, Course_ID);
             // To get the ID of the inserted row
@@ -174,8 +191,9 @@ namespace A2_Reg_A_Lot_2017
             using (SqlCommand insertNewContactDetails = Connection.CreateCommand())
             {
                 insertNewContactDetails.CommandText = CommandString;
-                insertNewContactDetails.ExecuteNonQuery();
-                int.TryParse(insertNewContactDetails.Parameters["@UserCourse_ID"].Value.ToString(), out newRow_ID);
+                string id = insertNewContactDetails.ExecuteScalar().ToString();
+                int.TryParse(id, out newRow_ID);
+                // int.TryParse(insertNewContactDetails.Parameters["@UserCourse_ID"].Value.ToString(), out newRow_ID);
             }
 
             // Close the connection
@@ -184,5 +202,12 @@ namespace A2_Reg_A_Lot_2017
             // And we're done.
             return newRow_ID;
         }
+        // TODO: Implement (required) Select Functions, Update Functions, and Delete Functions. (Around 15 of them at most?)
+        // TODO: Modify the Users Table to set UserType as an integer instead of a varchar(10).
+        // TODO: Modify the Courses Table to use CourseCode instead of CourseRubric as a column.
+        // TODO: Use Mockaroo to create testdata for Courses.
+
+
+
     }
 }
