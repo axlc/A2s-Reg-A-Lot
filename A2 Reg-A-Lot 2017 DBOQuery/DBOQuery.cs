@@ -73,7 +73,7 @@ namespace A2_Reg_A_Lot_2017
 
             // Create the command string
             string CommandString = string.Format("INSERT INTO dbo.ContactDetails " +
-                                                 "OUTPUT INSERTED.ContactDetails_ID " +
+                                                 "OUTPUT INSERTED.ContactDetail_ID " +
                                                  "VALUES ('{0}', '{1}', '{2}', " +
                                                          "'{3}', '{4}', '{5}', " +
                                                          "'{6}', '{7}', '{8}', " +
@@ -91,7 +91,6 @@ namespace A2_Reg_A_Lot_2017
                 insertNewContactDetails.CommandText = CommandString;
                 string id = insertNewContactDetails.ExecuteScalar().ToString();
                 int.TryParse(id, out newRow_ID);
-                // int.TryParse(insertNewContactDetails.Parameters["@UserCourse_ID"].Value.ToString(), out newRow_ID);
             }
 
             // Close the connection
@@ -128,7 +127,6 @@ namespace A2_Reg_A_Lot_2017
                 insertNewContactDetails.CommandText = CommandString;
                 string id = insertNewContactDetails.ExecuteScalar().ToString();
                 int.TryParse(id, out newRow_ID);
-                // int.TryParse(insertNewContactDetails.Parameters["@UserCourse_ID"].Value.ToString(), out newRow_ID);
             }
 
             // Close the connection
@@ -166,7 +164,7 @@ namespace A2_Reg_A_Lot_2017
                 insertNewContactDetails.CommandText = CommandString;
                 string id = insertNewContactDetails.ExecuteScalar().ToString();
                 int.TryParse(id, out newRow_ID);
-                // int.TryParse(insertNewContactDetails.Parameters["@UserCourse_ID"].Value.ToString(), out newRow_ID);
+                //Console.WriteLine("DLL: newRow = {0}", newRow_ID);
             }
 
             // Close the connection
@@ -182,7 +180,7 @@ namespace A2_Reg_A_Lot_2017
 
             // Create the command string
             string CommandString = string.Format("INSERT INTO dbo.UserCourses " +
-                                                 "OUTPUT INSERTED.UserCourses_ID " +
+                                                 "OUTPUT INSERTED.UserCourse_ID " +
                                                  "VALUES ('{0}', '{1}');",
                                                   User_ID, Course_ID);
             // To get the ID of the inserted row
@@ -193,7 +191,6 @@ namespace A2_Reg_A_Lot_2017
                 insertNewContactDetails.CommandText = CommandString;
                 string id = insertNewContactDetails.ExecuteScalar().ToString();
                 int.TryParse(id, out newRow_ID);
-                // int.TryParse(insertNewContactDetails.Parameters["@UserCourse_ID"].Value.ToString(), out newRow_ID);
             }
 
             // Close the connection
@@ -203,11 +200,6 @@ namespace A2_Reg_A_Lot_2017
             return newRow_ID;
         }
         // TODO: Implement (required) Select Functions, Update Functions, and Delete Functions. (Around 15 of them at most?)
-        // TODO: Modify the Users Table to set UserType as an integer instead of a varchar(10).
-        // TODO: Modify the Courses Table to use CourseCode instead of CourseRubric as a column.
         // TODO: Use Mockaroo to create testdata for Courses.
-
-
-
     }
 }
