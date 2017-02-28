@@ -20,7 +20,7 @@ namespace A2_Reg_A_Lot_2017
         private void button2_Click(object sender, EventArgs e)
         {
             //Closes the Select Courses window
-            this.Hide();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)

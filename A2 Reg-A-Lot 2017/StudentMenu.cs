@@ -20,11 +20,23 @@ namespace A2_Reg_A_Lot_2017
         private void btnUpdateInfo_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Allow Student to update their information");
-            /* NEEDS:
-             - Confirm Button
-             - Cancel Button
-             - To update the information: Name, Address, City, State, Zipcode, etc.
-              */
+
+            // Makes Text boxes editable for end-user to update their information:
+                txtFirstName.ReadOnly = false;
+                txtLastName.ReadOnly = false;
+                txtAddress.ReadOnly = false;
+                txtCity.ReadOnly = false;
+                txtState.ReadOnly = false;
+                txtZipcode.ReadOnly = false;
+                txtFax.ReadOnly = false;
+                txtEmail.ReadOnly = false;
+                txtPhone.ReadOnly = false;
+
+
+            //While text boxes are editable Confirm and Cancel buttons appear
+                btnConfirm.Visible = true;
+                btnCancel.Visible = true;
+
         }
 
         private void btnDropCourse_Click(object sender, EventArgs e)
@@ -81,11 +93,6 @@ namespace A2_Reg_A_Lot_2017
 
         }
 
-        private void lblDisplayCity_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtCity_TextChanged(object sender, EventArgs e)
         {
 
@@ -128,6 +135,43 @@ namespace A2_Reg_A_Lot_2017
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Clicking confirm should update the changes in the database, and make textboxes ReadOnly again");
+            txtFirstName.ReadOnly = true;
+            txtLastName.ReadOnly = true;
+            txtAddress.ReadOnly = true;
+            txtCity.ReadOnly = true;
+            txtState.ReadOnly = true;
+            txtZipcode.ReadOnly = true;
+            txtFax.ReadOnly = true;
+            txtEmail.ReadOnly = true;
+            txtPhone.ReadOnly = true;
+
+            //On click, it will hide Confirm & Cancel buttons:
+            btnCancel.Visible = false;
+            btnConfirm.Visible = false;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Should cancel the changes and change text boxes back to ReadOnly");
+            txtFirstName.ReadOnly = true;
+            txtLastName.ReadOnly = true;
+            txtAddress.ReadOnly = true;
+            txtCity.ReadOnly = true;
+            txtState.ReadOnly = true;
+            txtZipcode.ReadOnly = true;
+            txtFax.ReadOnly = true;
+            txtEmail.ReadOnly = true;
+            txtPhone.ReadOnly = true;
+
+            //On click, it will hide Confirm & Cancel buttons:
+            btnCancel.Visible = false;
+            btnConfirm.Visible = false;
 
         }
     }

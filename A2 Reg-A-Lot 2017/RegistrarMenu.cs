@@ -35,6 +35,7 @@ namespace A2_Reg_A_Lot_2017
         private void btnStudentSearch_Click(object sender, EventArgs e)
         {
             //Opens the Student Search Window
+            // To show studend information
             SearchStudents frm = new SearchStudents();
             frm.Show();
         }
@@ -42,7 +43,7 @@ namespace A2_Reg_A_Lot_2017
         private void btnModifyProfessor_Click(object sender, EventArgs e)
         {
             //Opens window to create new professors or modify existing ones
-            CreateUpdateProfessor frm = new CreateUpdateProfessor();
+            UpdateCreateProfessor frm = new UpdateCreateProfessor();
             frm.Show();
         }
 

@@ -31,7 +31,7 @@ namespace A2_Reg_A_Lot_2017
         private void btnCancel_Click(object sender, EventArgs e)
         {
             //Back button hides this window
-            this.Hide();
+            this.Close();
         }
     }
 }

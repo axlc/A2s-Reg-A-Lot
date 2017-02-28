@@ -20,7 +20,7 @@ namespace A2_Reg_A_Lot_2017
         private void btnBack_Click(object sender, EventArgs e)
         {
             // Take user back to Registrar Menu (Close this window)
-            this.Hide();
+            this.Close();
         }
 
         private void btnCancelCourse_Click(object sender, EventArgs e)
