@@ -53,6 +53,7 @@
             this.btnConfirmDrop.TabIndex = 4;
             this.btnConfirmDrop.Text = "Confirm";
             this.btnConfirmDrop.UseVisualStyleBackColor = true;
+            this.btnConfirmDrop.Click += new System.EventHandler(this.btnConfirmDrop_Click);
             // 
             // gbxLMyCourses
             // 

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label13 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.clbCourseCart = new System.Windows.Forms.CheckedListBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -67,15 +67,15 @@
             this.label13.TabIndex = 16;
             this.label13.Text = "Student Registration";
             // 
-            // button3
+            // btnRegister
             // 
-            this.button3.Location = new System.Drawing.Point(365, 583);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 36);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Register";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnRegister.Location = new System.Drawing.Point(365, 583);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(138, 36);
+            this.btnRegister.TabIndex = 13;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox2
             // 
@@ -316,15 +316,15 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Search for courses by Professors:";
             // 
-            // button2
+            // btnBack
             // 
-            this.button2.Location = new System.Drawing.Point(35, 583);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 36);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnBack.Location = new System.Drawing.Point(35, 583);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(138, 36);
+            this.btnBack.TabIndex = 12;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // StudentSelectCourse
             // 
@@ -332,10 +332,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(538, 630);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnBack);
             this.Name = "StudentSelectCourse";
             this.Text = "Course Selection";
             this.groupBox2.ResumeLayout(false);
@@ -350,7 +350,7 @@
         #endregion
 
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -372,7 +372,7 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.CheckedListBox clbCourseCart;
     }
 }
