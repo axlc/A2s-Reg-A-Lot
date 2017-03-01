@@ -26,7 +26,7 @@ namespace A2_Reg_A_Lot_2017
             MessageBox.Show("The courses you've selected will be registered to your courses.");
             /* NEEDS:
              - Are you sure? Y/N window
-             - To send selected courses to the student's list of courses is YES^
+             - To send selected courses to the student's list of courses if YES^
              - To possibly state the total in this window
              */
         }

@@ -162,7 +162,7 @@
             // 
             // btnCreateCourse
             // 
-            this.btnCreateCourse.Location = new System.Drawing.Point(259, 326);
+            this.btnCreateCourse.Location = new System.Drawing.Point(248, 326);
             this.btnCreateCourse.Name = "btnCreateCourse";
             this.btnCreateCourse.Size = new System.Drawing.Size(113, 32);
             this.btnCreateCourse.TabIndex = 94;
@@ -172,7 +172,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(119, 326);
+            this.btnBack.Location = new System.Drawing.Point(108, 326);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(113, 32);
             this.btnBack.TabIndex = 95;
@@ -228,7 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 373);
+            this.ClientSize = new System.Drawing.Size(455, 373);
             this.Controls.Add(this.txtNewCourseDuration);
             this.Controls.Add(this.txtNewCourseStartDate);
             this.Controls.Add(this.maskedTextBox1);

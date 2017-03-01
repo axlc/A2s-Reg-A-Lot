@@ -23,6 +23,8 @@ namespace A2_Reg_A_Lot_2017
             //Opens the Course Manager Window
             RegistrarCourseManager frm = new RegistrarCourseManager();
             frm.Show();
+            frm.PreviousForm = this;
+            this.Hide();
         }
 
         private void btnProfessorSearch_Click(object sender, EventArgs e)

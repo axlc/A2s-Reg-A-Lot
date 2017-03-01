@@ -26,6 +26,8 @@ namespace A2_Reg_A_Lot_2017
             // When link is clicked. Open the CreateAccount form 
             CreateAccount frm = new CreateAccount();
             frm.Show();
+            frm.PreviousForm = this;
+            this.Hide();
 
             //Hide login page when button is clicked 
             // this.Hide();

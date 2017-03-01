@@ -39,7 +39,10 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnCreateProfessor_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Should allow for the creation of a new Professor IN A NEW FORM");
+            CreateNewProfessor frm = new CreateNewProfessor();
+            frm.Show();
+            frm.PreviousForm = this;
+            this.Hide();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
