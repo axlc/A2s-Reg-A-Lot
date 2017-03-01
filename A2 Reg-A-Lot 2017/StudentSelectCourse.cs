@@ -23,8 +23,9 @@ namespace A2_Reg_A_Lot_2017
         {
             //Move on to the confirm registration window
             StudentCourseRegistration frm = new StudentCourseRegistration();
-
             frm.Show();
+            frm.PreviousForm = this;
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)

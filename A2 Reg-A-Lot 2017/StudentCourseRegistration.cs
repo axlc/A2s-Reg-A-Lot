@@ -12,6 +12,9 @@ namespace A2_Reg_A_Lot_2017
 {
     public partial class StudentCourseRegistration : Form
     {
+
+        public Form PreviousForm { get; set; }
+
         public StudentCourseRegistration()
         {
             InitializeComponent();
@@ -31,6 +34,8 @@ namespace A2_Reg_A_Lot_2017
         private void btnCancel_Click(object sender, EventArgs e)
         {
             // Closes the Confirm Registration window and takes user back to course select
+            // Should go back to previous form
+            PreviousForm.Show();
             this.Close();
         }
 

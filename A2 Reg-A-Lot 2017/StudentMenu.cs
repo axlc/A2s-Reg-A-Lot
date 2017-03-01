@@ -51,6 +51,7 @@ namespace A2_Reg_A_Lot_2017
             //Open the Course Selection window for registration
             StudentSelectCourse frm = new StudentSelectCourse();
             frm.Show();
+            this.Close();
         }
 
         private void lblFname_Click(object sender, EventArgs e)
@@ -172,6 +173,11 @@ namespace A2_Reg_A_Lot_2017
             //On click, it will hide Confirm & Cancel buttons:
             btnCancel.Visible = false;
             btnConfirm.Visible = false;
+
+        }
+
+        private void lblStartDate_Click(object sender, EventArgs e)
+        {
 
         }
     }
