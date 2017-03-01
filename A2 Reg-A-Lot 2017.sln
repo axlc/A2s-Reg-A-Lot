@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A2 Reg-A-Lot 2017 DBOQuery"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBOQuery - Testing", "DBOQuery - Testing\DBOQuery - Testing.csproj", "{915E1E34-E8B8-4656-84DF-008591AA8972}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reg-A-Lot-Class Library", "Reg-A-Lot-Class Library\Reg-A-Lot-Class Library.csproj", "{24EA34A8-9F08-4180-A242-F1FDFCA604B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{915E1E34-E8B8-4656-84DF-008591AA8972}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{915E1E34-E8B8-4656-84DF-008591AA8972}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{915E1E34-E8B8-4656-84DF-008591AA8972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24EA34A8-9F08-4180-A242-F1FDFCA604B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24EA34A8-9F08-4180-A242-F1FDFCA604B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24EA34A8-9F08-4180-A242-F1FDFCA604B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24EA34A8-9F08-4180-A242-F1FDFCA604B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
