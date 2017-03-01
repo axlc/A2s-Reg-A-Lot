@@ -64,6 +64,7 @@
             this.gbxLMyCourses.TabIndex = 3;
             this.gbxLMyCourses.TabStop = false;
             this.gbxLMyCourses.Text = "Select a course you would like to drop";
+            this.gbxLMyCourses.Enter += new System.EventHandler(this.gbxLMyCourses_Enter);
             // 
             // clbMyCourses
             // 
@@ -78,6 +79,7 @@
             this.clbMyCourses.Name = "clbMyCourses";
             this.clbMyCourses.Size = new System.Drawing.Size(322, 169);
             this.clbMyCourses.TabIndex = 0;
+            this.clbMyCourses.SelectedIndexChanged += new System.EventHandler(this.clbMyCourses_SelectedIndexChanged);
             // 
             // StudentDropCourse
             // 
