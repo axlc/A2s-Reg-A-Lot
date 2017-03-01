@@ -10,24 +10,22 @@ using System.Windows.Forms;
 
 namespace A2_Reg_A_Lot_2017
 {
-    public partial class ProfessorCancelCourse : Form
+    public partial class CreateNewProfessor : Form
     {
-        public ProfessorCancelCourse()
+        public CreateNewProfessor()
         {
             InitializeComponent();
         }
 
-        private void btnCancelCourseP_Click(object sender, EventArgs e)
+        private void btnConfirm_Click(object sender, EventArgs e)
         {
-            //Cancel a selected course. The courses that should be listed are ones registered to the specific professor.
-            MessageBox.Show("A course from this Professor's personal list will be canceled.");
+            MessageBox.Show("Save this information as a new Professor in the database.");
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            //Go back to ProfessorMenu
+            MessageBox.Show("Discard changes, do not save to database, go back to previous form.");
             this.Close();
-
         }
     }
 }

@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace A2_Reg_A_Lot_2017
 {
-    public partial class CreateUpdateStudent : Form
+    public partial class UpdateCreateProfessor : Form
     {
-        public CreateUpdateStudent()
+        public UpdateCreateProfessor()
         {
             InitializeComponent();
         }
 
-        private void btnEditStudent_Click(object sender, EventArgs e)
+        private void btnEditProfessor_Click(object sender, EventArgs e)
         {
             MessageBox.Show("The textboxes should become editable.");
             // Makes Text boxes editable for end-user to update their information:
@@ -34,18 +34,17 @@ namespace A2_Reg_A_Lot_2017
             // Confirm & Cancel buttons will appear when text boxes become editable
             btnConfirm.Visible = true;
             btnCancel.Visible = true;
+
         }
 
-        private void btnCreateStudent_Click(object sender, EventArgs e)
+        private void btnCreateProfessor_Click(object sender, EventArgs e)
         {
-            // The text boxes should become editable and allow for the creation of a new Student to add to the database or so
-            // Basically using the same Confirm and Cancel idea as above in the Idea 1 comment ^ Assuming that works
-            MessageBox.Show("Should allow for the creation of a new Student.");
+            MessageBox.Show("Should allow for the creation of a new Professor IN A NEW FORM");
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            //Closes the window
+            //Should close the window, preferably take back to the window before etc. etc.
             this.Close();
         }
 

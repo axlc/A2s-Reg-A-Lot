@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="A2 Reg-A-Lot 2017 DBOQuery">
+      <HintPath>..\A2 Reg-A-Lot 2017 DBOQuery\bin\Debug\A2 Reg-A-Lot 2017 DBOQuery.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -64,11 +67,17 @@
     <Compile Include="CreateCourse.Designer.cs">
       <DependentUpon>CreateCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateUpdateProfessor.cs">
+    <Compile Include="CreateNewProfessor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateUpdateProfessor.Designer.cs">
-      <DependentUpon>CreateUpdateProfessor.cs</DependentUpon>
+    <Compile Include="CreateNewProfessor.Designer.cs">
+      <DependentUpon>CreateNewProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCreateProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCreateProfessor.Designer.cs">
+      <DependentUpon>UpdateCreateProfessor.cs</DependentUpon>
     </Compile>
     <Compile Include="CreateUpdateStudent.cs">
       <SubType>Form</SubType>
@@ -165,8 +174,11 @@
     <EmbeddedResource Include="CreateCourse.resx">
       <DependentUpon>CreateCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateUpdateProfessor.resx">
-      <DependentUpon>CreateUpdateProfessor.cs</DependentUpon>
+    <EmbeddedResource Include="CreateNewProfessor.resx">
+      <DependentUpon>CreateNewProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCreateProfessor.resx">
+      <DependentUpon>UpdateCreateProfessor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateUpdateStudent.resx">
       <DependentUpon>CreateUpdateStudent.cs</DependentUpon>

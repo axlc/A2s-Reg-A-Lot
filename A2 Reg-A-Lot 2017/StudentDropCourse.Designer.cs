@@ -43,6 +43,7 @@
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnConfirmDrop
             // 
@@ -52,6 +53,7 @@
             this.btnConfirmDrop.TabIndex = 4;
             this.btnConfirmDrop.Text = "Confirm";
             this.btnConfirmDrop.UseVisualStyleBackColor = true;
+            this.btnConfirmDrop.Click += new System.EventHandler(this.btnConfirmDrop_Click);
             // 
             // gbxLMyCourses
             // 

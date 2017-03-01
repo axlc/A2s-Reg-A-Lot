@@ -11,10 +11,23 @@ using System.Windows.Forms;
 namespace A2_Reg_A_Lot_2017
 {
     public partial class StudentDropCourse : Form
+
     {
+
         public StudentDropCourse()
         {
             InitializeComponent();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnConfirmDrop_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("The Courses were dropped.");
+            this.Close();
         }
     }
 }

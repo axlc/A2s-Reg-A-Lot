@@ -16,5 +16,15 @@ namespace A2_Reg_A_Lot_2017
         {
             InitializeComponent();
         }
+
+        private void btnCreateCourse_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("A Course was created");
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
