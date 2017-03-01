@@ -30,10 +30,8 @@
         {
             this.gbxNewProfessorInfo = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtFax = new System.Windows.Forms.TextBox();
-            this.txtZipcode = new System.Windows.Forms.TextBox();
             this.txtState = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -51,16 +49,18 @@
             this.lblDisplayState = new System.Windows.Forms.Label();
             this.lblDisplayZipCode = new System.Windows.Forms.Label();
             this.lblDisplayFax = new System.Windows.Forms.Label();
+            this.txtZipcode = new System.Windows.Forms.MaskedTextBox();
+            this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.gbxNewProfessorInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxNewProfessorInfo
             // 
-            this.gbxNewProfessorInfo.Controls.Add(this.comboBox1);
+            this.gbxNewProfessorInfo.Controls.Add(this.txtZipcode);
             this.gbxNewProfessorInfo.Controls.Add(this.txtPhone);
+            this.gbxNewProfessorInfo.Controls.Add(this.comboBox1);
             this.gbxNewProfessorInfo.Controls.Add(this.txtEmail);
             this.gbxNewProfessorInfo.Controls.Add(this.txtFax);
-            this.gbxNewProfessorInfo.Controls.Add(this.txtZipcode);
             this.gbxNewProfessorInfo.Controls.Add(this.txtState);
             this.gbxNewProfessorInfo.Controls.Add(this.txtCity);
             this.gbxNewProfessorInfo.Controls.Add(this.txtAddress);
@@ -93,14 +93,6 @@
             this.comboBox1.Size = new System.Drawing.Size(139, 21);
             this.comboBox1.TabIndex = 136;
             // 
-            // txtPhone
-            // 
-            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPhone.Location = new System.Drawing.Point(98, 253);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(139, 13);
-            this.txtPhone.TabIndex = 135;
-            // 
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -116,14 +108,6 @@
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(139, 13);
             this.txtFax.TabIndex = 133;
-            // 
-            // txtZipcode
-            // 
-            this.txtZipcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtZipcode.Location = new System.Drawing.Point(98, 180);
-            this.txtZipcode.Name = "txtZipcode";
-            this.txtZipcode.Size = new System.Drawing.Size(139, 13);
-            this.txtZipcode.TabIndex = 132;
             // 
             // txtState
             // 
@@ -275,6 +259,22 @@
             this.lblDisplayFax.TabIndex = 105;
             this.lblDisplayFax.Text = "Fax:";
             // 
+            // txtZipcode
+            // 
+            this.txtZipcode.Location = new System.Drawing.Point(98, 177);
+            this.txtZipcode.Mask = "00000-9999";
+            this.txtZipcode.Name = "txtZipcode";
+            this.txtZipcode.Size = new System.Drawing.Size(139, 20);
+            this.txtZipcode.TabIndex = 140;
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(98, 252);
+            this.txtPhone.Mask = "(999) 000-0000";
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(139, 20);
+            this.txtPhone.TabIndex = 139;
+            // 
             // CreateNewProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,10 +293,8 @@
 
         private System.Windows.Forms.GroupBox gbxNewProfessorInfo;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtFax;
-        private System.Windows.Forms.TextBox txtZipcode;
         private System.Windows.Forms.TextBox txtState;
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.TextBox txtAddress;
@@ -314,5 +312,7 @@
         private System.Windows.Forms.Label lblDisplayState;
         private System.Windows.Forms.Label lblDisplayZipCode;
         private System.Windows.Forms.Label lblDisplayFax;
+        private System.Windows.Forms.MaskedTextBox txtZipcode;
+        private System.Windows.Forms.MaskedTextBox txtPhone;
     }
 }

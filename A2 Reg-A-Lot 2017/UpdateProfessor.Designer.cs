@@ -31,10 +31,8 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.gbxProfessorInfo = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtFax = new System.Windows.Forms.TextBox();
-            this.txtZipcode = new System.Windows.Forms.TextBox();
             this.txtState = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -62,6 +60,8 @@
             this.btnCreateProfessor = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
+            this.txtPhone = new System.Windows.Forms.MaskedTextBox();
+            this.txtZipcode = new System.Windows.Forms.MaskedTextBox();
             this.gbxProfessorInfo.SuspendLayout();
             this.gbxProfessorSearch.SuspendLayout();
             this.SuspendLayout();
@@ -78,11 +78,11 @@
             // 
             // gbxProfessorInfo
             // 
-            this.gbxProfessorInfo.Controls.Add(this.comboBox1);
             this.gbxProfessorInfo.Controls.Add(this.txtPhone);
+            this.gbxProfessorInfo.Controls.Add(this.txtZipcode);
+            this.gbxProfessorInfo.Controls.Add(this.comboBox1);
             this.gbxProfessorInfo.Controls.Add(this.txtEmail);
             this.gbxProfessorInfo.Controls.Add(this.txtFax);
-            this.gbxProfessorInfo.Controls.Add(this.txtZipcode);
             this.gbxProfessorInfo.Controls.Add(this.txtState);
             this.gbxProfessorInfo.Controls.Add(this.txtCity);
             this.gbxProfessorInfo.Controls.Add(this.txtAddress);
@@ -113,15 +113,6 @@
             this.comboBox1.Size = new System.Drawing.Size(139, 21);
             this.comboBox1.TabIndex = 159;
             // 
-            // txtPhone
-            // 
-            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPhone.Location = new System.Drawing.Point(100, 238);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.ReadOnly = true;
-            this.txtPhone.Size = new System.Drawing.Size(139, 13);
-            this.txtPhone.TabIndex = 158;
-            // 
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -139,15 +130,6 @@
             this.txtFax.ReadOnly = true;
             this.txtFax.Size = new System.Drawing.Size(139, 13);
             this.txtFax.TabIndex = 156;
-            // 
-            // txtZipcode
-            // 
-            this.txtZipcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtZipcode.Location = new System.Drawing.Point(100, 165);
-            this.txtZipcode.Name = "txtZipcode";
-            this.txtZipcode.ReadOnly = true;
-            this.txtZipcode.Size = new System.Drawing.Size(139, 13);
-            this.txtZipcode.TabIndex = 155;
             // 
             // txtState
             // 
@@ -411,7 +393,27 @@
             this.btnConfirm.Visible = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
-            // UpdateCreateProfessor
+            // txtPhone
+            // 
+            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPhone.Location = new System.Drawing.Point(100, 238);
+            this.txtPhone.Mask = "(999) 000-0000";
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.ReadOnly = true;
+            this.txtPhone.Size = new System.Drawing.Size(139, 13);
+            this.txtPhone.TabIndex = 182;
+            // 
+            // txtZipcode
+            // 
+            this.txtZipcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtZipcode.Location = new System.Drawing.Point(100, 165);
+            this.txtZipcode.Mask = "00000-9999";
+            this.txtZipcode.Name = "txtZipcode";
+            this.txtZipcode.ReadOnly = true;
+            this.txtZipcode.Size = new System.Drawing.Size(139, 13);
+            this.txtZipcode.TabIndex = 183;
+            // 
+            // UpdateProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -425,7 +427,7 @@
             this.Controls.Add(this.lbxProfessors);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.gbxProfessorSearch);
-            this.Name = "UpdateCreateProfessor";
+            this.Name = "UpdateProfessor";
             this.Text = "Add or Update Professor";
             this.gbxProfessorInfo.ResumeLayout(false);
             this.gbxProfessorInfo.PerformLayout();
@@ -451,10 +453,8 @@
         private System.Windows.Forms.Button btnEditProfessor;
         private System.Windows.Forms.Button btnCreateProfessor;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtFax;
-        private System.Windows.Forms.TextBox txtZipcode;
         private System.Windows.Forms.TextBox txtState;
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.TextBox txtAddress;
@@ -472,5 +472,7 @@
         private System.Windows.Forms.Label lblDisplayFax;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.MaskedTextBox txtPhone;
+        private System.Windows.Forms.MaskedTextBox txtZipcode;
     }
 }

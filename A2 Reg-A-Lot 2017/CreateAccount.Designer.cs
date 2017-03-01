@@ -50,7 +50,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtZipCode = new System.Windows.Forms.MaskedTextBox();
             this.btnGoBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -245,13 +245,13 @@
             this.txtPhone.Size = new System.Drawing.Size(126, 20);
             this.txtPhone.TabIndex = 46;
             // 
-            // maskedTextBox1
+            // txtZipCode
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(130, 251);
-            this.maskedTextBox1.Mask = "00000-9999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(126, 20);
-            this.maskedTextBox1.TabIndex = 47;
+            this.txtZipCode.Location = new System.Drawing.Point(130, 251);
+            this.txtZipCode.Mask = "00000-9999";
+            this.txtZipCode.Name = "txtZipCode";
+            this.txtZipCode.Size = new System.Drawing.Size(126, 20);
+            this.txtZipCode.TabIndex = 47;
             // 
             // btnGoBack
             // 
@@ -269,7 +269,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 454);
             this.Controls.Add(this.btnGoBack);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.txtZipCode);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -323,7 +323,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.MaskedTextBox txtPhone;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txtZipCode;
         private System.Windows.Forms.Button btnGoBack;
     }
 }
