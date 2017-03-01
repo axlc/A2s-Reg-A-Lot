@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A2 Reg-A-Lot 2017", "A2 Reg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A2 Reg-A-Lot 2017 DBOQuery", "A2 Reg-A-Lot 2017 DBOQuery\A2 Reg-A-Lot 2017 DBOQuery.csproj", "{8047B17D-D16B-4167-8FCA-FCB4ABF4F64A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBOQuery - Testing", "DBOQuery - Testing\DBOQuery - Testing.csproj", "{915E1E34-E8B8-4656-84DF-008591AA8972}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8047B17D-D16B-4167-8FCA-FCB4ABF4F64A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8047B17D-D16B-4167-8FCA-FCB4ABF4F64A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8047B17D-D16B-4167-8FCA-FCB4ABF4F64A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{915E1E34-E8B8-4656-84DF-008591AA8972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{915E1E34-E8B8-4656-84DF-008591AA8972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{915E1E34-E8B8-4656-84DF-008591AA8972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{915E1E34-E8B8-4656-84DF-008591AA8972}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
