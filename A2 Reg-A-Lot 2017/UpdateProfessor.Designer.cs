@@ -1,6 +1,6 @@
 ﻿namespace A2_Reg_A_Lot_2017
 {
-    partial class UpdateCreateProfessor
+    partial class UpdateProfessor
     {
         /// <summary>
         /// Required designer variable.
@@ -371,7 +371,7 @@
             // 
             // btnEditProfessor
             // 
-            this.btnEditProfessor.Location = new System.Drawing.Point(324, 302);
+            this.btnEditProfessor.Location = new System.Drawing.Point(323, 302);
             this.btnEditProfessor.Name = "btnEditProfessor";
             this.btnEditProfessor.Size = new System.Drawing.Size(75, 40);
             this.btnEditProfessor.TabIndex = 79;
@@ -391,7 +391,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(502, 322);
+            this.btnCancel.Location = new System.Drawing.Point(487, 312);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 127;
@@ -402,7 +402,7 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(502, 298);
+            this.btnConfirm.Location = new System.Drawing.Point(406, 312);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 23);
             this.btnConfirm.TabIndex = 126;

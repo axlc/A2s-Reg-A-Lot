@@ -54,6 +54,7 @@
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.columnCourseSeats = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -71,7 +72,7 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(404, 726);
+            this.btnRegister.Location = new System.Drawing.Point(363, 722);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(138, 36);
             this.btnRegister.TabIndex = 13;
@@ -91,7 +92,7 @@
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Location = new System.Drawing.Point(12, 163);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(590, 557);
+            this.groupBox2.Size = new System.Drawing.Size(691, 544);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Select Classes";
@@ -112,7 +113,7 @@
             this.rtbCourseDescription.Location = new System.Drawing.Point(23, 276);
             this.rtbCourseDescription.Name = "rtbCourseDescription";
             this.rtbCourseDescription.ReadOnly = true;
-            this.rtbCourseDescription.Size = new System.Drawing.Size(544, 83);
+            this.rtbCourseDescription.Size = new System.Drawing.Size(643, 61);
             this.rtbCourseDescription.TabIndex = 17;
             this.rtbCourseDescription.Text = "Text description for a course should come up  here if one was set";
             // 
@@ -125,11 +126,12 @@
             this.columnSection,
             this.columnProfessor,
             this.columnSchedule,
-            this.columnStartDate});
+            this.columnStartDate,
+            this.columnCourseSeats});
             this.dataGridView1.Location = new System.Drawing.Point(23, 49);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(544, 151);
+            this.dataGridView1.Size = new System.Drawing.Size(643, 151);
             this.dataGridView1.TabIndex = 16;
             // 
             // columnCourseTitle
@@ -167,9 +169,9 @@
             this.clbCourseCart.FormattingEnabled = true;
             this.clbCourseCart.Items.AddRange(new object[] {
             "Show Course Names of Added Courses as they are added here"});
-            this.clbCourseCart.Location = new System.Drawing.Point(23, 393);
+            this.clbCourseCart.Location = new System.Drawing.Point(23, 376);
             this.clbCourseCart.Name = "clbCourseCart";
-            this.clbCourseCart.Size = new System.Drawing.Size(544, 124);
+            this.clbCourseCart.Size = new System.Drawing.Size(643, 124);
             this.clbCourseCart.TabIndex = 15;
             // 
             // label7
@@ -186,7 +188,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(20, 371);
+            this.label6.Location = new System.Drawing.Point(20, 354);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(197, 13);
             this.label6.TabIndex = 8;
@@ -194,7 +196,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(36, 521);
+            this.button4.Location = new System.Drawing.Point(36, 504);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(114, 26);
             this.button4.TabIndex = 7;
@@ -223,7 +225,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 35);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(590, 122);
+            this.groupBox1.Size = new System.Drawing.Size(691, 122);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search for a Course";
@@ -231,7 +233,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(138, 23);
+            this.label1.Location = new System.Drawing.Point(189, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 13);
             this.label1.TabIndex = 0;
@@ -239,7 +241,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(311, 19);
+            this.textBox1.Location = new System.Drawing.Point(362, 19);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(138, 20);
             this.textBox1.TabIndex = 1;
@@ -254,7 +256,7 @@
             "Computer Information Systems",
             "Math",
             "Literature"});
-            this.listBox3.Location = new System.Drawing.Point(311, 91);
+            this.listBox3.Location = new System.Drawing.Point(362, 91);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(138, 17);
             this.listBox3.TabIndex = 7;
@@ -262,7 +264,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(138, 47);
+            this.label2.Location = new System.Drawing.Point(189, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 13);
             this.label2.TabIndex = 2;
@@ -271,7 +273,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(138, 93);
+            this.label4.Location = new System.Drawing.Point(189, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(171, 13);
             this.label4.TabIndex = 6;
@@ -289,7 +291,7 @@
             "Section 6",
             "Section 7",
             "Section 8"});
-            this.listBox1.Location = new System.Drawing.Point(311, 45);
+            this.listBox1.Location = new System.Drawing.Point(362, 45);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(138, 17);
             this.listBox1.TabIndex = 3;
@@ -301,7 +303,7 @@
             "Professor 1",
             "Professor 2",
             "Professor 3"});
-            this.listBox2.Location = new System.Drawing.Point(311, 68);
+            this.listBox2.Location = new System.Drawing.Point(362, 68);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(138, 17);
             this.listBox2.TabIndex = 5;
@@ -309,7 +311,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(138, 70);
+            this.label3.Location = new System.Drawing.Point(189, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 13);
             this.label3.TabIndex = 4;
@@ -317,7 +319,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(74, 726);
+            this.btnBack.Location = new System.Drawing.Point(200, 722);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(138, 36);
             this.btnBack.TabIndex = 12;
@@ -325,11 +327,17 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // columnCourseSeats
+            // 
+            this.columnCourseSeats.HeaderText = "Seats";
+            this.columnCourseSeats.Name = "columnCourseSeats";
+            this.columnCourseSeats.ReadOnly = true;
+            // 
             // StudentSelectCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 770);
+            this.ClientSize = new System.Drawing.Size(715, 770);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.groupBox2);
@@ -375,5 +383,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnSchedule;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnStartDate;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnCourseSeats;
     }
 }

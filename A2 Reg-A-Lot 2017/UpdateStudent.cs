@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace A2_Reg_A_Lot_2017
 {
-    public partial class CreateUpdateStudent : Form
+    public partial class UpdateStudent : Form
     {
-        public CreateUpdateStudent()
+
+        public UpdateStudent()
         {
             InitializeComponent();
         }
@@ -38,14 +39,15 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnCreateStudent_Click(object sender, EventArgs e)
         {
-            // The text boxes should become editable and allow for the creation of a new Student to add to the database or so
-            // Basically using the same Confirm and Cancel idea as above in the Idea 1 comment ^ Assuming that works
-            MessageBox.Show("Should allow for the creation of a new Student.");
+            CreateNewStudent frm = new CreateNewStudent();
+            frm.Show();
+            frm.PreviousForm = this;
+            this.Hide();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            //Closes the window
+
             this.Close();
         }
 

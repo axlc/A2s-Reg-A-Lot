@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace A2_Reg_A_Lot_2017
 {
-    public partial class UpdateCreateProfessor : Form
+    public partial class UpdateProfessor : Form
     {
-        public UpdateCreateProfessor()
+        public Form PreviousForm { get; set; }
+        public UpdateProfessor()
         {
             InitializeComponent();
         }
@@ -47,7 +48,9 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            //Should close the window, preferably take back to the window before etc. etc.
+
+            RegistrarMenu frm = new RegistrarMenu();
+            PreviousForm.Show();
             this.Close();
         }
 

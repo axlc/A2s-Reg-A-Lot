@@ -40,20 +40,25 @@ namespace A2_Reg_A_Lot_2017
             // To show studend information
             SearchStudents frm = new SearchStudents();
             frm.Show();
+            frm.PreviousForm = this;
+            this.Hide();
         }
 
         private void btnModifyProfessor_Click(object sender, EventArgs e)
         {
             //Opens window to create new professors or modify existing ones
-            UpdateCreateProfessor frm = new UpdateCreateProfessor();
+            UpdateProfessor frm = new UpdateProfessor();
             frm.Show();
+            frm.PreviousForm = this;
+            this.Hide();
         }
 
         private void btnModifyStudent_Click(object sender, EventArgs e)
         {
-            // Opens the CreateUpdateStudent window to allow for editing of student info or creationg of a new student
-            CreateUpdateStudent frm = new CreateUpdateStudent();
+            // Opens the UpdateStudent window to allow for editing of student info or creationg of a new student
+            UpdateStudent frm = new UpdateStudent();
             frm.Show();
+
         }
 
         private void RegistrarMenu_Load(object sender, EventArgs e)
