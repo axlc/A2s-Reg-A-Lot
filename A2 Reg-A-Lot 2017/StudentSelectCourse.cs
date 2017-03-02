@@ -12,7 +12,7 @@ namespace A2_Reg_A_Lot_2017
 {
     public partial class StudentSelectCourse : Form
     {              
-      
+      public Form PreviousForm { get; set; }
 
         public StudentSelectCourse()
         {
@@ -21,10 +21,12 @@ namespace A2_Reg_A_Lot_2017
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
             //Move on to the confirm registration window
             StudentCourseRegistration frm = new StudentCourseRegistration();
-
             frm.Show();
+            frm.PreviousForm = this;
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,7 +37,29 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            StudentMenu frm = new StudentMenu();
+            PreviousForm.Show();
             this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

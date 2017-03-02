@@ -12,6 +12,9 @@ namespace A2_Reg_A_Lot_2017
 {
     public partial class CreateNewProfessor : Form
     {
+        public Form PreviousForm { get; set; }
+        //For Go back buttons
+
         public CreateNewProfessor()
         {
             InitializeComponent();
@@ -24,7 +27,8 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Discard changes, do not save to database, go back to previous form.");
+            MessageBox.Show("Discard changes");
+            PreviousForm.Show();
             this.Close();
         }
     }

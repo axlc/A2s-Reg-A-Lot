@@ -12,6 +12,9 @@ namespace A2_Reg_A_Lot_2017
 {
     public partial class CreateAccount : Form
     {
+        public Form PreviousForm { get; set; }
+        //For go Back Buttons^
+
         public CreateAccount()
         {
             InitializeComponent();
@@ -20,6 +23,13 @@ namespace A2_Reg_A_Lot_2017
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Sign up was clicked. Do appropriate actions");
+        }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            Login frm = new Login();
+            frm.Show();
+            this.Hide();
         }
     }
 }

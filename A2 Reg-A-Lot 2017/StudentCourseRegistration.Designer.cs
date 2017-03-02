@@ -33,20 +33,21 @@
             this.gbxConfirmStudentRegistration = new System.Windows.Forms.GroupBox();
             this.lblTotalCost = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.btnRemoveCourse = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.columnCourseTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnSection = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnProfessor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnSchedule = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnStartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnTuition = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxConfirmStudentRegistration.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(232, 225);
+            this.btnConfirm.Location = new System.Drawing.Point(232, 308);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(109, 39);
             this.btnConfirm.TabIndex = 7;
@@ -56,7 +57,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(347, 225);
+            this.btnCancel.Location = new System.Drawing.Point(347, 308);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 39);
             this.btnCancel.TabIndex = 6;
@@ -66,19 +67,13 @@
             // 
             // gbxConfirmStudentRegistration
             // 
+            this.gbxConfirmStudentRegistration.Controls.Add(this.dataGridView1);
             this.gbxConfirmStudentRegistration.Controls.Add(this.lblTotalCost);
             this.gbxConfirmStudentRegistration.Controls.Add(this.label2);
-            this.gbxConfirmStudentRegistration.Controls.Add(this.label1);
-            this.gbxConfirmStudentRegistration.Controls.Add(this.label12);
-            this.gbxConfirmStudentRegistration.Controls.Add(this.label11);
-            this.gbxConfirmStudentRegistration.Controls.Add(this.label10);
-            this.gbxConfirmStudentRegistration.Controls.Add(this.label9);
-            this.gbxConfirmStudentRegistration.Controls.Add(this.label8);
             this.gbxConfirmStudentRegistration.Controls.Add(this.btnRemoveCourse);
-            this.gbxConfirmStudentRegistration.Controls.Add(this.listBox1);
             this.gbxConfirmStudentRegistration.Location = new System.Drawing.Point(12, 12);
             this.gbxConfirmStudentRegistration.Name = "gbxConfirmStudentRegistration";
-            this.gbxConfirmStudentRegistration.Size = new System.Drawing.Size(660, 202);
+            this.gbxConfirmStudentRegistration.Size = new System.Drawing.Size(665, 287);
             this.gbxConfirmStudentRegistration.TabIndex = 5;
             this.gbxConfirmStudentRegistration.TabStop = false;
             this.gbxConfirmStudentRegistration.Text = "The following courses will be registered";
@@ -86,78 +81,25 @@
             // lblTotalCost
             // 
             this.lblTotalCost.AutoSize = true;
-            this.lblTotalCost.Location = new System.Drawing.Point(50, 173);
+            this.lblTotalCost.ForeColor = System.Drawing.Color.Red;
+            this.lblTotalCost.Location = new System.Drawing.Point(50, 263);
             this.lblTotalCost.Name = "lblTotalCost";
-            this.lblTotalCost.Size = new System.Drawing.Size(34, 13);
+            this.lblTotalCost.Size = new System.Drawing.Size(240, 13);
             this.lblTotalCost.TabIndex = 22;
-            this.lblTotalCost.Text = "$0.00";
+            this.lblTotalCost.Text = "ADD UP THE TUITION AND DISPLAY IT HERE";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 173);
+            this.label2.Location = new System.Drawing.Point(18, 263);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 21;
             this.label2.Text = "Total:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(580, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Cost";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(461, 25);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 13);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "Start Date";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(358, 25);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 13);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Schedule";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(253, 25);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 13);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Professor";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(155, 25);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 13);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Section";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(38, 25);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 13);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Course Title";
-            // 
             // btnRemoveCourse
             // 
-            this.btnRemoveCourse.Location = new System.Drawing.Point(558, 168);
+            this.btnRemoveCourse.Location = new System.Drawing.Point(581, 256);
             this.btnRemoveCourse.Name = "btnRemoveCourse";
             this.btnRemoveCourse.Size = new System.Drawing.Size(75, 23);
             this.btnRemoveCourse.TabIndex = 2;
@@ -165,22 +107,64 @@
             this.btnRemoveCourse.UseVisualStyleBackColor = true;
             this.btnRemoveCourse.Click += new System.EventHandler(this.btnRemoveCourse_Click);
             // 
-            // listBox1
+            // dataGridView1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            "TEMPORARY PLACEHOLDER",
-            "We want to try to use a datagrid control bound to the data used here I think"});
-            this.listBox1.Location = new System.Drawing.Point(9, 41);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(635, 121);
-            this.listBox1.TabIndex = 1;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.columnCourseTitle,
+            this.columnSection,
+            this.columnProfessor,
+            this.columnSchedule,
+            this.columnStartDate,
+            this.columnTuition});
+            this.dataGridView1.Location = new System.Drawing.Point(13, 19);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(643, 228);
+            this.dataGridView1.TabIndex = 23;
+            // 
+            // columnCourseTitle
+            // 
+            this.columnCourseTitle.HeaderText = "Course Title";
+            this.columnCourseTitle.Name = "columnCourseTitle";
+            this.columnCourseTitle.ReadOnly = true;
+            // 
+            // columnSection
+            // 
+            this.columnSection.HeaderText = "Section";
+            this.columnSection.Name = "columnSection";
+            this.columnSection.ReadOnly = true;
+            // 
+            // columnProfessor
+            // 
+            this.columnProfessor.HeaderText = "Professor";
+            this.columnProfessor.Name = "columnProfessor";
+            this.columnProfessor.ReadOnly = true;
+            // 
+            // columnSchedule
+            // 
+            this.columnSchedule.HeaderText = "Schedule";
+            this.columnSchedule.Name = "columnSchedule";
+            this.columnSchedule.ReadOnly = true;
+            // 
+            // columnStartDate
+            // 
+            this.columnStartDate.HeaderText = "Start Date";
+            this.columnStartDate.Name = "columnStartDate";
+            this.columnStartDate.ReadOnly = true;
+            // 
+            // columnTuition
+            // 
+            this.columnTuition.HeaderText = "Tuition";
+            this.columnTuition.Name = "columnTuition";
+            this.columnTuition.ReadOnly = true;
             // 
             // StudentCourseRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 277);
+            this.ClientSize = new System.Drawing.Size(689, 355);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.gbxConfirmStudentRegistration);
@@ -188,6 +172,7 @@
             this.Text = "Register for Courses";
             this.gbxConfirmStudentRegistration.ResumeLayout(false);
             this.gbxConfirmStudentRegistration.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,13 +184,13 @@
         private System.Windows.Forms.GroupBox gbxConfirmStudentRegistration;
         private System.Windows.Forms.Label lblTotalCost;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnRemoveCourse;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnCourseTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnSection;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnProfessor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnSchedule;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnStartDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnTuition;
     }
 }

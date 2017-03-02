@@ -10,8 +10,12 @@ using System.Windows.Forms;
 
 namespace A2_Reg_A_Lot_2017
 {
+  
     public partial class RegistrarCourseManager : Form
     {
+
+        public Form PreviousForm { get; set; }
+
         public RegistrarCourseManager()
         {
             InitializeComponent();
@@ -20,6 +24,7 @@ namespace A2_Reg_A_Lot_2017
         private void btnBack_Click(object sender, EventArgs e)
         {
             // Take user back to Registrar Menu (Close this window)
+            PreviousForm.Show();
             this.Close();
         }
 
@@ -32,7 +37,9 @@ namespace A2_Reg_A_Lot_2017
         private void btnCreateCourse_Click(object sender, EventArgs e)
         {
             CreateCourse frm = new CreateCourse();
+            frm.PreviousForm = this;
             frm.Show();
+            this.Hide();
         }
 
         private void btnResumeCourse_Click(object sender, EventArgs e)

@@ -10,14 +10,16 @@ using System.Windows.Forms;
 
 namespace A2_Reg_A_Lot_2017
 {
-    public partial class UpdateCreateProfessor : Form
+    public partial class UpdateStudent : Form
     {
-        public UpdateCreateProfessor()
+        public Form PreviousForm { get; set; }
+
+        public UpdateStudent()
         {
             InitializeComponent();
         }
 
-        private void btnEditProfessor_Click(object sender, EventArgs e)
+        private void btnEditStudent_Click(object sender, EventArgs e)
         {
             MessageBox.Show("The textboxes should become editable.");
             // Makes Text boxes editable for end-user to update their information:
@@ -34,12 +36,11 @@ namespace A2_Reg_A_Lot_2017
             // Confirm & Cancel buttons will appear when text boxes become editable
             btnConfirm.Visible = true;
             btnCancel.Visible = true;
-
         }
 
-        private void btnCreateProfessor_Click(object sender, EventArgs e)
+        private void btnCreateStudent_Click(object sender, EventArgs e)
         {
-            CreateNewProfessor frm = new CreateNewProfessor();
+            CreateNewStudent frm = new CreateNewStudent();
             frm.Show();
             frm.PreviousForm = this;
             this.Hide();
@@ -47,7 +48,8 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            //Should close the window, preferably take back to the window before etc. etc.
+            RegistrarMenu frm = new RegistrarMenu();
+            PreviousForm.Show();
             this.Close();
         }
 

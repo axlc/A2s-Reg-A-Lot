@@ -44,6 +44,8 @@ namespace A2_Reg_A_Lot_2017
             //Opens the Drop Courses window: StudentDropCourse
             StudentDropCourse frm = new StudentDropCourse();
             frm.Show();
+            frm.PreviousForm = this;
+            this.Hide();
         }
 
         private void btnRegisterCourse_Click(object sender, EventArgs e)
@@ -51,6 +53,9 @@ namespace A2_Reg_A_Lot_2017
             //Open the Course Selection window for registration
             StudentSelectCourse frm = new StudentSelectCourse();
             frm.Show();
+            frm.PreviousForm = this;
+            this.Hide();
+            
         }
 
         private void lblFname_Click(object sender, EventArgs e)
@@ -172,6 +177,11 @@ namespace A2_Reg_A_Lot_2017
             //On click, it will hide Confirm & Cancel buttons:
             btnCancel.Visible = false;
             btnConfirm.Visible = false;
+
+        }
+
+        private void lblStartDate_Click(object sender, EventArgs e)
+        {
 
         }
     }
