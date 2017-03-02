@@ -36,7 +36,7 @@ namespace A2_Reg_A_Lot_2017
             Connection = new SqlConnection();
             Connection.ConnectionString = "Server=cis1.actx.edu;Database=Project2;User Id=db2;Password=db20;";
         }
-        
+
         /// <summary>
         /// Overloaded Constructor to allow the user to pass in the string "azure" to connect to the azure server.
         /// <para>Otherwise, connects to the actx server.</para>
@@ -107,7 +107,7 @@ namespace A2_Reg_A_Lot_2017
             // And we're done.
             return newRow_ID;
         }
-        
+
         /// <summary>
         /// Insert a new record into the Courses Table
         /// </summary>
@@ -169,7 +169,7 @@ namespace A2_Reg_A_Lot_2017
             {
                 throw new System.ArgumentException("UserType must be 1, 2 or 3 for Student, Professor or Registrar", "UserType");
             }
-            
+
             // Open the connection
             Connection.Open();
 
@@ -255,7 +255,7 @@ namespace A2_Reg_A_Lot_2017
                     }
                 }
 
-                if(numRows == 1)
+                if (numRows == 1)
                 {
                     logonOutcome = true;
                 }
@@ -314,7 +314,7 @@ namespace A2_Reg_A_Lot_2017
                 {
                     while (reader.Read())
                     {
-                        for(int i = 0; i < 10; i++)
+                        for (int i = 0; i < 10; i++)
                             queryResults.Add(reader.GetString(i));
                     }
                 }
