@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="A2 Reg-A-Lot 2017 DBOQuery">
+      <HintPath>..\A2 Reg-A-Lot 2017 DBOQuery\bin\Debug\A2 Reg-A-Lot 2017 DBOQuery.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,11 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="UserClass.cs" />
     <Compile Include="Professor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registrar.cs" />
     <Compile Include="Student.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\A2 Reg-A-Lot 2017\A2 Reg-A-Lot 2017.csproj">
+      <Project>{7EFFDDCB-4125-4EE9-8F9C-2656EB9FE8C4}</Project>
+      <Name>A2 Reg-A-Lot 2017</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

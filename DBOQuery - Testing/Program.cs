@@ -26,7 +26,7 @@ namespace DBOQuery___Testing
                 false,
                 
                 // Log On:
-                false,
+                true,
 
                 // Add New Courses and Registrations:
                 false,
@@ -70,7 +70,7 @@ namespace DBOQuery___Testing
                 TestFunctions.InsertIntoContactDetails(User_ID, FirstName, LastName,
                               AddressLine1, AddressLine2, AddressCity, AddressState,
                               AddressZipCode, PhoneNumber, FaxNumber, Email);
-                
+
 
                 newUser_ID = TestFunctions.InsertIntoUsers("joeStudentsPassword", 1);
                 User_ID = newUser_ID;
@@ -87,7 +87,7 @@ namespace DBOQuery___Testing
                 TestFunctions.InsertIntoContactDetails(User_ID, FirstName, LastName,
                               AddressLine1, AddressLine2, AddressCity, AddressState,
                               AddressZipCode, PhoneNumber, FaxNumber, Email);
-                
+
 
                 newUser_ID = TestFunctions.InsertIntoUsers("bobProfessorsPassword", 2);
                 User_ID = newUser_ID;
@@ -173,7 +173,7 @@ namespace DBOQuery___Testing
                               AddressLine1, AddressLine2, AddressCity, AddressState,
                               AddressZipCode, PhoneNumber, FaxNumber, Email);
             }
-            
+
             // Log On:
             if (testsToPerform[1])
             {
@@ -244,8 +244,8 @@ namespace DBOQuery___Testing
                 double CourseTuition = 250;
                 string CourseDepartment = "History";
                 //Add the course to the database
-                Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
-                                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
+                //Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
+                //                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
 
 
                 // Set the details
@@ -258,8 +258,8 @@ namespace DBOQuery___Testing
                 CourseTuition = 250;
                 CourseDepartment = "Mathematics";
                 //Add the course to the database
-                Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
-                                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
+                //Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
+                //                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
 
                 // Set the details
                 CourseTitle = "Basic Writing";
@@ -271,8 +271,8 @@ namespace DBOQuery___Testing
                 CourseTuition = 250;
                 CourseDepartment = "English";
                 //Add the course to the database
-                Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
-                                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
+                //Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
+                //                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
 
 
                 // Set the details
@@ -285,8 +285,8 @@ namespace DBOQuery___Testing
                 CourseTuition = 250;
                 CourseDepartment = "CIS";
                 //Add the course to the database
-                Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
-                                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
+                //Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
+                //                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
 
                 // Set the details
                 CourseTitle = "The Beginning of Bob Town";
@@ -298,8 +298,8 @@ namespace DBOQuery___Testing
                 CourseTuition = 250;
                 CourseDepartment = "History";
                 //Add the course to the database
-                Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
-                                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
+                //Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
+                //                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
 
 
                 // Set the details
@@ -312,8 +312,8 @@ namespace DBOQuery___Testing
                 CourseTuition = 250;
                 CourseDepartment = "Mathematics";
                 //Add the course to the database
-                Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
-                                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
+                //Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
+                //                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
 
                 // Set the details
                 CourseTitle = "Basic Writing";
@@ -325,8 +325,8 @@ namespace DBOQuery___Testing
                 CourseTuition = 250;
                 CourseDepartment = "English";
                 //Add the course to the database
-                Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
-                                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
+                //Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
+                //                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
 
 
                 // Set the details
@@ -339,8 +339,8 @@ namespace DBOQuery___Testing
                 CourseTuition = 250;
                 CourseDepartment = "CIS";
                 //Add the course to the database
-                Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
-                                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
+                //Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
+                //                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
 
                 // Perform Registration. For now, every student will attend every class.
                 // The business logic is where we'll start testing to see if there are schedule conflicts.
@@ -348,36 +348,41 @@ namespace DBOQuery___Testing
 
                 for (int i = 1; i <= 8; i++)
                 {
-                    if(i%2 == 0)
+                    if (i % 2 == 0)
                         Course_IDs.Add(i);
                 }
 
+
+                for (int i = 1; i <= 8; i++)
+                    Course_IDs.Add(i);
+
+
                 foreach (var course in Course_IDs)
                 {
-                    holder = TestFunctions.InsertIntoUserCourses(16, course);
+                    holder = TestFunctions.InsertIntoUserCourses(2, course);
                     Console.WriteLine("New Record ID: {0}", holder);
 
-                    holder = TestFunctions.InsertIntoUserCourses(19, course);
+                    holder = TestFunctions.InsertIntoUserCourses(5, course);
                     Console.WriteLine("New Record ID: {0}", holder);
 
-                    holder = TestFunctions.InsertIntoUserCourses(23, course);
-                    Console.WriteLine("New Record ID: {0}", holder);
+                    //holder = TestFunctions.InsertIntoUserCourses(23, course);
+                    //Console.WriteLine("New Record ID: {0}", holder);
 
-                    holder = TestFunctions.InsertIntoUserCourses(26, course);
-                    Console.WriteLine("New Record ID: {0}", holder);
+                    //holder = TestFunctions.InsertIntoUserCourses(26, course);
+                    //Console.WriteLine("New Record ID: {0}", holder);
 
-                    holder = TestFunctions.InsertIntoUserCourses(30, course);
-                    Console.WriteLine("New Record ID: {0}", holder);
+                    //holder = TestFunctions.InsertIntoUserCourses(30, course);
+                    //Console.WriteLine("New Record ID: {0}", holder);
 
-                    holder = TestFunctions.InsertIntoUserCourses(33, course);
-                    Console.WriteLine("New Record ID: {0}", holder);
+                    //holder = TestFunctions.InsertIntoUserCourses(33, course);
+                    //Console.WriteLine("New Record ID: {0}", holder);
 
                     Console.ReadKey();
                 }
             }
 
             // Get a list of User_IDs for all Students, Professors and Registrars
-            if(testsToPerform[3])
+            if (testsToPerform[3])
             {
                 Console.WriteLine("Students:");
                 foreach (int User_ID in TestFunctions.GetListOfRoles(1))
@@ -400,7 +405,7 @@ namespace DBOQuery___Testing
             }
 
             // Get the contact details for a given User_ID
-            if(testsToPerform[4])
+            if (testsToPerform[4])
             {
                 List<string> labels = new List<string>();
                 labels.Add("FirstName");
@@ -423,7 +428,7 @@ namespace DBOQuery___Testing
             }
 
             // Get the role for a given User_ID
-            if(testsToPerform[5])
+            if (testsToPerform[5])
             {
                 Console.WriteLine("Should display like below:\nStudent\nProfessor\nRegistrar\n");
                 Console.WriteLine(TestFunctions.GetRoleFromUserID(2));
@@ -433,15 +438,15 @@ namespace DBOQuery___Testing
             }
 
             // Display Courses with Openings
-            if(testsToPerform[6])
+            if (testsToPerform[6])
             {
                 Console.WriteLine("Courses with Openings: ");
                 int upperBound = TestFunctions.GetLatestCourseID();
-                for(int i = 1; i <= upperBound; i++)
+                for (int i = 1; i <= upperBound; i++)
                 {
                     int currentEnrollment = TestFunctions.GetEnrollmentsByCourseID(i);
                     int freeSpaces = 10 - currentEnrollment;
-                    if(freeSpaces > 0)
+                    if (freeSpaces > 0)
                     {
                         Console.WriteLine("Course_ID {0} has {1} space(s) remaining.", i, freeSpaces);
                     }
@@ -469,9 +474,9 @@ namespace DBOQuery___Testing
             {
                 List<List<string>> courses = TestFunctions.GetAllCourses();
 
-                foreach(List<string> course in courses)
+                foreach (List<string> course in courses)
                 {
-                    foreach(string courseDetail in course)
+                    foreach (string courseDetail in course)
                     {
                         Console.WriteLine(courseDetail);
                     }
@@ -482,4 +487,3 @@ namespace DBOQuery___Testing
         }
     }
 }
-

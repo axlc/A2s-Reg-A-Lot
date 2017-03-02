@@ -17,7 +17,7 @@ namespace A2_Reg_A_Lot_2017
 
         public CreateAccount()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)

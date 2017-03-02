@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using A2_Reg_A_Lot_2017;
 namespace A2_Reg_A_Lot_2017
 {
     public partial class Login : Form
@@ -62,10 +62,40 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("User information should lead to the proper log in of a Student, Professor, or Course Registrar.");
-            // User logs in
-            // Specify any errors while logging in
-            // Send user to appropriate Menu: Professor, Student, or Course registrar
+            StudentMenu studentFrm = new StudentMenu();
+            ProfessorMenu professorFrm = new ProfessorMenu();
+            RegistrarMenu registrarFrm = new RegistrarMenu();
+
+           
+
+            string Password = txtPassword.Text;
+            string UserName = txtUsername.Text;
+            int UserId;
+            DBOQuery Query = new DBOQuery();
+
+            if (Int32.TryParse(UserName, out UserId))
+            {
+                if (Query.UserLogOn(UserId, Password) == true)
+                {
+                    MessageBox.Show("login succesful");
+                    if (Query.GetRoleFromUserID(UserId) == "Student")
+                    {
+                        studentFrm.Show();
+                    }
+                    else if (Query.GetRoleFromUserID(UserId) == "Professor")
+                    {
+                        professorFrm.Show();
+                    }
+                    else if (Query.GetRoleFromUserID(UserId) == "Registrar")
+                    {
+                        registrarFrm.Show();
+                    }
+                }
+                else MessageBox.Show("Check UserName & Password");
+
+
+            }
+            else MessageBox.Show("Check UserName");
         }
     }
 }
