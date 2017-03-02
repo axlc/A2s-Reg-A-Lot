@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Reg_A_Lot_Class_Library
 {
-    abstract class Student
+    abstract class Student: UserClass
     {
         int user_ID;
 
