@@ -12,6 +12,7 @@ namespace A2_Reg_A_Lot_2017
 {
     public partial class UpdateStudent : Form
     {
+        public Form PreviousForm { get; set; }
 
         public UpdateStudent()
         {
@@ -47,7 +48,8 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-
+            RegistrarMenu frm = new RegistrarMenu();
+            PreviousForm.Show();
             this.Close();
         }
 

@@ -27,9 +27,9 @@ namespace A2_Reg_A_Lot_2017
         private void btnBack_Click(object sender, EventArgs e)
         {
             //Back button closes this window
-            RegistrarMenu frm = new RegistrarMenu();
+            ProfessorMenu frm = new ProfessorMenu();
             PreviousForm.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

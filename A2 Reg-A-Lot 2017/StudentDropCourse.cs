@@ -13,6 +13,7 @@ namespace A2_Reg_A_Lot_2017
     public partial class StudentDropCourse : Form
 
     {
+        public Form PreviousForm { get; set; }
 
         public StudentDropCourse()
         {
@@ -21,6 +22,8 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            StudentMenu frm = new StudentMenu();
+            PreviousForm.Show(); 
             this.Close();
         }
 

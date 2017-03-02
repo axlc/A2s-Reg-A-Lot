@@ -12,6 +12,7 @@ namespace A2_Reg_A_Lot_2017
 {
     public partial class ProfessorAddCourse : Form
     {
+        public Form PreviousForm { get; set; }
         public ProfessorAddCourse()
         {
             InitializeComponent();
@@ -31,6 +32,8 @@ namespace A2_Reg_A_Lot_2017
         private void btnCancel_Click(object sender, EventArgs e)
         {
             //Back button hides this window
+            ProfessorMenu frm = new ProfessorMenu();
+            PreviousForm.Show();
             this.Close();
         }
     }

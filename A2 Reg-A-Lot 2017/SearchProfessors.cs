@@ -12,6 +12,8 @@ namespace A2_Reg_A_Lot_2017
 {
     public partial class SearchProfessors : Form
     {
+        public Form PreviousForm { get; set; }
+
         public SearchProfessors()
         {
             InitializeComponent();
@@ -24,7 +26,8 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            //Back button hides thsi window
+            RegistrarMenu frm = new RegistrarMenu();
+            PreviousForm.Show();
             this.Close();
         }
     }

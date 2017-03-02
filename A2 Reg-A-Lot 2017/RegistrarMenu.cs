@@ -12,7 +12,7 @@ namespace A2_Reg_A_Lot_2017
 {
     public partial class RegistrarMenu : Form
     {
-       
+
         public RegistrarMenu()
         {
             InitializeComponent();
@@ -32,6 +32,8 @@ namespace A2_Reg_A_Lot_2017
             //Opens the Professor Search Window
             SearchProfessors frm = new SearchProfessors();
             frm.Show();
+            frm.PreviousForm = this;
+            this.Hide();
         }
 
         private void btnStudentSearch_Click(object sender, EventArgs e)
@@ -57,7 +59,9 @@ namespace A2_Reg_A_Lot_2017
         {
             // Opens the UpdateStudent window to allow for editing of student info or creationg of a new student
             UpdateStudent frm = new UpdateStudent();
+            frm.PreviousForm = this;
             frm.Show();
+            this.Hide();
 
         }
 

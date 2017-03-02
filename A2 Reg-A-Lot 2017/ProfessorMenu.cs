@@ -29,9 +29,11 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnCancelCourses_Click(object sender, EventArgs e)
         {
-            //Opens ProfessorCancelCourse window
+            //Opens ProfessorCancelCourse window:
             ProfessorCancelCourse frm = new ProfessorCancelCourse();
             frm.Show();
+            frm.PreviousForm = this;
+            this.Hide();
 
             //Hides Professor Main Menu !! ------------------------------ AFTER I figure out how to make a "back" button work
             // this.Hide();
@@ -42,6 +44,8 @@ namespace A2_Reg_A_Lot_2017
             //Button opens the ProfessorAddCourse window to allow the professor to register to teach new courses.
             ProfessorAddCourse frm = new ProfessorAddCourse();
             frm.Show();
+            frm.PreviousForm = this;
+            this.Hide();
 
             // Hides the Professor main menu
             //this.Hide();
@@ -53,6 +57,8 @@ namespace A2_Reg_A_Lot_2017
             // Opens ProfessorMyStudents window
             ProfessorMyStudents frm = new ProfessorMyStudents();
             frm.Show();
+            frm.PreviousForm = this;
+            this.Hide();
         }
 
         private void btnStudentSearch_Click(object sender, EventArgs e)
@@ -60,7 +66,8 @@ namespace A2_Reg_A_Lot_2017
             //Button brings up the Student Search Window SearchStudents
             SearchStudents frm = new SearchStudents();
             frm.Show();
-
+            frm.PreviousForm = this;
+            this.Hide();
         }
 
         private void btnUpdateInfo_Click_1(object sender, EventArgs e)

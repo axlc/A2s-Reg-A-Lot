@@ -12,6 +12,7 @@ namespace A2_Reg_A_Lot_2017
 {
     public partial class ProfessorCancelCourse : Form
     {
+        public Form PreviousForm {get;set;}
         public ProfessorCancelCourse()
         {
             InitializeComponent();
@@ -26,6 +27,8 @@ namespace A2_Reg_A_Lot_2017
         private void btnCancel_Click(object sender, EventArgs e)
         {
             //Go back to ProfessorMenu
+            ProfessorMenu frm = new ProfessorMenu();
+            PreviousForm.Show();
             this.Close();
 
         }
