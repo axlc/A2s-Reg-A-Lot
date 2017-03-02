@@ -392,5 +392,70 @@ namespace A2_Reg_A_Lot_2017
             Connection.Close();
             return course_ID;
         }
+
+        public string GetCourseTitleByID(int course_ID)
+        {
+            string courseTitle = "";
+            Connection.Open();
+
+            string commandString = string.Format("SELECT [CourseTitle] FROM [dbo].[Courses] WHERE [Course_ID]='{0}';", course_ID);
+
+            using (SqlCommand selectCourseTitlebyCourseID = Connection.CreateCommand())
+            {
+                selectCourseTitlebyCourseID.CommandText = commandString;
+
+                using (SqlDataReader reader = selectCourseTitlebyCourseID.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        courseTitle = reader.GetString(0);
+                    }
+                }
+            }
+
+            Connection.Close();
+            return courseTitle;
+        }
+
+        public List<List<string>> GetAllCourses()
+        {
+            List<List<string>> courses = new List<List<string>>();
+            Connection.Open();
+
+            string commandString = string.Format("SELECT * FROM [dbo].[Courses]");
+
+            using (SqlCommand selectAllCourses = Connection.CreateCommand())
+            {
+                selectAllCourses.CommandText = commandString;
+
+                using (SqlDataReader reader = selectAllCourses.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        List<string> courseDetails = new List<string>();
+
+                        courseDetails.Add(reader.GetInt32(0).ToString());
+                        courseDetails.Add(reader.GetString(1));
+                        courseDetails.Add(reader.GetString(2));
+                        courseDetails.Add(reader.GetString(3));
+                        courseDetails.Add(reader.GetString(4));
+
+                        TimeSpan startTime = reader.GetTimeSpan(5);
+                        courseDetails.Add(startTime.ToString());
+
+                        TimeSpan duration = reader.GetTimeSpan(6);
+                        courseDetails.Add(duration.ToString());
+
+                        courseDetails.Add(reader.GetDouble(7).ToString());
+                        courseDetails.Add(reader.GetString(8));
+
+                        courses.Add(courseDetails);
+                    }
+                }
+            }
+
+            Connection.Close();
+            return courses;
+        }
     }
 }
