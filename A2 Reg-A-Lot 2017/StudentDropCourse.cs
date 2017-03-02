@@ -32,5 +32,15 @@ namespace A2_Reg_A_Lot_2017
             MessageBox.Show("The Courses were dropped.");
             this.Close();
         }
+
+        private void gbxLMyCourses_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clbMyCourses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
