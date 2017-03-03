@@ -235,109 +235,109 @@ namespace DBOQuery___Testing
             {
                 List<int> Course_IDs = new List<int>();
                 // Set the details
-                string CourseTitle = "The Beginning of Bob Town";
-                string CourseRubric = "HIST-0101";
-                string CourseSection = "001";
-                string CourseDescription = "A brief history of Bob Town";
-                string CourseStartTime = "8:00AM";
-                string CourseDuration = "1:45";
-                double CourseTuition = 250;
-                string CourseDepartment = "History";
-                //Add the course to the database
-                //Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
-                //                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
+                //string CourseTitle = "The Beginning of Bob Town";
+                //string CourseRubric = "HIST-0101";
+                //string CourseSection = "001";
+                //string CourseDescription = "A brief history of Bob Town";
+                //string CourseStartTime = "8:00AM";
+                //string CourseDuration = "1:45";
+                //double CourseTuition = 250;
+                //string CourseDepartment = "History";
+                ////Add the course to the database
+                ////Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
+                ////                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
 
 
-                // Set the details
-                CourseTitle = "Introduction to College Algebra";
-                CourseRubric = "MATH-0101";
-                CourseSection = "001";
-                CourseDescription = "Algebraic!";
-                CourseStartTime = "10:00AM";
-                CourseDuration = "1:45";
-                CourseTuition = 250;
-                CourseDepartment = "Mathematics";
-                //Add the course to the database
-                //Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
-                //                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
+                //// Set the details
+                //CourseTitle = "Introduction to College Algebra";
+                //CourseRubric = "MATH-0101";
+                //CourseSection = "001";
+                //CourseDescription = "Algebraic!";
+                //CourseStartTime = "10:00AM";
+                //CourseDuration = "1:45";
+                //CourseTuition = 250;
+                //CourseDepartment = "Mathematics";
+                ////Add the course to the database
+                ////Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
+                ////                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
 
-                // Set the details
-                CourseTitle = "Basic Writing";
-                CourseRubric = "ENGL-0150";
-                CourseSection = "001";
-                CourseDescription = "LERN HOW RIGHT GOODER";
-                CourseStartTime = "12:00PM";
-                CourseDuration = "1:45";
-                CourseTuition = 250;
-                CourseDepartment = "English";
-                //Add the course to the database
-                //Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
-                //                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
-
-
-                // Set the details
-                CourseTitle = "Advanced Structured Languages";
-                CourseRubric = "COSC-2330";
-                CourseSection = "001";
-                CourseDescription = "Further applications of programming techniques. Topics may include file access methods, data structures and modular programming, program testing and documentation, and other topics not normally covered in an introductory computer programming course.";
-                CourseStartTime = "2:00PM";
-                CourseDuration = "1:45";
-                CourseTuition = 250;
-                CourseDepartment = "CIS";
-                //Add the course to the database
-                //Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
-                //                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
-
-                // Set the details
-                CourseTitle = "The Beginning of Bob Town";
-                CourseRubric = "HIST-0101";
-                CourseSection = "002";
-                CourseDescription = "A brief history of Bob Town";
-                CourseStartTime = "8:00AM";
-                CourseDuration = "1:45";
-                CourseTuition = 250;
-                CourseDepartment = "History";
-                //Add the course to the database
-                //Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
-                //                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
+                //// Set the details
+                //CourseTitle = "Basic Writing";
+                //CourseRubric = "ENGL-0150";
+                //CourseSection = "001";
+                //CourseDescription = "LERN HOW RIGHT GOODER";
+                //CourseStartTime = "12:00PM";
+                //CourseDuration = "1:45";
+                //CourseTuition = 250;
+                //CourseDepartment = "English";
+                ////Add the course to the database
+                ////Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
+                ////                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
 
 
-                // Set the details
-                CourseTitle = "Introduction to College Algebra";
-                CourseRubric = "MATH-0101";
-                CourseSection = "002";
-                CourseDescription = "Algebraic!";
-                CourseStartTime = "10:00AM";
-                CourseDuration = "1:45";
-                CourseTuition = 250;
-                CourseDepartment = "Mathematics";
-                //Add the course to the database
-                //Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
-                //                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
+                //// Set the details
+                //CourseTitle = "Advanced Structured Languages";
+                //CourseRubric = "COSC-2330";
+                //CourseSection = "001";
+                //CourseDescription = "Further applications of programming techniques. Topics may include file access methods, data structures and modular programming, program testing and documentation, and other topics not normally covered in an introductory computer programming course.";
+                //CourseStartTime = "2:00PM";
+                //CourseDuration = "1:45";
+                //CourseTuition = 250;
+                //CourseDepartment = "CIS";
+                ////Add the course to the database
+                ////Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
+                ////                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
 
-                // Set the details
-                CourseTitle = "Basic Writing";
-                CourseRubric = "ENGL-0150";
-                CourseSection = "002";
-                CourseDescription = "LERN HOW RIGHT GOODER";
-                CourseStartTime = "12:00PM";
-                CourseDuration = "1:45";
-                CourseTuition = 250;
-                CourseDepartment = "English";
-                //Add the course to the database
-                //Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
-                //                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
+                //// Set the details
+                //CourseTitle = "The Beginning of Bob Town";
+                //CourseRubric = "HIST-0101";
+                //CourseSection = "002";
+                //CourseDescription = "A brief history of Bob Town";
+                //CourseStartTime = "8:00AM";
+                //CourseDuration = "1:45";
+                //CourseTuition = 250;
+                //CourseDepartment = "History";
+                ////Add the course to the database
+                ////Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
+                ////                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
 
 
-                // Set the details
-                CourseTitle = "Advanced Structured Languages";
-                CourseRubric = "COSC-2330";
-                CourseSection = "002";
-                CourseDescription = "Further applications of programming techniques. Topics may include file access methods, data structures and modular programming, program testing and documentation, and other topics not normally covered in an introductory computer programming course.";
-                CourseStartTime = "2:00PM";
-                CourseDuration = "1:45";
-                CourseTuition = 250;
-                CourseDepartment = "CIS";
+                //// Set the details
+                //CourseTitle = "Introduction to College Algebra";
+                //CourseRubric = "MATH-0101";
+                //CourseSection = "002";
+                //CourseDescription = "Algebraic!";
+                //CourseStartTime = "10:00AM";
+                //CourseDuration = "1:45";
+                //CourseTuition = 250;
+                //CourseDepartment = "Mathematics";
+                ////Add the course to the database
+                ////Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
+                ////                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
+
+                //// Set the details
+                //CourseTitle = "Basic Writing";
+                //CourseRubric = "ENGL-0150";
+                //CourseSection = "002";
+                //CourseDescription = "LERN HOW RIGHT GOODER";
+                //CourseStartTime = "12:00PM";
+                //CourseDuration = "1:45";
+                //CourseTuition = 250;
+                //CourseDepartment = "English";
+                ////Add the course to the database
+                ////Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
+                ////                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
+
+
+                //// Set the details
+                //CourseTitle = "Advanced Structured Languages";
+                //CourseRubric = "COSC-2330";
+                //CourseSection = "002";
+                //CourseDescription = "Further applications of programming techniques. Topics may include file access methods, data structures and modular programming, program testing and documentation, and other topics not normally covered in an introductory computer programming course.";
+                //CourseStartTime = "2:00PM";
+                //CourseDuration = "1:45";
+                //CourseTuition = 250;
+                //CourseDepartment = "CIS";
                 //Add the course to the database
                 //Course_IDs.Add(TestFunctions.InsertIntoCourses(CourseTitle, CourseRubric, CourseSection, CourseDescription,
                 //                                               CourseStartTime, CourseDuration, CourseTuition, CourseDepartment));
