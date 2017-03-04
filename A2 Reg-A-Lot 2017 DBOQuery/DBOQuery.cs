@@ -481,5 +481,54 @@ namespace A2_Reg_A_Lot_2017
             Connection.Close();
             return results;
         }
+        public List<string> GetBillInformation(int user_ID)
+        {
+            List<string> results = new List<string>();
+            if (GetRoleFromUserID(user_ID) != "Student")
+            {
+                results.Add("Check your input, user_ID was not a student.");
+                return results;
+            }
+
+            
+            Connection.Open();
+            string commandString =
+                // oh my god, this query... this crazy query...
+                string.Format("SELECT[Users].[User_ID],[ContactDetails].[FirstName],[ContactDetails].[LastName]"     +
+                              ",[ContactDetails].[AddressLine1],[ContactDetails].[AddressLine2],"                    +
+                              "[ContactDetails].[AddressCity],[ContactDetails].[AddressState],[ContactDetails]."     +
+                              "[AddressZipCode],[Tuition].[totalTuition]FROM[dbo].[Users],(SELECT[UserCourses]."     +
+                              "[User_ID],sum([Courses].[CourseTuition])AS totalTuition FROM[Courses]INNER JOIN"      +
+                              "[UserCourses]ON[UserCourses].[Course_ID]=[Courses].[Course_ID]WHERE[UserCourses]"     +
+                              ".[User_ID]='{0}'GROUP BY[UserCourses].[User_ID])Tuition INNER JOIN[ContactDetails]ON" +
+                              "[ContactDetails].[User_ID]=[Tuition].[User_ID]WHERE[Users].[User_ID]='{0}';", user_ID);
+
+            using (SqlCommand selectBillInformation = Connection.CreateCommand())
+            {
+                selectBillInformation.CommandText = commandString;
+                using (SqlDataReader reader = selectBillInformation.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string user        = reader.GetInt32(0).ToString();
+                        string name        = string.Format("{0} {1}", reader.GetString(1), reader.GetString(2));
+                        string fullAddress = string.Format("{0}\n{1}\n{2} {3} {4}", 
+                                                           reader.GetString(3), 
+                                                           reader.GetString(4), 
+                                                           reader.GetString(5), reader.GetString(6), reader.GetString(7));
+                        string tuition     = reader.GetDouble(8).ToString();
+
+                        results.Add(user);
+                        results.Add(name);
+                        results.Add(fullAddress);
+                        results.Add(tuition);
+                    }
+                }
+            }
+
+            Connection.Close();
+            return results;
+        }
+        
     }
 }

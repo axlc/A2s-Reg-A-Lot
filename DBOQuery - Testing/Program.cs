@@ -19,10 +19,10 @@ namespace DBOQuery___Testing
         static void Main(string[] args)
         {
             // Connect to the azure server, if at school, remove "azure" and leave parentheses blank to connect to school.
-            DBOQuery TestFunctions = new DBOQuery("azure");
+            DBOQuery TestFunctions = new DBOQuery();
 
             // Decide which tests to perform by changing the boolean values. 
-            bool[] testsToPerform = new bool[10] {
+            bool[] testsToPerform = new bool[11] {
                 // Add New Users and Contact Details:
                 false,
                 
@@ -51,6 +51,9 @@ namespace DBOQuery___Testing
                 false,
 
                 // Get a list of all courses that have an enrollment of less than 'x'
+                false,
+
+                // Get the bill information for a specific user
                 true
             };
 
@@ -501,8 +504,19 @@ namespace DBOQuery___Testing
                 }
                 Console.ReadKey();
             }
-            
 
+            // Get a bill for the requested user.
+            if (testsToPerform[10])
+            {
+                int userID = 2;
+                List<string> bill = TestFunctions.GetBillInformation(userID);
+
+                foreach(string billDetail in bill)
+                {
+                    Console.WriteLine(billDetail);
+                }
+                Console.ReadKey();
+            }
         }
     }
 }
