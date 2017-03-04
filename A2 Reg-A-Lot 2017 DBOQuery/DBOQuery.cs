@@ -7,6 +7,7 @@
 // them to focus on making their code work.
 //
 // Work In Progress. Look for posts on Trello board for updates on this project.
+// TODO: Make the GetBillInformation function also return the courses that make up the bill.
 
 using System;
 using System.Collections.Generic;
@@ -29,7 +30,6 @@ namespace A2_Reg_A_Lot_2017
 
         /// <summary>
         /// The Default Constructor. Automatically sets the ConnectionString to the project database.
-        /// <para>TODO: Update his once we receive the login details.</para>
         /// </summary>
         public DBOQuery()
         {
@@ -528,6 +528,33 @@ namespace A2_Reg_A_Lot_2017
 
             Connection.Close();
             return results;
+        }
+
+        public Boolean UpdateUserContactDetails(int user_ID, List<string> contactDetails)
+        {
+            bool outcome = false;
+
+            int User_ID = user_ID;
+
+            List<string> previousDetails = GetContactDetails(User_ID);
+
+            // TODO: Make some sort of comparison between the new and the old contact details. Maybe if the details differ, the new details take precedence?
+
+            string FirstName      = contactDetails[0];
+            string LastName       = contactDetails[1];
+            string AddressLine1   = contactDetails[2];
+            string AddressLine2   = contactDetails[3];
+            string AddressCity    = contactDetails[4];
+            string AddressState   = contactDetails[5];
+            string AddressZipCode = contactDetails[6];
+            string PhoneNumber    = contactDetails[7];
+            string FaxNumber      = contactDetails[8];
+            string Email          = contactDetails[9];
+
+
+
+
+            return outcome;
         }
         
     }

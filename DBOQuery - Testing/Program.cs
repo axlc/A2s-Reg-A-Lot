@@ -7,7 +7,6 @@ using A2_Reg_A_Lot_2017;
 
 
 // TODO: Implement (required) Select Functions, Update Functions, and Delete Functions. (Around 15 of them at most?)
-
 // TODO: Implement the cancellation of courses by the registrar
 // TODO: Update the ERD and upload it to trello.
 
@@ -517,6 +516,8 @@ namespace DBOQuery___Testing
                 }
                 Console.ReadKey();
             }
+
+
         }
     }
 }
