@@ -457,5 +457,29 @@ namespace A2_Reg_A_Lot_2017
             Connection.Close();
             return courses;
         }
+
+        public Dictionary<int, int> GetUnderEnrolledCourses(int lowerLimit)
+        {
+            Dictionary<int, int> results = new Dictionary<int, int>();
+            Connection.Open();
+            string commandString = string.Format("SELECT [Course_ID], count([User_ID]) AS Enrollments FROM [dbo].[UserCourses] GROUP BY [Course_ID] HAVING count([User_ID])<='{0}';", lowerLimit);
+
+            using (SqlCommand selectUnderEnrolledCourses = Connection.CreateCommand())
+            {
+                selectUnderEnrolledCourses.CommandText = commandString;
+                using (SqlDataReader reader = selectUnderEnrolledCourses.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int course = reader.GetInt32(0);
+                        int enrollment = reader.GetInt32(1);
+                        results.Add(course, enrollment);
+                    }
+                }
+            }
+
+            Connection.Close();
+            return results;
+        }
     }
 }

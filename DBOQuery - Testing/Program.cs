@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using A2_Reg_A_Lot_2017;
 
-// TODO: Update the courses table on the actx server to include a CourseDepartment and a CourseEnrollments column. 
-// TODO: Check to see if the users table on actx was updated so that UserType is an int, not a varchar
-// TODO: Update the ERD and upload it to trello.
+
 // TODO: Implement (required) Select Functions, Update Functions, and Delete Functions. (Around 15 of them at most?)
-// TODO: Use Mockaroo to create testdata for all tables.
+
+// TODO: Implement the cancellation of courses by the registrar
+// TODO: Update the ERD and upload it to trello.
+
 
 namespace DBOQuery___Testing
 {
@@ -18,15 +19,15 @@ namespace DBOQuery___Testing
         static void Main(string[] args)
         {
             // Connect to the azure server, if at school, remove "azure" and leave parentheses blank to connect to school.
-            DBOQuery TestFunctions = new DBOQuery();
+            DBOQuery TestFunctions = new DBOQuery("azure");
 
             // Decide which tests to perform by changing the boolean values. 
-            bool[] testsToPerform = new bool[9] {
+            bool[] testsToPerform = new bool[10] {
                 // Add New Users and Contact Details:
                 false,
                 
                 // Log On:
-                true,
+                false,
 
                 // Add New Courses and Registrations:
                 false,
@@ -47,6 +48,9 @@ namespace DBOQuery___Testing
                 false,
 
                 // Get a list of all course information
+                false,
+
+                // Get a list of all courses that have an enrollment of less than 'x'
                 true
             };
 
@@ -484,6 +488,21 @@ namespace DBOQuery___Testing
                 }
                 Console.ReadKey();
             }
+
+            // Get a list of courses that don't have enough enrollments
+            if (testsToPerform[9])
+            {
+                Dictionary<int, int> underEnrolledCourses = TestFunctions.GetUnderEnrolledCourses(6);
+                foreach(KeyValuePair<int, int> course in underEnrolledCourses)
+                {
+                    string courseName = TestFunctions.GetCourseTitleByID(course.Key);
+                    int enrollment = course.Value;
+                    Console.WriteLine("{0} (Course_ID: {1}) has an enrollment of {2}",courseName, course.Key, enrollment);
+                }
+                Console.ReadKey();
+            }
+            
+
         }
     }
 }
