@@ -85,7 +85,7 @@ namespace A2_Reg_A_Lot_2017
                                                  "VALUES ('{0}', '{1}', '{2}', " +
                                                          "'{3}', '{4}', '{5}', " +
                                                          "'{6}', '{7}', '{8}', " +
-                                                         "'{9}', '{10}');",
+                                                         "'{9}', '{10}'); ",
                                                          User_ID, FirstName, LastName,
                                                          AddressLine1, AddressLine2, AddressCity,
                                                          AddressState, AddressZipCode, PhoneNumber,
@@ -134,7 +134,7 @@ namespace A2_Reg_A_Lot_2017
                                                  "VALUES ('{0}', '{1}', " +
                                                          "'{2}', '{3}', " +
                                                          "'{4}', '{5}', " +
-                                                         "'{6}', '{7}');",
+                                                         "'{6}', '{7}'); ",
                                                          CourseTitle, CourseRubric,
                                                          CourseSection, CourseDescription,
                                                          CourseStartTime, CourseDuration, // Use: StartTime - "3:30PM" CourseDuration - "3:00"
@@ -176,7 +176,7 @@ namespace A2_Reg_A_Lot_2017
             // Create the command string
             string CommandString = string.Format("INSERT INTO dbo.Users " +
                                                  "OUTPUT INSERTED.User_ID " +
-                                                 "VALUES ('{0}', '{1}');",
+                                                 "VALUES ('{0}', '{1}'); ",
                                                   UserPassword, UserType);
 
             // To get the ID of the inserted row
@@ -210,7 +210,7 @@ namespace A2_Reg_A_Lot_2017
             // Create the command string
             string CommandString = string.Format("INSERT INTO dbo.UserCourses " +
                                                  "OUTPUT INSERTED.UserCourse_ID " +
-                                                 "VALUES ('{0}', '{1}');",
+                                                 "VALUES ('{0}', '{1}'); ",
                                                   User_ID, Course_ID);
             // To get the ID of the inserted row
             int newRow_ID = 0;
@@ -240,7 +240,10 @@ namespace A2_Reg_A_Lot_2017
             Connection.Open();
             Boolean logonOutcome = false;
 
-            string commandString = string.Format("SELECT * FROM dbo.Users WHERE User_ID='{0}' AND UserPassword='{1}';", User_ID, password);
+            string commandString = string.Format("SELECT * " + 
+                                                 "FROM [dbo].[Users] " + 
+                                                 "WHERE [User_ID] = '{0}' AND UserPassword = '{1}'; ",
+                                                 User_ID, password);
 
             using (SqlCommand selectUserCredentials = Connection.CreateCommand())
             {
@@ -281,7 +284,10 @@ namespace A2_Reg_A_Lot_2017
             Connection.Open();
             List<int> queryResults = new List<int>();
 
-            string commandString = string.Format("SELECT [User_ID], [UserType] FROM [dbo].[Users] WHERE UserType='{0}';", userType);
+            string commandString = string.Format("SELECT [User_ID], [UserType] " +
+                                                 "FROM [dbo].[Users] " +
+                                                 "WHERE [UserType]='{0}'; ", 
+                                                 userType);
 
             using (SqlCommand selectUsersByUserType = Connection.CreateCommand())
             {
@@ -304,7 +310,13 @@ namespace A2_Reg_A_Lot_2017
             List<string> queryResults = new List<string>();
             Connection.Open();
 
-            string commandString = string.Format("SELECT [FirstName], [LastName], [AddressLine1], [AddressLine2], [AddressCity], [AddressState], [AddressZipCode], [PhoneNumber], [FaxNumber], [Email] FROM [dbo].[ContactDetails] WHERE [User_ID]='{0}';", user_ID);
+            string commandString = string.Format("SELECT [FirstName], [LastName], [AddressLine1], " + 
+                                                        "[AddressLine2], [AddressCity], [AddressState], " +
+                                                        "[AddressZipCode], [PhoneNumber], [FaxNumber], " +
+                                                        "[Email] " +
+                                                   "FROM [dbo].[ContactDetails] " +
+                                                  "WHERE [User_ID]='{0}'; ",
+                                                  user_ID);
 
             using (SqlCommand selectContactDetailsByUserID = Connection.CreateCommand())
             {
@@ -330,7 +342,10 @@ namespace A2_Reg_A_Lot_2017
             string role = "Error. Check the entered user_ID";
             Connection.Open();
 
-            string commandString = string.Format("SELECT [UserType] FROM [dbo].[Users] WHERE [User_ID]='{0}';", user_ID);
+            string commandString = string.Format("SELECT [UserType] " +
+                                                   "FROM [dbo].[Users] " +
+                                                  "WHERE [User_ID]='{0}'; ",
+                                                  user_ID);
 
             using (SqlCommand selectUsersByUserID = Connection.CreateCommand())
             {
@@ -363,7 +378,11 @@ namespace A2_Reg_A_Lot_2017
             int enrollments = 0;
             Connection.Open();
 
-            string commandString = string.Format("SELECT count([User_ID]) AS Enrollments FROM [dbo].[UserCourses] WHERE [Course_ID]={0} GROUP BY [Course_ID];", course_ID);
+            string commandString = string.Format("SELECT count([User_ID]) AS Enrollments " + 
+                                                         "FROM [dbo].[UserCourses] " +
+                                                        "WHERE [Course_ID]={0} " +
+                                                     "GROUP BY [Course_ID]; ",
+                                                     course_ID);
 
             using (SqlCommand selectUserCoursesEnrollments = Connection.CreateCommand())
             {
@@ -381,7 +400,9 @@ namespace A2_Reg_A_Lot_2017
             int course_ID = 0;
             Connection.Open();
 
-            string commandString = string.Format("SELECT [Course_ID] FROM [dbo].[Courses] ORDER BY [Course_ID] DESC");
+            string commandString = string.Format("SELECT [Course_ID] " +
+                                                   "FROM [dbo].[Courses] " +
+                                               "ORDER BY [Course_ID] DESC; ");
 
             using (SqlCommand selectLatestCourseID = Connection.CreateCommand())
             {
@@ -398,7 +419,10 @@ namespace A2_Reg_A_Lot_2017
             string courseTitle = "";
             Connection.Open();
 
-            string commandString = string.Format("SELECT [CourseTitle] FROM [dbo].[Courses] WHERE [Course_ID]='{0}';", course_ID);
+            string commandString = string.Format("SELECT [CourseTitle] " +
+                                                   "FROM [dbo].[Courses] " +
+                                                  "WHERE [Course_ID]='{0}'; ",
+                                                  course_ID);
 
             using (SqlCommand selectCourseTitlebyCourseID = Connection.CreateCommand())
             {
@@ -422,7 +446,8 @@ namespace A2_Reg_A_Lot_2017
             List<List<string>> courses = new List<List<string>>();
             Connection.Open();
 
-            string commandString = string.Format("SELECT * FROM [dbo].[Courses]");
+            string commandString = string.Format("SELECT * " +
+                                                   "FROM [dbo].[Courses]; ");
 
             using (SqlCommand selectAllCourses = Connection.CreateCommand())
             {
@@ -462,7 +487,12 @@ namespace A2_Reg_A_Lot_2017
         {
             Dictionary<int, int> results = new Dictionary<int, int>();
             Connection.Open();
-            string commandString = string.Format("SELECT [Course_ID], count([User_ID]) AS Enrollments FROM [dbo].[UserCourses] GROUP BY [Course_ID] HAVING count([User_ID])<='{0}';", lowerLimit);
+            string commandString = string.Format("SELECT [Course_ID], " + 
+                                                  "count([User_ID]) AS Enrollments " +
+                                                   "FROM [dbo].[UserCourses] " +
+                                               "GROUP BY [Course_ID] " +
+                                           "HAVING count([User_ID])<='{0}';",
+                                           lowerLimit);
 
             using (SqlCommand selectUnderEnrolledCourses = Connection.CreateCommand())
             {
@@ -494,14 +524,37 @@ namespace A2_Reg_A_Lot_2017
             Connection.Open();
             string commandString =
                 // oh my god, this query... this crazy query...
-                string.Format("SELECT[Users].[User_ID],[ContactDetails].[FirstName],[ContactDetails].[LastName]"     +
-                              ",[ContactDetails].[AddressLine1],[ContactDetails].[AddressLine2],"                    +
-                              "[ContactDetails].[AddressCity],[ContactDetails].[AddressState],[ContactDetails]."     +
-                              "[AddressZipCode],[Tuition].[totalTuition]FROM[dbo].[Users],(SELECT[UserCourses]."     +
-                              "[User_ID],sum([Courses].[CourseTuition])AS totalTuition FROM[Courses]INNER JOIN"      +
-                              "[UserCourses]ON[UserCourses].[Course_ID]=[Courses].[Course_ID]WHERE[UserCourses]"     +
-                              ".[User_ID]='{0}'GROUP BY[UserCourses].[User_ID])Tuition INNER JOIN[ContactDetails]ON" +
-                              "[ContactDetails].[User_ID]=[Tuition].[User_ID]WHERE[Users].[User_ID]='{0}';", user_ID);
+                //string.Format("SELECT[Users].[User_ID],[ContactDetails].[FirstName],[ContactDetails].[LastName]"     +
+                //              ",[ContactDetails].[AddressLine1],[ContactDetails].[AddressLine2],"                    +
+                //              "[ContactDetails].[AddressCity],[ContactDetails].[AddressState],[ContactDetails]."     +
+                //              "[AddressZipCode],[Tuition].[totalTuition]FROM[dbo].[Users],(SELECT[UserCourses]."     +
+                //              "[User_ID],sum([Courses].[CourseTuition])AS totalTuition FROM[Courses]INNER JOIN"      +
+                //              "[UserCourses]ON[UserCourses].[Course_ID]=[Courses].[Course_ID]WHERE[UserCourses]"     +
+                //              ".[User_ID]='{0}'GROUP BY[UserCourses].[User_ID])Tuition INNER JOIN[ContactDetails]ON" +
+                //              "[ContactDetails].[User_ID]=[Tuition].[User_ID]WHERE[Users].[User_ID]='{0}';", user_ID);
+                string.Format(       "    SELECT [Users].[User_ID], " +
+	                                 "           [ContactDetails].[FirstName]," +
+	                                 "           [ContactDetails].[LastName], " +
+	                                 "           [ContactDetails].[AddressLine1], " +
+	                                 "           [ContactDetails].[AddressLine2], " +
+	                                 "           [ContactDetails].[AddressCity], " +
+	                                 "           [ContactDetails].[AddressState], " +
+	                                 "           [ContactDetails].[AddressZipCode], " +
+	                                 "           [Tuition].[totalTuition]" +
+                                     "      FROM [dbo].[Users]," +
+	                                 "      (" +    
+		                             "              SELECT [UserCourses].[User_ID], " +
+                                     "                 sum([Courses].[CourseTuition]) AS totalTuition " +
+		                             "                FROM [Courses]" + 
+		                             "          INNER JOIN [UserCourses] " +
+                                     "                  ON [UserCourses].[Course_ID] = [Courses].[Course_ID] " +
+                                     "               WHERE [UserCourses].[User_ID] = '{0}' " +
+		                             "            GROUP BY [UserCourses].[User_ID] " +
+                                     "      ) Tuition " +
+                                     "INNER JOIN [ContactDetails] " +
+                                     "        ON [ContactDetails].[User_ID] = [Tuition].[User_ID] " +
+                                     "     WHERE [Users].[User_ID] = '{0}'; ",
+                                     user_ID);
 
             using (SqlCommand selectBillInformation = Connection.CreateCommand())
             {
@@ -530,16 +583,8 @@ namespace A2_Reg_A_Lot_2017
             return results;
         }
 
-        public Boolean UpdateUserContactDetails(int user_ID, List<string> contactDetails)
+        public void UpdateUserContactDetails(int User_ID, List<string> contactDetails)
         {
-            bool outcome = false;
-
-            int User_ID = user_ID;
-
-            List<string> previousDetails = GetContactDetails(User_ID);
-
-            // TODO: Make some sort of comparison between the new and the old contact details. Maybe if the details differ, the new details take precedence?
-
             string FirstName      = contactDetails[0];
             string LastName       = contactDetails[1];
             string AddressLine1   = contactDetails[2];
@@ -551,11 +596,34 @@ namespace A2_Reg_A_Lot_2017
             string FaxNumber      = contactDetails[8];
             string Email          = contactDetails[9];
 
+            string commandString =
+                string.Format("UPDATE [dbo].[ContactDetails] "    +
+                              "   SET [FirstName]      = '{0}', " +
+                              "       [LastName]       = '{1}', " +
+	                          "       [AddressLine1]   = '{2}', " +
+	                          "       [AddressLine2]   = '{3}', " +
+                              "       [AddressCity]    = '{4}', " +
+                              "       [AddressState]   = '{5}', " +
+                              "       [AddressZipCode] = '{6}', " +
+                              "       [PhoneNumber]    = '{7}', " +
+                              "       [FaxNumber]      = '{8}', " +
+                              "       [Email]          = '{9}'  " +
+                              " WHERE [User_ID]        = '{10}';",
+                              FirstName, LastName, 
+                              AddressLine1, 
+                              AddressLine2, 
+                              AddressCity, AddressState, AddressZipCode,
+                              PhoneNumber, FaxNumber, 
+                              Email, User_ID);
 
-
-
-            return outcome;
+            Connection.Open();
+            using (SqlCommand updateUserDetails = Connection.CreateCommand())
+            {
+                updateUserDetails.CommandText = commandString;
+                updateUserDetails.ExecuteNonQuery();
+            }
+            Connection.Close();
+            return;
         }
-        
     }
 }

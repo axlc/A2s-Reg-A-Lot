@@ -18,10 +18,10 @@ namespace DBOQuery___Testing
         static void Main(string[] args)
         {
             // Connect to the azure server, if at school, remove "azure" and leave parentheses blank to connect to school.
-            DBOQuery TestFunctions = new DBOQuery();
+            DBOQuery TestFunctions = new DBOQuery("azure");
 
             // Decide which tests to perform by changing the boolean values. 
-            bool[] testsToPerform = new bool[11] {
+            bool[] testsToPerform = new bool[12] {
                 // Add New Users and Contact Details:
                 false,
                 
@@ -53,6 +53,9 @@ namespace DBOQuery___Testing
                 false,
 
                 // Get the bill information for a specific user
+                false,
+
+                // Update contact info for a given user
                 true
             };
 
@@ -517,7 +520,49 @@ namespace DBOQuery___Testing
                 Console.ReadKey();
             }
 
+            // Update a users contact details
+            if (testsToPerform[11])
+            {
+                int userID = 1;
 
+                // This function is very literal. If you include blank information, the new record will be blank.
+                // Make sure to call GetContactDetails on your user so you can pass in the details that aren't changing.
+                List<string> oldContactDetails = TestFunctions.GetContactDetails(userID);
+
+                Console.Write("Old Details:");
+                foreach (string detail in oldContactDetails)
+                {
+                    Console.WriteLine(detail);
+                }
+
+                List<string> newContactDetails = new List<string>();
+
+                // We want to update bob loblaws address and remove his fax number. Here's how we'd do this:
+                newContactDetails.Add(oldContactDetails[0]); // FirstName
+                newContactDetails.Add(oldContactDetails[1]); // LastName
+
+                newContactDetails.Add("276 Anywhere Street"); // AddressLine1
+
+                newContactDetails.Add(oldContactDetails[3]); // AddressLine2
+                newContactDetails.Add(oldContactDetails[4]); // AddressCity
+                newContactDetails.Add(oldContactDetails[5]); // AddressState
+                newContactDetails.Add(oldContactDetails[6]); // AddressZipCode
+                newContactDetails.Add(oldContactDetails[7]); // PhoneNumber
+
+                newContactDetails.Add("");                   // FaxNumber
+
+                newContactDetails.Add(oldContactDetails[9]); // Email
+
+                TestFunctions.UpdateUserContactDetails(userID, newContactDetails);
+
+                List<string> updatedDetails = TestFunctions.GetContactDetails(userID);
+
+                Console.Write("New Details:");
+                foreach (string detail in updatedDetails)
+                {
+                    Console.WriteLine(detail);
+                }
+            }
         }
     }
 }
