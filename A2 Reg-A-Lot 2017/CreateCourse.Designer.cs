@@ -45,8 +45,8 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.rtbNewCourseDescription = new System.Windows.Forms.RichTextBox();
             this.txtNewCourseStart = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.txtNewCourseStartDate = new System.Windows.Forms.Label();
+            this.txtDepartment = new System.Windows.Forms.MaskedTextBox();
+            this.txtNewCourseDepartment = new System.Windows.Forms.Label();
             this.txtNewCourseDuration = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
@@ -54,117 +54,131 @@
             // 
             this.lblCreateCourse.AutoSize = true;
             this.lblCreateCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreateCourse.Location = new System.Drawing.Point(8, 8);
+            this.lblCreateCourse.Location = new System.Drawing.Point(11, 10);
+            this.lblCreateCourse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCreateCourse.Name = "lblCreateCourse";
-            this.lblCreateCourse.Size = new System.Drawing.Size(229, 25);
+            this.lblCreateCourse.Size = new System.Drawing.Size(283, 31);
             this.lblCreateCourse.TabIndex = 78;
             this.lblCreateCourse.Text = "Create a new course";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 36);
+            this.label1.Location = new System.Drawing.Point(21, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 13);
+            this.label1.Size = new System.Drawing.Size(331, 17);
             this.label1.TabIndex = 79;
             this.label1.Text = "Please enter the criteria for the course to be added";
             // 
             // lblCourseTitle
             // 
             this.lblCourseTitle.AutoSize = true;
-            this.lblCourseTitle.Location = new System.Drawing.Point(84, 66);
+            this.lblCourseTitle.Location = new System.Drawing.Point(112, 81);
+            this.lblCourseTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCourseTitle.Name = "lblCourseTitle";
-            this.lblCourseTitle.Size = new System.Drawing.Size(30, 13);
+            this.lblCourseTitle.Size = new System.Drawing.Size(39, 17);
             this.lblCourseTitle.TabIndex = 80;
             this.lblCourseTitle.Text = "Title:";
             // 
             // txtNewCourseTitle
             // 
-            this.txtNewCourseTitle.Location = new System.Drawing.Point(119, 63);
+            this.txtNewCourseTitle.Location = new System.Drawing.Point(159, 78);
+            this.txtNewCourseTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNewCourseTitle.Name = "txtNewCourseTitle";
-            this.txtNewCourseTitle.Size = new System.Drawing.Size(253, 20);
+            this.txtNewCourseTitle.Size = new System.Drawing.Size(336, 22);
             this.txtNewCourseTitle.TabIndex = 81;
             // 
             // txtNewCourseCode
             // 
-            this.txtNewCourseCode.Location = new System.Drawing.Point(119, 89);
+            this.txtNewCourseCode.Location = new System.Drawing.Point(159, 110);
+            this.txtNewCourseCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNewCourseCode.Name = "txtNewCourseCode";
-            this.txtNewCourseCode.Size = new System.Drawing.Size(253, 20);
+            this.txtNewCourseCode.Size = new System.Drawing.Size(336, 22);
             this.txtNewCourseCode.TabIndex = 83;
             // 
             // lblCourseCode
             // 
             this.lblCourseCode.AutoSize = true;
-            this.lblCourseCode.Location = new System.Drawing.Point(43, 92);
+            this.lblCourseCode.Location = new System.Drawing.Point(57, 113);
+            this.lblCourseCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCourseCode.Name = "lblCourseCode";
-            this.lblCourseCode.Size = new System.Drawing.Size(71, 13);
+            this.lblCourseCode.Size = new System.Drawing.Size(94, 17);
             this.lblCourseCode.TabIndex = 82;
             this.lblCourseCode.Text = "Course Code:";
             // 
             // txtNewcourseSection
             // 
-            this.txtNewcourseSection.Location = new System.Drawing.Point(119, 115);
+            this.txtNewcourseSection.Location = new System.Drawing.Point(159, 142);
+            this.txtNewcourseSection.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNewcourseSection.Name = "txtNewcourseSection";
-            this.txtNewcourseSection.Size = new System.Drawing.Size(253, 20);
+            this.txtNewcourseSection.Size = new System.Drawing.Size(336, 22);
             this.txtNewcourseSection.TabIndex = 85;
             // 
             // lblSection
             // 
             this.lblSection.AutoSize = true;
-            this.lblSection.Location = new System.Drawing.Point(68, 118);
+            this.lblSection.Location = new System.Drawing.Point(91, 145);
+            this.lblSection.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSection.Name = "lblSection";
-            this.lblSection.Size = new System.Drawing.Size(46, 13);
+            this.lblSection.Size = new System.Drawing.Size(59, 17);
             this.lblSection.TabIndex = 84;
             this.lblSection.Text = "Section:";
             // 
             // lblStartTime
             // 
             this.lblStartTime.AutoSize = true;
-            this.lblStartTime.Location = new System.Drawing.Point(56, 144);
+            this.lblStartTime.Location = new System.Drawing.Point(75, 177);
+            this.lblStartTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStartTime.Name = "lblStartTime";
-            this.lblStartTime.Size = new System.Drawing.Size(58, 13);
+            this.lblStartTime.Size = new System.Drawing.Size(77, 17);
             this.lblStartTime.TabIndex = 86;
             this.lblStartTime.Text = "Start Time:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 246);
+            this.label2.Location = new System.Drawing.Point(68, 303);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(83, 17);
             this.label2.TabIndex = 88;
             this.label2.Text = "Description:";
             // 
             // lblDuration
             // 
             this.lblDuration.AutoSize = true;
-            this.lblDuration.Location = new System.Drawing.Point(64, 170);
+            this.lblDuration.Location = new System.Drawing.Point(85, 209);
+            this.lblDuration.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDuration.Name = "lblDuration";
-            this.lblDuration.Size = new System.Drawing.Size(50, 13);
+            this.lblDuration.Size = new System.Drawing.Size(66, 17);
             this.lblDuration.TabIndex = 90;
             this.lblDuration.Text = "Duration:";
             // 
             // txtNewCourseTuition
             // 
-            this.txtNewCourseTuition.Location = new System.Drawing.Point(119, 217);
+            this.txtNewCourseTuition.Location = new System.Drawing.Point(159, 267);
+            this.txtNewCourseTuition.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNewCourseTuition.Name = "txtNewCourseTuition";
-            this.txtNewCourseTuition.Size = new System.Drawing.Size(253, 20);
+            this.txtNewCourseTuition.Size = new System.Drawing.Size(336, 22);
             this.txtNewCourseTuition.TabIndex = 93;
             // 
             // lblTuition
             // 
             this.lblTuition.AutoSize = true;
-            this.lblTuition.Location = new System.Drawing.Point(72, 220);
+            this.lblTuition.Location = new System.Drawing.Point(96, 271);
+            this.lblTuition.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTuition.Name = "lblTuition";
-            this.lblTuition.Size = new System.Drawing.Size(42, 13);
+            this.lblTuition.Size = new System.Drawing.Size(55, 17);
             this.lblTuition.TabIndex = 92;
             this.lblTuition.Text = "Tuition:";
             // 
             // btnCreateCourse
             // 
-            this.btnCreateCourse.Location = new System.Drawing.Point(248, 326);
+            this.btnCreateCourse.Location = new System.Drawing.Point(331, 401);
+            this.btnCreateCourse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreateCourse.Name = "btnCreateCourse";
-            this.btnCreateCourse.Size = new System.Drawing.Size(113, 32);
+            this.btnCreateCourse.Size = new System.Drawing.Size(151, 39);
             this.btnCreateCourse.TabIndex = 94;
             this.btnCreateCourse.Text = "Create New Course";
             this.btnCreateCourse.UseVisualStyleBackColor = true;
@@ -172,9 +186,10 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(108, 326);
+            this.btnBack.Location = new System.Drawing.Point(144, 401);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(113, 32);
+            this.btnBack.Size = new System.Drawing.Size(151, 39);
             this.btnBack.TabIndex = 95;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -182,56 +197,60 @@
             // 
             // rtbNewCourseDescription
             // 
-            this.rtbNewCourseDescription.Location = new System.Drawing.Point(119, 243);
+            this.rtbNewCourseDescription.Location = new System.Drawing.Point(159, 299);
+            this.rtbNewCourseDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rtbNewCourseDescription.Name = "rtbNewCourseDescription";
-            this.rtbNewCourseDescription.Size = new System.Drawing.Size(253, 62);
+            this.rtbNewCourseDescription.Size = new System.Drawing.Size(336, 75);
             this.rtbNewCourseDescription.TabIndex = 96;
             this.rtbNewCourseDescription.Text = "";
             // 
             // txtNewCourseStart
             // 
-            this.txtNewCourseStart.Location = new System.Drawing.Point(119, 141);
+            this.txtNewCourseStart.Location = new System.Drawing.Point(159, 174);
+            this.txtNewCourseStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNewCourseStart.Mask = "90:00";
             this.txtNewCourseStart.Name = "txtNewCourseStart";
-            this.txtNewCourseStart.Size = new System.Drawing.Size(253, 20);
+            this.txtNewCourseStart.Size = new System.Drawing.Size(336, 22);
             this.txtNewCourseStart.TabIndex = 97;
             this.txtNewCourseStart.ValidatingType = typeof(System.DateTime);
             // 
-            // maskedTextBox1
+            // txtDepartment
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(119, 192);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(253, 20);
-            this.maskedTextBox1.TabIndex = 98;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.txtDepartment.Location = new System.Drawing.Point(159, 236);
+            this.txtDepartment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDepartment.Name = "txtDepartment";
+            this.txtDepartment.Size = new System.Drawing.Size(336, 22);
+            this.txtDepartment.TabIndex = 98;
             // 
-            // txtNewCourseStartDate
+            // txtNewCourseDepartment
             // 
-            this.txtNewCourseStartDate.AutoSize = true;
-            this.txtNewCourseStartDate.Location = new System.Drawing.Point(56, 193);
-            this.txtNewCourseStartDate.Name = "txtNewCourseStartDate";
-            this.txtNewCourseStartDate.Size = new System.Drawing.Size(58, 13);
-            this.txtNewCourseStartDate.TabIndex = 99;
-            this.txtNewCourseStartDate.Text = "Start Date:";
+            this.txtNewCourseDepartment.AutoSize = true;
+            this.txtNewCourseDepartment.Location = new System.Drawing.Point(75, 238);
+            this.txtNewCourseDepartment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtNewCourseDepartment.Name = "txtNewCourseDepartment";
+            this.txtNewCourseDepartment.Size = new System.Drawing.Size(82, 17);
+            this.txtNewCourseDepartment.TabIndex = 99;
+            this.txtNewCourseDepartment.Text = "Department";
+            this.txtNewCourseDepartment.Click += new System.EventHandler(this.txtNewCourseStartDate_Click);
             // 
             // txtNewCourseDuration
             // 
-            this.txtNewCourseDuration.Location = new System.Drawing.Point(119, 167);
+            this.txtNewCourseDuration.Location = new System.Drawing.Point(159, 206);
+            this.txtNewCourseDuration.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNewCourseDuration.Mask = "90:00";
             this.txtNewCourseDuration.Name = "txtNewCourseDuration";
-            this.txtNewCourseDuration.Size = new System.Drawing.Size(253, 20);
+            this.txtNewCourseDuration.Size = new System.Drawing.Size(336, 22);
             this.txtNewCourseDuration.TabIndex = 100;
             this.txtNewCourseDuration.ValidatingType = typeof(System.DateTime);
             // 
             // CreateCourse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 373);
+            this.ClientSize = new System.Drawing.Size(607, 459);
             this.Controls.Add(this.txtNewCourseDuration);
-            this.Controls.Add(this.txtNewCourseStartDate);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.txtNewCourseDepartment);
+            this.Controls.Add(this.txtDepartment);
             this.Controls.Add(this.txtNewCourseStart);
             this.Controls.Add(this.rtbNewCourseDescription);
             this.Controls.Add(this.btnBack);
@@ -249,6 +268,7 @@
             this.Controls.Add(this.lblCourseTitle);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCreateCourse);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CreateCourse";
             this.Text = "Create New Course";
             this.ResumeLayout(false);
@@ -275,8 +295,8 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.RichTextBox rtbNewCourseDescription;
         private System.Windows.Forms.MaskedTextBox txtNewCourseStart;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Label txtNewCourseStartDate;
+        private System.Windows.Forms.MaskedTextBox txtDepartment;
+        private System.Windows.Forms.Label txtNewCourseDepartment;
         private System.Windows.Forms.MaskedTextBox txtNewCourseDuration;
     }
 }

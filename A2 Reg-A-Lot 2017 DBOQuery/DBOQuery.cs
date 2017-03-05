@@ -21,10 +21,10 @@ using System.Data.Sql;
 namespace A2_Reg_A_Lot_2017
 {
     /// <summary>
-    /// Axl's Class. Abstracts away the process of opening and querying the database. This class cannot be inherited.
+    /// Axl's Class. Abstracts away the process of opening and querying the database.
     /// </summary>
     /// <remarks></remarks>
-    public sealed class DBOQuery
+    public class DBOQuery
     {
         private SqlConnection Connection;
 
@@ -197,7 +197,7 @@ namespace A2_Reg_A_Lot_2017
         }
 
         /// <summary>
-        /// Insert a new record into the UserCourses Table
+        /// Insert a new record into the UserCourses Table (is basically the register for a course function) both students and professors will use this function.
         /// </summary>
         /// <param name="User_ID">The user who is registering for the course.</param>
         /// <param name="Course_ID">The course the user is registering for.</param>
@@ -523,15 +523,6 @@ namespace A2_Reg_A_Lot_2017
             
             Connection.Open();
             string commandString =
-                // oh my god, this query... this crazy query...
-                //string.Format("SELECT[Users].[User_ID],[ContactDetails].[FirstName],[ContactDetails].[LastName]"     +
-                //              ",[ContactDetails].[AddressLine1],[ContactDetails].[AddressLine2],"                    +
-                //              "[ContactDetails].[AddressCity],[ContactDetails].[AddressState],[ContactDetails]."     +
-                //              "[AddressZipCode],[Tuition].[totalTuition]FROM[dbo].[Users],(SELECT[UserCourses]."     +
-                //              "[User_ID],sum([Courses].[CourseTuition])AS totalTuition FROM[Courses]INNER JOIN"      +
-                //              "[UserCourses]ON[UserCourses].[Course_ID]=[Courses].[Course_ID]WHERE[UserCourses]"     +
-                //              ".[User_ID]='{0}'GROUP BY[UserCourses].[User_ID])Tuition INNER JOIN[ContactDetails]ON" +
-                //              "[ContactDetails].[User_ID]=[Tuition].[User_ID]WHERE[Users].[User_ID]='{0}';", user_ID);
                 string.Format(       "    SELECT [Users].[User_ID], " +
 	                                 "           [ContactDetails].[FirstName]," +
 	                                 "           [ContactDetails].[LastName], " +
@@ -624,6 +615,15 @@ namespace A2_Reg_A_Lot_2017
             }
             Connection.Close();
             return;
+        }
+
+        public List<string> GetCoursesWithNoProfessor()
+        {
+            List<string> results = new List<string>();
+
+
+
+            return results;
         }
     }
 }
