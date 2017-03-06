@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Reg_A_Lot_Class_Library;
 
 namespace A2_Reg_A_Lot_2017
 {
@@ -160,7 +161,9 @@ namespace A2_Reg_A_Lot_2017
             rawDetails.Add(txtEmail.Text);
             rawDetails.Add(txtPhone.Text);
 
-            query.UpdateUserContactDetails(,rawDetails);
+
+            MessageBox.Show("Current UserID = "+ CurrentUser.user_ID.ToString() + ".", "This is a title?");
+            // query.UpdateUserContactDetails(Student.user_ID, rawDetails); // change this later - ajm
 
             txtFirstName.ReadOnly = true;
             txtLastName.ReadOnly = true;

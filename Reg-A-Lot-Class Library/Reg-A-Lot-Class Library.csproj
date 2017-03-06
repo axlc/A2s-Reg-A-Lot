@@ -43,11 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserClass.cs" />
-    <Compile Include="Professor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registrar.cs" />
-    <Compile Include="Student.cs" />
+    <Compile Include="CurrentUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\A2 Reg-A-Lot 2017\A2 Reg-A-Lot 2017.csproj">

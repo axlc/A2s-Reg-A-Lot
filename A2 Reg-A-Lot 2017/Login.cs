@@ -83,15 +83,20 @@ namespace A2_Reg_A_Lot_2017
                     MessageBox.Show("login succesful");
                     if (Query.GetRoleFromUserID(UserId) == "Student")
                     {
-                        Student currentStudent = new Student(UserId);
+                        CurrentUser.user_ID = UserId;
+                        CurrentUser.user_Type = 1;
                         studentFrm.Show();
                     }
                     else if (Query.GetRoleFromUserID(UserId) == "Professor")
                     {
+                        CurrentUser.user_ID = UserId;
+                        CurrentUser.user_Type = 2;
                         professorFrm.Show();
                     }
                     else if (Query.GetRoleFromUserID(UserId) == "Registrar")
                     {
+                        CurrentUser.user_ID = UserId;
+                        CurrentUser.user_Type = 3;
                         registrarFrm.Show();
                     }
                 }
