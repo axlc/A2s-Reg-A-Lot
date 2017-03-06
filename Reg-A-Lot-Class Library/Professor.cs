@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Reg_A_Lot_Class_Library
 {
-    abstract class Professor : UserClass
+    public class Professor : UserClass
     {
-        public void GrabInfo()
+        int user_ID { get; set; }
+        public Professor(int userID)
         {
-            
+            user_ID = userID;
         }
     }
 }

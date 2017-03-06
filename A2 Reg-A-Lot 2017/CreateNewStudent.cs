@@ -22,7 +22,7 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Create a new student in the database");
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

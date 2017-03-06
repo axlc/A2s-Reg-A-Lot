@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using A2_Reg_A_Lot_2017;
+using Reg_A_Lot_Class_Library;
+
 namespace A2_Reg_A_Lot_2017
 {
     public partial class Login : Form
@@ -81,6 +83,7 @@ namespace A2_Reg_A_Lot_2017
                     MessageBox.Show("login succesful");
                     if (Query.GetRoleFromUserID(UserId) == "Student")
                     {
+                        Student currentStudent = new Student(UserId);
                         studentFrm.Show();
                     }
                     else if (Query.GetRoleFromUserID(UserId) == "Professor")

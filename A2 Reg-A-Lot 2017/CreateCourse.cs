@@ -21,7 +21,7 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnCreateCourse_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("A Course will be created");
+            // MessageBox.Show("A Course will be created");
             DBOQuery Query = new DBOQuery();
 
             string CourseTitle = txtNewCourseTitle.Text;
