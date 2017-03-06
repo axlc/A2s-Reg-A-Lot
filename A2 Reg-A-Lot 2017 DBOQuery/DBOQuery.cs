@@ -617,12 +617,43 @@ namespace A2_Reg_A_Lot_2017
             return;
         }
 
-        public List<string> GetCoursesWithNoProfessor()
+        public List<int> GetCoursesWithNoProfessor()
         {
-            List<string> results = new List<string>();
+            List<int> results = new List<int>();
+            // The IN condition of the WHERE clause seemed a lot more intuitive than the joins I originally tried for this.
+            string commandString = string.Format("SELECT [Course_ID] " +
+                                                 "  FROM [UserCourses] " +
+                                                 " WHERE [Course_ID] " +
+                                                 "NOT IN ( " +
+                                                 "       SELECT [Course_ID] " +
+                                                 "         FROM ( " +
+                                                 "              SELECT [Course_ID], [User_ID] " +
+                                                 "                FROM [UserCourses] " +
+                                                 "              )   AS [RegisteredCourses] " +
+                                                 "        WHERE [User_ID] " +
+                                                 "           IN ( " +
+                                                 "              SELECT [User_ID] " +
+                                                 "                FROM [dbo].[Users] " +
+                                                 "               WHERE [UserType]='2' " +
+                                                 "              ) " +
+                                                 "       ) " +
+                                                 "GROUP BY ([Course_ID]); ");
+            Connection.Open();
 
+            using (SqlCommand selectCoursesWithNoProfessor = Connection.CreateCommand())
+            {
+                selectCoursesWithNoProfessor.CommandText = commandString;
+                using (SqlDataReader reader = selectCoursesWithNoProfessor.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int course = reader.GetInt32(0);
+                        results.Add(course);
+                    }
+                }
+            }
 
-
+            Connection.Close();
             return results;
         }
     }

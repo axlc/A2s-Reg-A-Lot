@@ -21,7 +21,7 @@ namespace DBOQuery___Testing
             DBOQuery TestFunctions = new DBOQuery("azure");
 
             // Decide which tests to perform by changing the boolean values. 
-            bool[] testsToPerform = new bool[12] {
+            bool[] testsToPerform = new bool[13] {
                 // Add New Users and Contact Details:
                 false,
                 
@@ -56,6 +56,9 @@ namespace DBOQuery___Testing
                 false,
 
                 // Update contact info for a given user
+                false,
+
+                // Get a list of courses without a professor
                 true
             };
 
@@ -562,6 +565,17 @@ namespace DBOQuery___Testing
                 {
                     Console.WriteLine(detail);
                 }
+            }
+
+            // Get a list of courses with no professor
+            if (testsToPerform[12])
+            {
+                List<int> courses = TestFunctions.GetCoursesWithNoProfessor();
+                foreach (int course in courses)
+                {
+                    Console.WriteLine("Course_ID: {0} has no professor to teach it.", course);
+                }
+                Console.ReadKey();
             }
         }
     }
