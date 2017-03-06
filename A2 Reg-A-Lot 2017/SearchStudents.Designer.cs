@@ -39,8 +39,7 @@
             this.lblById = new System.Windows.Forms.Label();
             this.lblByCourse = new System.Windows.Forms.Label();
             this.gbxStudentInfo = new System.Windows.Forms.GroupBox();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,6 +59,7 @@
             this.lblDisplayState = new System.Windows.Forms.Label();
             this.lblDisplayZipCode = new System.Windows.Forms.Label();
             this.lblDisplayFax = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.gbxStudentSearch.SuspendLayout();
             this.gbxStudentInfo.SuspendLayout();
             this.SuspendLayout();
@@ -67,23 +67,6 @@
             // lbxStudents
             // 
             this.lbxStudents.FormattingEnabled = true;
-            this.lbxStudents.Items.AddRange(new object[] {
-            "Student 1",
-            "Student 2",
-            "Student 3",
-            "Student 4",
-            "Student 5",
-            "Student 6",
-            "Student 7",
-            "Student 8",
-            "Student 9",
-            "Student 10",
-            "Student 11",
-            "Student 12",
-            "Student 13",
-            "Student 14",
-            "Student 15",
-            "etc."});
             this.lbxStudents.Location = new System.Drawing.Point(13, 174);
             this.lbxStudents.Name = "lbxStudents";
             this.lbxStudents.Size = new System.Drawing.Size(279, 199);
@@ -185,7 +168,7 @@
             // 
             // gbxStudentInfo
             // 
-            this.gbxStudentInfo.Controls.Add(this.textBox2);
+            this.gbxStudentInfo.Controls.Add(this.txtPhoneNumber);
             this.gbxStudentInfo.Controls.Add(this.lblPhone);
             this.gbxStudentInfo.Controls.Add(this.textBox1);
             this.gbxStudentInfo.Controls.Add(this.label1);
@@ -212,25 +195,15 @@
             this.gbxStudentInfo.TabStop = false;
             this.gbxStudentInfo.Text = "Student Information";
             // 
-            // btnBack
+            // txtPhoneNumber
             // 
-            this.btnBack.Location = new System.Drawing.Point(386, 335);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 69;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(120, 248);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 13);
-            this.textBox2.TabIndex = 143;
+            this.txtPhoneNumber.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPhoneNumber.Location = new System.Drawing.Point(120, 248);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.ReadOnly = true;
+            this.txtPhoneNumber.Size = new System.Drawing.Size(100, 13);
+            this.txtPhoneNumber.TabIndex = 143;
             // 
             // lblPhone
             // 
@@ -412,6 +385,16 @@
             this.lblDisplayFax.TabIndex = 129;
             this.lblDisplayFax.Text = "Fax:";
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(386, 335);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 69;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // SearchStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -447,7 +430,7 @@
         private System.Windows.Forms.Label lblByCourse;
         private System.Windows.Forms.GroupBox gbxStudentInfo;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;

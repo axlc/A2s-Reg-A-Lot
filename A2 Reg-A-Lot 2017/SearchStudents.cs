@@ -21,6 +21,34 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnSearchStudents_Click(object sender, EventArgs e)
         {
+            string rawStudentID = txtId.Text;
+            int studentID = Int32.Parse(rawStudentID);
+            DBOQuery Query = new DBOQuery();
+
+            if(int.TryParse(rawStudentID, out studentID))
+            {   List<string> contactDetails = Query.GetContactDetails(studentID);
+                string Name =contactDetails[0]+ contactDetails[1];
+                // MessageBox.Show("HEY");//MessageBox.Show(contactDetails[0]);
+               
+
+                 lbxStudents.Items.Add(Name);
+
+                  txtFirstName.Text = contactDetails[0];
+                txtLastName.Text = contactDetails[1];
+                txtAddress.Text = contactDetails[2];
+                txtCity.Text = contactDetails[4];
+                txtState.Text = contactDetails[5];
+                txtZipcode.Text = contactDetails[6];
+                txtFax.Text = contactDetails[8];
+                txtEmail.Text = contactDetails[9];
+                txtPhoneNumber.Text = contactDetails[7];
+
+
+                
+
+               
+            }
+
             MessageBox.Show("Attempt to search for a student using specified conditions");
         }
 
