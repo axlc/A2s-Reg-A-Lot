@@ -15,6 +15,7 @@ namespace A2_Reg_A_Lot_2017
         public StudentMenu()
         {
             InitializeComponent();
+            
         }
 
         private void btnUpdateInfo_Click(object sender, EventArgs e)
@@ -146,6 +147,21 @@ namespace A2_Reg_A_Lot_2017
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Clicking confirm should update the changes in the database, and make textboxes ReadOnly again");
+
+            DBOQuery query = new DBOQuery();
+            List<string> rawDetails = new List<string>();
+            rawDetails.Add(txtFirstName.Text);
+            rawDetails.Add(txtLastName.Text);
+            rawDetails.Add(txtAddress.Text);
+            rawDetails.Add(txtCity.Text);
+            rawDetails.Add(txtState.Text);
+            rawDetails.Add(txtZipcode.Text);
+            rawDetails.Add(txtFax.Text);
+            rawDetails.Add(txtEmail.Text);
+            rawDetails.Add(txtPhone.Text);
+
+            query.UpdateUserContactDetails(,rawDetails);
+
             txtFirstName.ReadOnly = true;
             txtLastName.ReadOnly = true;
             txtAddress.ReadOnly = true;

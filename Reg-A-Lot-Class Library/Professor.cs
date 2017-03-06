@@ -8,9 +8,10 @@ namespace Reg_A_Lot_Class_Library
 {
     public class Professor : UserClass
     {
-        public void GrabInfo()
+        int user_ID { get; set; }
+        public Professor(int userID)
         {
-            
+            user_ID = userID;
         }
     }
 }
