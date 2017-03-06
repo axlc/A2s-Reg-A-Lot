@@ -16,5 +16,10 @@ namespace A2_Reg_A_Lot_2017
         {
             InitializeComponent();
         }
+
+        private void btnRegisterP_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

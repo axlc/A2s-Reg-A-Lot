@@ -54,6 +54,7 @@
             this.btnRegisterP.TabIndex = 74;
             this.btnRegisterP.Text = "Register";
             this.btnRegisterP.UseVisualStyleBackColor = true;
+            this.btnRegisterP.Click += new System.EventHandler(this.btnRegisterP_Click);
             // 
             // gbxCourseSelectP
             // 

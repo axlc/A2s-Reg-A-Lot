@@ -16,6 +16,10 @@ namespace A2_Reg_A_Lot_2017
         public ProfessorAddCourse()
         {
             InitializeComponent();
+            DBOQuery Query = new DBOQuery();
+            Query.GetAllCourses();
+            List<List<string>> courses = Query.GetAllCourses();
+            clbAllNewCourses.Items.Add(courses);
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
