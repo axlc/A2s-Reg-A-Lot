@@ -656,5 +656,19 @@ namespace A2_Reg_A_Lot_2017
             Connection.Close();
             return results;
         }
+
+        public void CancelRegistration(int Course_ID)
+        {
+            string commandString = string.Format("delete from UserCourses where[Course_ID] = '{0}';", Course_ID);
+
+            Connection.Open();
+            using (SqlCommand CancelCourseRegistrations = Connection.CreateCommand())
+            {
+                CancelCourseRegistrations.CommandText = commandString;
+                CancelCourseRegistrations.ExecuteNonQuery();
+            }
+            Connection.Close();
+            return;
+        }
     }
 }
