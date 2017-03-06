@@ -66,6 +66,7 @@ namespace A2_Reg_A_Lot_2017
             ProfessorMenu professorFrm = new ProfessorMenu();
             RegistrarMenu registrarFrm = new RegistrarMenu();
 
+            //Test comment - OT
            
 
             string Password = txtPassword.Text;
