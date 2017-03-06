@@ -18,7 +18,7 @@ namespace DBOQuery___Testing
         static void Main(string[] args)
         {
             // Connect to the azure server, if at school, remove "azure" and leave parentheses blank to connect to school.
-            DBOQuery TestFunctions = new DBOQuery("azure");
+            DBOQuery TestFunctions = new DBOQuery();
 
             // Decide which tests to perform by changing the boolean values. 
             bool[] testsToPerform = new bool[13] {
