@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Reg_A_Lot_Class_Library
 {
-    abstract class Student: UserClass
+    public class Student: UserClass
     {
-        int user_ID;
+        public int user_ID { get; set; }
 
-        Student(int userID)
+        public Student(int UserID)
         {
-            user_ID = userID;
+            user_ID = UserID;
         }
     }
 }

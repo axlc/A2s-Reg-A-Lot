@@ -670,5 +670,45 @@ namespace A2_Reg_A_Lot_2017
             Connection.Close();
             return;
         }
+
+        /* public List<List<string>> GetAllContactDetails()
+        {
+            List<List<string>> contactDetails = new List<List<string>>();
+            Connection.Open();
+
+            string commandString = string.Format("SELECT * " +
+                                                   "FROM [dbo].[Courses]; ");
+
+            using (SqlCommand selectAllCourses = Connection.CreateCommand())
+            {
+                selectAllCourses.CommandText = commandString;
+
+                using (SqlDataReader reader = selectAllCourses.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        List<string> courseDetails = new List<string>();
+
+                        courseDetails.Add(reader.GetInt32(0).ToString());
+                        courseDetails.Add(reader.GetString(1));
+                        courseDetails.Add(reader.GetString(2));
+                        courseDetails.Add(reader.GetString(3));
+                        courseDetails.Add(reader.GetString(4));
+
+                        TimeSpan startTime = reader.GetTimeSpan(5);
+                        courseDetails.Add(startTime.ToString());
+
+                        TimeSpan duration = reader.GetTimeSpan(6);
+                        courseDetails.Add(duration.ToString());
+
+                        courseDetails.Add(reader.GetDouble(7).ToString());
+                        courseDetails.Add(reader.GetString(8));
+
+                        courses.Add(courseDetails);
+                    }
+                }
+            }
+            return contactDetails;
+        }*/
     }
 }
