@@ -160,7 +160,7 @@ namespace A2_Reg_A_Lot_2017
             rawDetails.Add(txtEmail.Text);
             rawDetails.Add(txtPhone.Text);
 
-            query.UpdateUserContactDetails(,rawDetails);
+            query.UpdateUserContactDetails(1,rawDetails);
 
             txtFirstName.ReadOnly = true;
             txtLastName.ReadOnly = true;
