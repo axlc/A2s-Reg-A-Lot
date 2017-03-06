@@ -46,12 +46,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CurrentUser.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\A2 Reg-A-Lot 2017\A2 Reg-A-Lot 2017.csproj">
-      <Project>{7EFFDDCB-4125-4EE9-8F9C-2656EB9FE8C4}</Project>
-      <Name>A2 Reg-A-Lot 2017</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
