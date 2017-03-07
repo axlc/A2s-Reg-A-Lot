@@ -36,13 +36,6 @@
             this.columnSchedule = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnStartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxProfessorInfo = new System.Windows.Forms.GroupBox();
-            this.imgProfessorPhoto = new System.Windows.Forms.PictureBox();
-            this.gbxProfessorOptions = new System.Windows.Forms.GroupBox();
-            this.btnStudentSearch = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnMyStudents = new System.Windows.Forms.Button();
-            this.btnCancelCourses = new System.Windows.Forms.Button();
-            this.btnAddCourses = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -66,6 +59,13 @@
             this.lblDisplayZipCode = new System.Windows.Forms.Label();
             this.lblDisplayFax = new System.Windows.Forms.Label();
             this.btnUpdateInfo = new System.Windows.Forms.Button();
+            this.imgProfessorPhoto = new System.Windows.Forms.PictureBox();
+            this.gbxProfessorOptions = new System.Windows.Forms.GroupBox();
+            this.btnStudentSearch = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnMyStudents = new System.Windows.Forms.Button();
+            this.btnCancelCourses = new System.Windows.Forms.Button();
+            this.btnAddCourses = new System.Windows.Forms.Button();
             this.gbxMyCourses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbxProfessorInfo.SuspendLayout();
@@ -161,77 +161,6 @@
             this.gbxProfessorInfo.TabIndex = 71;
             this.gbxProfessorInfo.TabStop = false;
             this.gbxProfessorInfo.Text = "Professor Information";
-            // 
-            // imgProfessorPhoto
-            // 
-            this.imgProfessorPhoto.Location = new System.Drawing.Point(78, 24);
-            this.imgProfessorPhoto.Name = "imgProfessorPhoto";
-            this.imgProfessorPhoto.Size = new System.Drawing.Size(100, 100);
-            this.imgProfessorPhoto.TabIndex = 63;
-            this.imgProfessorPhoto.TabStop = false;
-            // 
-            // gbxProfessorOptions
-            // 
-            this.gbxProfessorOptions.Controls.Add(this.btnStudentSearch);
-            this.gbxProfessorOptions.Controls.Add(this.label6);
-            this.gbxProfessorOptions.Controls.Add(this.btnMyStudents);
-            this.gbxProfessorOptions.Controls.Add(this.btnCancelCourses);
-            this.gbxProfessorOptions.Controls.Add(this.btnAddCourses);
-            this.gbxProfessorOptions.Location = new System.Drawing.Point(343, 370);
-            this.gbxProfessorOptions.Name = "gbxProfessorOptions";
-            this.gbxProfessorOptions.Size = new System.Drawing.Size(452, 67);
-            this.gbxProfessorOptions.TabIndex = 73;
-            this.gbxProfessorOptions.TabStop = false;
-            this.gbxProfessorOptions.Text = "Course Options";
-            // 
-            // btnStudentSearch
-            // 
-            this.btnStudentSearch.Location = new System.Drawing.Point(342, 23);
-            this.btnStudentSearch.Name = "btnStudentSearch";
-            this.btnStudentSearch.Size = new System.Drawing.Size(99, 30);
-            this.btnStudentSearch.TabIndex = 73;
-            this.btnStudentSearch.Text = "View All Students";
-            this.btnStudentSearch.UseVisualStyleBackColor = true;
-            this.btnStudentSearch.Click += new System.EventHandler(this.btnStudentSearch_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(221, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 13);
-            this.label6.TabIndex = 72;
-            this.label6.Text = "Student Options";
-            // 
-            // btnMyStudents
-            // 
-            this.btnMyStudents.Location = new System.Drawing.Point(236, 23);
-            this.btnMyStudents.Name = "btnMyStudents";
-            this.btnMyStudents.Size = new System.Drawing.Size(100, 30);
-            this.btnMyStudents.TabIndex = 67;
-            this.btnMyStudents.Text = "View My Students";
-            this.btnMyStudents.UseVisualStyleBackColor = true;
-            this.btnMyStudents.Click += new System.EventHandler(this.btnMyStudents_Click);
-            // 
-            // btnCancelCourses
-            // 
-            this.btnCancelCourses.Location = new System.Drawing.Point(17, 23);
-            this.btnCancelCourses.Name = "btnCancelCourses";
-            this.btnCancelCourses.Size = new System.Drawing.Size(90, 30);
-            this.btnCancelCourses.TabIndex = 66;
-            this.btnCancelCourses.Text = "Cancel Courses";
-            this.btnCancelCourses.UseVisualStyleBackColor = true;
-            this.btnCancelCourses.Click += new System.EventHandler(this.btnCancelCourses_Click);
-            // 
-            // btnAddCourses
-            // 
-            this.btnAddCourses.Location = new System.Drawing.Point(117, 23);
-            this.btnAddCourses.Name = "btnAddCourses";
-            this.btnAddCourses.Size = new System.Drawing.Size(79, 30);
-            this.btnAddCourses.TabIndex = 65;
-            this.btnAddCourses.Text = "Add Course";
-            this.btnAddCourses.UseVisualStyleBackColor = true;
-            this.btnAddCourses.Click += new System.EventHandler(this.btnAddCourses_Click);
             // 
             // comboBox1
             // 
@@ -444,6 +373,77 @@
             this.btnUpdateInfo.UseVisualStyleBackColor = true;
             this.btnUpdateInfo.Click += new System.EventHandler(this.btnUpdateInfo_Click_1);
             // 
+            // imgProfessorPhoto
+            // 
+            this.imgProfessorPhoto.Location = new System.Drawing.Point(78, 24);
+            this.imgProfessorPhoto.Name = "imgProfessorPhoto";
+            this.imgProfessorPhoto.Size = new System.Drawing.Size(100, 100);
+            this.imgProfessorPhoto.TabIndex = 63;
+            this.imgProfessorPhoto.TabStop = false;
+            // 
+            // gbxProfessorOptions
+            // 
+            this.gbxProfessorOptions.Controls.Add(this.btnStudentSearch);
+            this.gbxProfessorOptions.Controls.Add(this.label6);
+            this.gbxProfessorOptions.Controls.Add(this.btnMyStudents);
+            this.gbxProfessorOptions.Controls.Add(this.btnCancelCourses);
+            this.gbxProfessorOptions.Controls.Add(this.btnAddCourses);
+            this.gbxProfessorOptions.Location = new System.Drawing.Point(343, 370);
+            this.gbxProfessorOptions.Name = "gbxProfessorOptions";
+            this.gbxProfessorOptions.Size = new System.Drawing.Size(452, 67);
+            this.gbxProfessorOptions.TabIndex = 73;
+            this.gbxProfessorOptions.TabStop = false;
+            this.gbxProfessorOptions.Text = "Course Options";
+            // 
+            // btnStudentSearch
+            // 
+            this.btnStudentSearch.Location = new System.Drawing.Point(342, 23);
+            this.btnStudentSearch.Name = "btnStudentSearch";
+            this.btnStudentSearch.Size = new System.Drawing.Size(99, 30);
+            this.btnStudentSearch.TabIndex = 73;
+            this.btnStudentSearch.Text = "View All Students";
+            this.btnStudentSearch.UseVisualStyleBackColor = true;
+            this.btnStudentSearch.Click += new System.EventHandler(this.btnStudentSearch_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(221, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 13);
+            this.label6.TabIndex = 72;
+            this.label6.Text = "Student Options";
+            // 
+            // btnMyStudents
+            // 
+            this.btnMyStudents.Location = new System.Drawing.Point(236, 23);
+            this.btnMyStudents.Name = "btnMyStudents";
+            this.btnMyStudents.Size = new System.Drawing.Size(100, 30);
+            this.btnMyStudents.TabIndex = 67;
+            this.btnMyStudents.Text = "View My Students";
+            this.btnMyStudents.UseVisualStyleBackColor = true;
+            this.btnMyStudents.Click += new System.EventHandler(this.btnMyStudents_Click);
+            // 
+            // btnCancelCourses
+            // 
+            this.btnCancelCourses.Location = new System.Drawing.Point(17, 23);
+            this.btnCancelCourses.Name = "btnCancelCourses";
+            this.btnCancelCourses.Size = new System.Drawing.Size(90, 30);
+            this.btnCancelCourses.TabIndex = 66;
+            this.btnCancelCourses.Text = "Cancel Courses";
+            this.btnCancelCourses.UseVisualStyleBackColor = true;
+            this.btnCancelCourses.Click += new System.EventHandler(this.btnCancelCourses_Click);
+            // 
+            // btnAddCourses
+            // 
+            this.btnAddCourses.Location = new System.Drawing.Point(117, 23);
+            this.btnAddCourses.Name = "btnAddCourses";
+            this.btnAddCourses.Size = new System.Drawing.Size(79, 30);
+            this.btnAddCourses.TabIndex = 65;
+            this.btnAddCourses.Text = "Add Course";
+            this.btnAddCourses.UseVisualStyleBackColor = true;
+            this.btnAddCourses.Click += new System.EventHandler(this.btnAddCourses_Click);
+            // 
             // ProfessorMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -454,6 +454,7 @@
             this.Controls.Add(this.gbxProfessorInfo);
             this.Name = "ProfessorMenu";
             this.Text = "Professor Menu";
+            this.Load += new System.EventHandler(this.ProfessorMenu_Load);
             this.gbxMyCourses.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gbxProfessorInfo.ResumeLayout(false);

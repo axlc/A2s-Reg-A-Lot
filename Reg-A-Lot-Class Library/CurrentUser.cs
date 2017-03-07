@@ -10,5 +10,6 @@ namespace Reg_A_Lot_Class_Library
     {
         public static int user_ID { get; set; }
         public static int user_Type { get; set; }
+        
     }
 }
