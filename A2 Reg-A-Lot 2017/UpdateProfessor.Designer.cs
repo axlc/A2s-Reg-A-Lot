@@ -296,6 +296,7 @@
             this.lbxProfessors.Name = "lbxProfessors";
             this.lbxProfessors.Size = new System.Drawing.Size(279, 199);
             this.lbxProfessors.TabIndex = 76;
+            this.lbxProfessors.SelectedIndexChanged += new System.EventHandler(this.lbxProfessors_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -330,6 +331,7 @@
             this.btnSearchProfessors.TabIndex = 65;
             this.btnSearchProfessors.Text = "Search";
             this.btnSearchProfessors.UseVisualStyleBackColor = true;
+            this.btnSearchProfessors.Click += new System.EventHandler(this.btnSearchProfessors_Click);
             // 
             // lblByName
             // 

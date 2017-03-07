@@ -10,22 +10,22 @@ using System.Windows.Forms;
 
 namespace A2_Reg_A_Lot_2017
 {
-    public partial class CreateNewStudent : Form
+    public partial class CreateNewRegistrar : Form
     {
-
-        public Form PreviousForm { get; set; }
-
-        public CreateNewStudent()
+        public CreateNewRegistrar()
         {
             InitializeComponent();
         }
 
+        public UpdateRegistrar PreviousForm { get; internal set; }
+
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            // MessageBox.Show("Create a new student in the database");
+
+            // Saves the information types in the text boxes
+
 
             DBOQuery Query = new DBOQuery();
-
             string FirstName = txtFirstName.Text;
             string LastName = txtLastName.Text;
             string AddressLine = txtAddress.Text;
@@ -39,17 +39,10 @@ namespace A2_Reg_A_Lot_2017
 
             if (FirstName != "" & LastName != "")
             {
-                int newUserID = Query.InsertIntoUsers("TempPasswordForStudents", 1);
+                int newUserID = Query.InsertIntoUsers("TempPasswordForRegistrar", 3);
                 Query.InsertIntoContactDetails(newUserID, FirstName, LastName, AddressLine, Gender, AddressCity, AddressState, AddressZipCode, FaxNumber, Email, PhoneNumber);
             }
 
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            UpdateStudent frm = new UpdateStudent();
-            PreviousForm.Show();
-            this.Close();
         }
 
     }

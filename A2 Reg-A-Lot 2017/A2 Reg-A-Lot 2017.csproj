@@ -73,6 +73,12 @@
     <Compile Include="CreateNewProfessor.Designer.cs">
       <DependentUpon>CreateNewProfessor.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateNewRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateNewRegistrar.Designer.cs">
+      <DependentUpon>CreateNewRegistrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateNewStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,12 @@
     </Compile>
     <Compile Include="UpdateProfessor.Designer.cs">
       <DependentUpon>UpdateProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRegistrar.Designer.cs">
+      <DependentUpon>UpdateRegistrar.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateStudent.cs">
       <SubType>Form</SubType>
@@ -189,6 +201,9 @@
     <EmbeddedResource Include="CreateNewProfessor.resx">
       <DependentUpon>CreateNewProfessor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateNewRegistrar.resx">
+      <DependentUpon>CreateNewRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateNewStudent.resx">
       <DependentUpon>CreateNewStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateProfessor.resx">
       <DependentUpon>UpdateProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRegistrar.resx">
+      <DependentUpon>UpdateRegistrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateStudent.resx">
       <DependentUpon>UpdateStudent.cs</DependentUpon>

@@ -22,9 +22,28 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Save this information as a new Professor in the database.");
-        }
+            // MessageBox.Show("Save this information as a new Professor in the database.");
 
+            DBOQuery Query = new DBOQuery();
+
+            string FirstName = txtFirstName.Text;
+            string LastName = txtLastName.Text;
+            string AddressLine = txtAddress.Text;
+            string Gender = comboBox1.Text;
+            string AddressCity = txtCity.Text;
+            string AddressState = txtState.Text;
+            string AddressZipCode = txtZipcode.Text;
+            string FaxNumber = txtFax.Text;
+            string Email = txtEmail.Text;
+            string PhoneNumber = txtPhone.Text;
+
+            if (FirstName != "" & LastName != "")
+            {
+                int newUserID = Query.InsertIntoUsers("TempPasswordForProfessor", 2);
+                Query.InsertIntoContactDetails(newUserID, FirstName, LastName, AddressLine, Gender, AddressCity, AddressState, AddressZipCode, FaxNumber, Email, PhoneNumber);
+            }
+
+        }
         private void btnCancel_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Discard changes");

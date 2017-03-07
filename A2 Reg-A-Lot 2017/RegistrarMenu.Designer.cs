@@ -36,14 +36,15 @@
             this.columnSchedule = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnTotalStudents = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxRegistrarOptions = new System.Windows.Forms.GroupBox();
+            this.btnBilling = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnModifyProfessor = new System.Windows.Forms.Button();
             this.btnModifyStudent = new System.Windows.Forms.Button();
             this.btnProfessorSearch = new System.Windows.Forms.Button();
             this.btnStudentSearch = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnManageCourses = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnBilling = new System.Windows.Forms.Button();
+            this.btnModifyRegistrar = new System.Windows.Forms.Button();
             this.gbxMyCourses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbxRegistrarOptions.SuspendLayout();
@@ -107,6 +108,7 @@
             // 
             // gbxRegistrarOptions
             // 
+            this.gbxRegistrarOptions.Controls.Add(this.btnModifyRegistrar);
             this.gbxRegistrarOptions.Controls.Add(this.btnBilling);
             this.gbxRegistrarOptions.Controls.Add(this.label1);
             this.gbxRegistrarOptions.Controls.Add(this.btnModifyProfessor);
@@ -122,9 +124,28 @@
             this.gbxRegistrarOptions.TabStop = false;
             this.gbxRegistrarOptions.Text = "Course Options";
             // 
+            // btnBilling
+            // 
+            this.btnBilling.Location = new System.Drawing.Point(491, 24);
+            this.btnBilling.Name = "btnBilling";
+            this.btnBilling.Size = new System.Drawing.Size(114, 30);
+            this.btnBilling.TabIndex = 79;
+            this.btnBilling.Text = "Student Billing";
+            this.btnBilling.UseVisualStyleBackColor = true;
+            this.btnBilling.Click += new System.EventHandler(this.btnBilling_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(516, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.TabIndex = 78;
+            this.label1.Text = "Billing Option";
+            // 
             // btnModifyProfessor
             // 
-            this.btnModifyProfessor.Location = new System.Drawing.Point(232, 64);
+            this.btnModifyProfessor.Location = new System.Drawing.Point(162, 64);
             this.btnModifyProfessor.Name = "btnModifyProfessor";
             this.btnModifyProfessor.Size = new System.Drawing.Size(99, 40);
             this.btnModifyProfessor.TabIndex = 76;
@@ -134,7 +155,7 @@
             // 
             // btnModifyStudent
             // 
-            this.btnModifyStudent.Location = new System.Drawing.Point(337, 64);
+            this.btnModifyStudent.Location = new System.Drawing.Point(267, 64);
             this.btnModifyStudent.Name = "btnModifyStudent";
             this.btnModifyStudent.Size = new System.Drawing.Size(99, 40);
             this.btnModifyStudent.TabIndex = 75;
@@ -144,7 +165,7 @@
             // 
             // btnProfessorSearch
             // 
-            this.btnProfessorSearch.Location = new System.Drawing.Point(232, 24);
+            this.btnProfessorSearch.Location = new System.Drawing.Point(189, 24);
             this.btnProfessorSearch.Name = "btnProfessorSearch";
             this.btnProfessorSearch.Size = new System.Drawing.Size(99, 30);
             this.btnProfessorSearch.TabIndex = 74;
@@ -154,7 +175,7 @@
             // 
             // btnStudentSearch
             // 
-            this.btnStudentSearch.Location = new System.Drawing.Point(337, 24);
+            this.btnStudentSearch.Location = new System.Drawing.Point(294, 24);
             this.btnStudentSearch.Name = "btnStudentSearch";
             this.btnStudentSearch.Size = new System.Drawing.Size(99, 30);
             this.btnStudentSearch.TabIndex = 73;
@@ -165,7 +186,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(221, 0);
+            this.label6.Location = new System.Drawing.Point(249, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 13);
             this.label6.TabIndex = 72;
@@ -181,24 +202,15 @@
             this.btnManageCourses.UseVisualStyleBackColor = true;
             this.btnManageCourses.Click += new System.EventHandler(this.btnManageCourses_Click);
             // 
-            // label1
+            // btnModifyRegistrar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(516, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
-            this.label1.TabIndex = 78;
-            this.label1.Text = "Billing Option";
-            // 
-            // btnBilling
-            // 
-            this.btnBilling.Location = new System.Drawing.Point(491, 24);
-            this.btnBilling.Name = "btnBilling";
-            this.btnBilling.Size = new System.Drawing.Size(114, 30);
-            this.btnBilling.TabIndex = 79;
-            this.btnBilling.Text = "Student Billing";
-            this.btnBilling.UseVisualStyleBackColor = true;
-            this.btnBilling.Click += new System.EventHandler(this.btnBilling_Click);
+            this.btnModifyRegistrar.Location = new System.Drawing.Point(372, 64);
+            this.btnModifyRegistrar.Name = "btnModifyRegistrar";
+            this.btnModifyRegistrar.Size = new System.Drawing.Size(99, 40);
+            this.btnModifyRegistrar.TabIndex = 80;
+            this.btnModifyRegistrar.Text = "Add/Update Registrar";
+            this.btnModifyRegistrar.UseVisualStyleBackColor = true;
+            this.btnModifyRegistrar.Click += new System.EventHandler(this.btnModifyRegistrar_Click);
             // 
             // RegistrarMenu
             // 
@@ -236,5 +248,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnTotalStudents;
         private System.Windows.Forms.Button btnBilling;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnModifyRegistrar;
     }
 }

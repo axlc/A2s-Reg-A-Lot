@@ -75,5 +75,11 @@ namespace A2_Reg_A_Lot_2017
             StudentBilling frm = new StudentBilling();
             frm.Show();
         }
+
+        private void btnModifyRegistrar_Click(object sender, EventArgs e)
+        {
+            UpdateRegistrar frm = new UpdateRegistrar();
+            frm.Show();
+        }
     }
 }
