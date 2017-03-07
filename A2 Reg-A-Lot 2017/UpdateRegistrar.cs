@@ -54,7 +54,7 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Clicking confirm should update the changes in the database, and make textboxes ReadOnly again");
+           //MessageBox.Show("Clicking confirm should update the changes in the database, and make textboxes ReadOnly again");
             DBOQuery query = new DBOQuery();
             List<string> rawDetails = new List<string>();
             // This adds all the text from the fields from the form into a list.
