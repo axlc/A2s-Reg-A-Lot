@@ -37,7 +37,6 @@
             this.columnStartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxProfessorInfo = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtFax = new System.Windows.Forms.TextBox();
             this.txtZipcode = new System.Windows.Forms.TextBox();
@@ -66,6 +65,7 @@
             this.btnMyStudents = new System.Windows.Forms.Button();
             this.btnCancelCourses = new System.Windows.Forms.Button();
             this.btnAddCourses = new System.Windows.Forms.Button();
+            this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.gbxMyCourses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbxProfessorInfo.SuspendLayout();
@@ -131,8 +131,8 @@
             // 
             // gbxProfessorInfo
             // 
-            this.gbxProfessorInfo.Controls.Add(this.comboBox1);
             this.gbxProfessorInfo.Controls.Add(this.txtPhone);
+            this.gbxProfessorInfo.Controls.Add(this.comboBox1);
             this.gbxProfessorInfo.Controls.Add(this.txtEmail);
             this.gbxProfessorInfo.Controls.Add(this.txtFax);
             this.gbxProfessorInfo.Controls.Add(this.txtZipcode);
@@ -169,15 +169,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(139, 21);
             this.comboBox1.TabIndex = 159;
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPhone.Location = new System.Drawing.Point(97, 355);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.ReadOnly = true;
-            this.txtPhone.Size = new System.Drawing.Size(139, 13);
-            this.txtPhone.TabIndex = 158;
             // 
             // txtEmail
             // 
@@ -444,6 +435,16 @@
             this.btnAddCourses.UseVisualStyleBackColor = true;
             this.btnAddCourses.Click += new System.EventHandler(this.btnAddCourses_Click);
             // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(97, 355);
+            this.txtPhone.Mask = "(999) 000-0000";
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.ReadOnly = true;
+            this.txtPhone.Size = new System.Drawing.Size(139, 20);
+            this.txtPhone.TabIndex = 160;
+            this.txtPhone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
             // ProfessorMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -484,7 +485,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnSchedule;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnStartDate;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtFax;
         private System.Windows.Forms.TextBox txtZipcode;
@@ -506,5 +506,6 @@
         private System.Windows.Forms.Label lblDisplayZipCode;
         private System.Windows.Forms.Label lblDisplayFax;
         private System.Windows.Forms.Button btnUpdateInfo;
+        private System.Windows.Forms.MaskedTextBox txtPhone;
     }
 }

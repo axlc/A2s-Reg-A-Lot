@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.gbxNewStudentInfo = new System.Windows.Forms.GroupBox();
+            this.txtZipcode = new System.Windows.Forms.MaskedTextBox();
+            this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtFax = new System.Windows.Forms.TextBox();
@@ -49,8 +51,6 @@
             this.lblDisplayState = new System.Windows.Forms.Label();
             this.lblDisplayZipCode = new System.Windows.Forms.Label();
             this.lblDisplayFax = new System.Windows.Forms.Label();
-            this.txtZipcode = new System.Windows.Forms.MaskedTextBox();
-            this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.gbxNewStudentInfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +84,23 @@
             this.gbxNewStudentInfo.TabIndex = 69;
             this.gbxNewStudentInfo.TabStop = false;
             this.gbxNewStudentInfo.Text = "Create New Student";
+            // 
+            // txtZipcode
+            // 
+            this.txtZipcode.Location = new System.Drawing.Point(98, 175);
+            this.txtZipcode.Mask = "00000-9999";
+            this.txtZipcode.Name = "txtZipcode";
+            this.txtZipcode.Size = new System.Drawing.Size(139, 20);
+            this.txtZipcode.TabIndex = 138;
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(98, 250);
+            this.txtPhone.Mask = "(999) 000-0000";
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(139, 20);
+            this.txtPhone.TabIndex = 137;
+            this.txtPhone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // comboBox1
             // 
@@ -258,22 +275,6 @@
             this.lblDisplayFax.Size = new System.Drawing.Size(27, 13);
             this.lblDisplayFax.TabIndex = 105;
             this.lblDisplayFax.Text = "Fax:";
-            // 
-            // txtZipcode
-            // 
-            this.txtZipcode.Location = new System.Drawing.Point(98, 175);
-            this.txtZipcode.Mask = "00000-9999";
-            this.txtZipcode.Name = "txtZipcode";
-            this.txtZipcode.Size = new System.Drawing.Size(139, 20);
-            this.txtZipcode.TabIndex = 138;
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Location = new System.Drawing.Point(98, 250);
-            this.txtPhone.Mask = "(999) 000-0000";
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(139, 20);
-            this.txtPhone.TabIndex = 137;
             // 
             // CreateNewStudent
             // 
