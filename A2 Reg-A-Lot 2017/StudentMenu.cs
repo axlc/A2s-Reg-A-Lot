@@ -204,5 +204,23 @@ namespace A2_Reg_A_Lot_2017
         {
 
         }
+
+        private void StudentMenu_Load(object sender, EventArgs e)
+        {
+            DBOQuery Query = new DBOQuery();
+            int UserID = CurrentUser.user_ID;
+
+
+            List<string> contactDetails = Query.GetContactDetails(UserID);
+            string Name = contactDetails[0] + contactDetails[1];
+            txtFirstName.Text = contactDetails[0];
+            txtLastName.Text = contactDetails[1];
+            txtAddress.Text = contactDetails[2];
+            txtCity.Text = contactDetails[4];
+            txtState.Text = contactDetails[5];
+            txtZipcode.Text = contactDetails[6];
+            txtFax.Text = contactDetails[8];
+            txtEmail.Text = contactDetails[9];
+        }
     }
 }
