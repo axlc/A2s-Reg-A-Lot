@@ -99,12 +99,14 @@ namespace A2_Reg_A_Lot_2017
             rawDetails.Add(txtFirstName.Text);
             rawDetails.Add(txtLastName.Text);
             rawDetails.Add(txtAddress.Text);
+            rawDetails.Add(null);
             rawDetails.Add(txtCity.Text);
             rawDetails.Add(txtState.Text);
             rawDetails.Add(txtZipcode.Text);
+            rawDetails.Add(txtPhone.Text);
             rawDetails.Add(txtFax.Text);
             rawDetails.Add(txtEmail.Text);
-            rawDetails.Add(txtPhone.Text);
+            
             // Takes the list and updates it into the database, based on the current user id
             query.UpdateUserContactDetails(CurrentUser.user_ID, rawDetails);
 
