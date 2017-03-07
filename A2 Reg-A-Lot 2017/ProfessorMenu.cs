@@ -97,6 +97,21 @@ namespace A2_Reg_A_Lot_2017
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            DBOQuery query = new DBOQuery();
+            List<string> rawDetails = new List<string>();
+            // This adds all the text from the fields from the form into a list.
+            rawDetails.Add(txtFirstName.Text);
+            rawDetails.Add(txtLastName.Text);
+            rawDetails.Add(txtAddress.Text);
+            rawDetails.Add(txtCity.Text);
+            rawDetails.Add(txtState.Text);
+            rawDetails.Add(txtZipcode.Text);
+            rawDetails.Add(txtFax.Text);
+            rawDetails.Add(txtEmail.Text);
+            rawDetails.Add(txtPhone.Text);
+            // Takes the list and updates it into the database, based on the current user id
+            query.UpdateUserContactDetails(CurrentUser.user_ID, rawDetails);
+
             txtFirstName.ReadOnly = true;
             txtLastName.ReadOnly = true;
             txtAddress.ReadOnly = true;

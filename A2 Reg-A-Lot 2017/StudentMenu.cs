@@ -151,6 +151,7 @@ namespace A2_Reg_A_Lot_2017
 
             DBOQuery query = new DBOQuery();
             List<string> rawDetails = new List<string>();
+            // This adds all the text from the fields from the form into a list.
             rawDetails.Add(txtFirstName.Text);
             rawDetails.Add(txtLastName.Text);
             rawDetails.Add(txtAddress.Text);
@@ -160,10 +161,8 @@ namespace A2_Reg_A_Lot_2017
             rawDetails.Add(txtFax.Text);
             rawDetails.Add(txtEmail.Text);
             rawDetails.Add(txtPhone.Text);
-
-
-            MessageBox.Show("Current UserID = "+ CurrentUser.user_ID.ToString() + ".", "This is a title?");
-            // query.UpdateUserContactDetails(Student.user_ID, rawDetails); // change this later - ajm
+            // Takes the list and updates it into the database, based on the current user id
+            query.UpdateUserContactDetails(CurrentUser.user_ID, rawDetails);
 
             txtFirstName.ReadOnly = true;
             txtLastName.ReadOnly = true;
