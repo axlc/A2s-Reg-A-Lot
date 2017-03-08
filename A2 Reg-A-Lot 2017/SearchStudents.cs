@@ -33,7 +33,7 @@ namespace A2_Reg_A_Lot_2017
 
                  lbxStudents.Items.Add(Name);
 
-                  txtFirstName.Text = contactDetails[0];
+                txtFirstName.Text = contactDetails[0];
                 txtLastName.Text = contactDetails[1];
                 txtAddress.Text = contactDetails[2];
                 txtCity.Text = contactDetails[4];
@@ -58,6 +58,28 @@ namespace A2_Reg_A_Lot_2017
             ProfessorMenu frm = new ProfessorMenu();
             PreviousForm.Show();
             this.Close();
+        }
+
+        private void SearchStudents_Load(object sender, EventArgs e)
+        {
+            // Attempted to get list of students from the database but...there is not getStudents method - OT
+            DBOQuery query = new DBOQuery();
+            
+            List<int> studentId = query.GetListOfRoles(1);
+            string fname;
+            string lname;
+            
+            
+            foreach (int number in studentId)
+            {
+                List<string> contactDetails = query.GetContactDetails(number);
+                fname = contactDetails[0];
+                lname = contactDetails[1];
+                string name = fname + " " + lname;
+                lbxStudents.Items.Add(name);
+                MessageBox.Show("Hey this is student" + number);
+            }
+
         }
     }
 }

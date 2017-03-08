@@ -407,6 +407,7 @@
             this.Controls.Add(this.gbxStudentSearch);
             this.Name = "SearchStudents";
             this.Text = "Find Students";
+            this.Load += new System.EventHandler(this.SearchStudents_Load);
             this.gbxStudentSearch.ResumeLayout(false);
             this.gbxStudentSearch.PerformLayout();
             this.gbxStudentInfo.ResumeLayout(false);
