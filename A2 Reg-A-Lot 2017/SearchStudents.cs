@@ -19,7 +19,7 @@ namespace A2_Reg_A_Lot_2017
         public SearchStudents()
         {
             InitializeComponent();
-            List<int> studentId = new List<int>();
+            
             StudentId = new List<int>();
         }
 

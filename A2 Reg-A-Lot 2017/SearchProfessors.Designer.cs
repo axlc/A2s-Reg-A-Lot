@@ -37,7 +37,6 @@
             this.lstCourses = new System.Windows.Forms.ListBox();
             this.lblByCourse = new System.Windows.Forms.Label();
             this.gbxProfessorInfo = new System.Windows.Forms.GroupBox();
-            this.btnBack = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -58,6 +57,7 @@
             this.lblDisplayState = new System.Windows.Forms.Label();
             this.lblDisplayZipCode = new System.Windows.Forms.Label();
             this.lblDisplayFax = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.gbxProfessorSearch.SuspendLayout();
             this.gbxProfessorInfo.SuspendLayout();
             this.SuspendLayout();
@@ -65,28 +65,11 @@
             // lbxProfessors
             // 
             this.lbxProfessors.FormattingEnabled = true;
-            this.lbxProfessors.Items.AddRange(new object[] {
-            "Professor Name 1",
-            "Professor Name 2",
-            "Professor Name 3",
-            "Professor Name 4",
-            "Professor Name 5",
-            "Professor Name 6",
-            "Professor Name 7",
-            "Professor Name 8",
-            "Professor Name 9",
-            "Professor Name 10",
-            "Professor Name 11",
-            "Professor Name 12",
-            "Professor Name 13",
-            "Professor Name 14",
-            "Professor Name 15",
-            "Professor Name 16",
-            "Professor Name 17"});
             this.lbxProfessors.Location = new System.Drawing.Point(17, 144);
             this.lbxProfessors.Name = "lbxProfessors";
             this.lbxProfessors.Size = new System.Drawing.Size(279, 199);
             this.lbxProfessors.TabIndex = 70;
+            this.lbxProfessors.SelectedIndexChanged += new System.EventHandler(this.clickProfessor);
             // 
             // label13
             // 
@@ -192,16 +175,6 @@
             this.gbxProfessorInfo.TabIndex = 72;
             this.gbxProfessorInfo.TabStop = false;
             this.gbxProfessorInfo.Text = "Professor Information";
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(392, 320);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 73;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // textBox2
             // 
@@ -393,6 +366,16 @@
             this.lblDisplayFax.TabIndex = 129;
             this.lblDisplayFax.Text = "Fax:";
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(392, 320);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 73;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // SearchProfessors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,6 +388,7 @@
             this.Controls.Add(this.gbxProfessorSearch);
             this.Name = "SearchProfessors";
             this.Text = "SearchProfessors";
+            this.Load += new System.EventHandler(this.SearchProfessors_Load);
             this.gbxProfessorSearch.ResumeLayout(false);
             this.gbxProfessorSearch.PerformLayout();
             this.gbxProfessorInfo.ResumeLayout(false);
