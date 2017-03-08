@@ -31,7 +31,6 @@
             this.gbxStudentInfo = new System.Windows.Forms.GroupBox();
             this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.txtZipcode = new System.Windows.Forms.MaskedTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtFax = new System.Windows.Forms.TextBox();
             this.txtState = new System.Windows.Forms.TextBox();
@@ -40,7 +39,6 @@
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblFname = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.lblDisplayEmail = new System.Windows.Forms.Label();
@@ -72,7 +70,6 @@
             // 
             this.gbxStudentInfo.Controls.Add(this.txtPhone);
             this.gbxStudentInfo.Controls.Add(this.txtZipcode);
-            this.gbxStudentInfo.Controls.Add(this.comboBox1);
             this.gbxStudentInfo.Controls.Add(this.txtEmail);
             this.gbxStudentInfo.Controls.Add(this.txtFax);
             this.gbxStudentInfo.Controls.Add(this.txtState);
@@ -81,7 +78,6 @@
             this.gbxStudentInfo.Controls.Add(this.txtLastName);
             this.gbxStudentInfo.Controls.Add(this.txtFirstName);
             this.gbxStudentInfo.Controls.Add(this.lblPhone);
-            this.gbxStudentInfo.Controls.Add(this.label1);
             this.gbxStudentInfo.Controls.Add(this.lblFname);
             this.gbxStudentInfo.Controls.Add(this.label30);
             this.gbxStudentInfo.Controls.Add(this.lblDisplayEmail);
@@ -100,7 +96,7 @@
             // txtPhone
             // 
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPhone.Location = new System.Drawing.Point(89, 240);
+            this.txtPhone.Location = new System.Drawing.Point(89, 212);
             this.txtPhone.Mask = "(999) 000-0000";
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.ReadOnly = true;
@@ -111,25 +107,17 @@
             // txtZipcode
             // 
             this.txtZipcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtZipcode.Location = new System.Drawing.Point(89, 167);
+            this.txtZipcode.Location = new System.Drawing.Point(89, 139);
             this.txtZipcode.Mask = "00000-9999";
             this.txtZipcode.Name = "txtZipcode";
             this.txtZipcode.ReadOnly = true;
             this.txtZipcode.Size = new System.Drawing.Size(139, 13);
             this.txtZipcode.TabIndex = 181;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(89, 65);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(139, 21);
-            this.comboBox1.TabIndex = 179;
-            // 
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Location = new System.Drawing.Point(89, 215);
+            this.txtEmail.Location = new System.Drawing.Point(89, 187);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(139, 13);
@@ -138,7 +126,7 @@
             // txtFax
             // 
             this.txtFax.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFax.Location = new System.Drawing.Point(89, 191);
+            this.txtFax.Location = new System.Drawing.Point(89, 163);
             this.txtFax.Name = "txtFax";
             this.txtFax.ReadOnly = true;
             this.txtFax.Size = new System.Drawing.Size(139, 13);
@@ -147,7 +135,7 @@
             // txtState
             // 
             this.txtState.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtState.Location = new System.Drawing.Point(89, 143);
+            this.txtState.Location = new System.Drawing.Point(89, 115);
             this.txtState.Name = "txtState";
             this.txtState.ReadOnly = true;
             this.txtState.Size = new System.Drawing.Size(139, 13);
@@ -156,7 +144,7 @@
             // txtCity
             // 
             this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCity.Location = new System.Drawing.Point(89, 119);
+            this.txtCity.Location = new System.Drawing.Point(89, 91);
             this.txtCity.Name = "txtCity";
             this.txtCity.ReadOnly = true;
             this.txtCity.Size = new System.Drawing.Size(139, 13);
@@ -165,7 +153,7 @@
             // txtAddress
             // 
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAddress.Location = new System.Drawing.Point(89, 95);
+            this.txtAddress.Location = new System.Drawing.Point(89, 67);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(139, 13);
@@ -192,20 +180,11 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(23, 240);
+            this.lblPhone.Location = new System.Drawing.Point(23, 212);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(41, 13);
             this.lblPhone.TabIndex = 169;
             this.lblPhone.Text = "Phone:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
-            this.label1.TabIndex = 168;
-            this.label1.Text = "Gender:";
             // 
             // lblFname
             // 
@@ -228,7 +207,7 @@
             // lblDisplayEmail
             // 
             this.lblDisplayEmail.AutoSize = true;
-            this.lblDisplayEmail.Location = new System.Drawing.Point(26, 215);
+            this.lblDisplayEmail.Location = new System.Drawing.Point(26, 187);
             this.lblDisplayEmail.Name = "lblDisplayEmail";
             this.lblDisplayEmail.Size = new System.Drawing.Size(35, 13);
             this.lblDisplayEmail.TabIndex = 167;
@@ -237,7 +216,7 @@
             // lblDisplayCity
             // 
             this.lblDisplayCity.AutoSize = true;
-            this.lblDisplayCity.Location = new System.Drawing.Point(26, 119);
+            this.lblDisplayCity.Location = new System.Drawing.Point(26, 91);
             this.lblDisplayCity.Name = "lblDisplayCity";
             this.lblDisplayCity.Size = new System.Drawing.Size(27, 13);
             this.lblDisplayCity.TabIndex = 162;
@@ -246,7 +225,7 @@
             // lblAddressA
             // 
             this.lblAddressA.AutoSize = true;
-            this.lblAddressA.Location = new System.Drawing.Point(23, 95);
+            this.lblAddressA.Location = new System.Drawing.Point(23, 67);
             this.lblAddressA.Name = "lblAddressA";
             this.lblAddressA.Size = new System.Drawing.Size(48, 13);
             this.lblAddressA.TabIndex = 166;
@@ -255,7 +234,7 @@
             // lblDisplayState
             // 
             this.lblDisplayState.AutoSize = true;
-            this.lblDisplayState.Location = new System.Drawing.Point(26, 143);
+            this.lblDisplayState.Location = new System.Drawing.Point(26, 115);
             this.lblDisplayState.Name = "lblDisplayState";
             this.lblDisplayState.Size = new System.Drawing.Size(35, 13);
             this.lblDisplayState.TabIndex = 163;
@@ -264,7 +243,7 @@
             // lblDisplayZipCode
             // 
             this.lblDisplayZipCode.AutoSize = true;
-            this.lblDisplayZipCode.Location = new System.Drawing.Point(26, 167);
+            this.lblDisplayZipCode.Location = new System.Drawing.Point(26, 139);
             this.lblDisplayZipCode.Name = "lblDisplayZipCode";
             this.lblDisplayZipCode.Size = new System.Drawing.Size(49, 13);
             this.lblDisplayZipCode.TabIndex = 164;
@@ -273,7 +252,7 @@
             // lblDisplayFax
             // 
             this.lblDisplayFax.AutoSize = true;
-            this.lblDisplayFax.Location = new System.Drawing.Point(26, 191);
+            this.lblDisplayFax.Location = new System.Drawing.Point(26, 163);
             this.lblDisplayFax.Name = "lblDisplayFax";
             this.lblDisplayFax.Size = new System.Drawing.Size(27, 13);
             this.lblDisplayFax.TabIndex = 165;
@@ -492,7 +471,6 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtFax;
         private System.Windows.Forms.TextBox txtState;
@@ -501,7 +479,6 @@
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.Label lblPhone;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblFname;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label lblDisplayEmail;
