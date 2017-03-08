@@ -40,5 +40,19 @@ namespace A2_Reg_A_Lot_2017
             PreviousForm.Show();
             this.Close();
         }
+
+        private void ProfessorAddCourse_Load(object sender, EventArgs e)
+        {
+            // tried to populate the course list for the professor -OT.
+            DBOQuery query = new DBOQuery();
+            List<List<string>> courses = new List<List<string>>();
+            
+            foreach (var course in query.GetAllCourses())
+            {
+                //courses.Add(course);
+                clbAllNewCourses.Items.Add(course);
+            }
+            
+        }
     }
 }

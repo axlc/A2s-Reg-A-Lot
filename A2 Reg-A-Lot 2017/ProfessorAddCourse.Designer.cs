@@ -127,6 +127,7 @@
             this.Controls.Add(this.label13);
             this.Name = "ProfessorAddCourse";
             this.Text = "Professor Registration";
+            this.Load += new System.EventHandler(this.ProfessorAddCourse_Load);
             this.gbxCourseDescription.ResumeLayout(false);
             this.gbxCourseDescription.PerformLayout();
             this.gboxProfessorCourseRegistration.ResumeLayout(false);
