@@ -71,6 +71,7 @@
             this.lbxStudents.Name = "lbxStudents";
             this.lbxStudents.Size = new System.Drawing.Size(279, 199);
             this.lbxStudents.TabIndex = 66;
+            this.lbxStudents.SelectedIndexChanged += new System.EventHandler(this.clickStudentList);
             // 
             // label13
             // 
