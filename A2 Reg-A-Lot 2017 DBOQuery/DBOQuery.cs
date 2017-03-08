@@ -228,6 +228,24 @@ namespace A2_Reg_A_Lot_2017
             // And we're done.
             return newRow_ID;
         }
+        //DELETE COURSE FROM USER ID AND COURSE ID
+        public void CancelRegistrationbyUserIDandCourseID(int User_ID,int Course_ID)
+        {
+            string commandString = string.Format("delete from UserCourses where[Course_ID] = '{0}' and [User_ID] = '{1}';", Course_ID,User_ID);
+
+            Connection.Open();
+            using (SqlCommand CancelCourseRegistrations = Connection.CreateCommand())
+            {
+                CancelCourseRegistrations.CommandText = commandString;
+                CancelCourseRegistrations.ExecuteNonQuery();
+            }
+            Connection.Close();
+            return;
+        }
+
+
+
+
         //get course ID by Title
         public int GetCourseIDbyTitle(String courseTitle)
         {

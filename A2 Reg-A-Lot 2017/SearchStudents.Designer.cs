@@ -71,6 +71,7 @@
             this.lbxStudents.Name = "lbxStudents";
             this.lbxStudents.Size = new System.Drawing.Size(279, 199);
             this.lbxStudents.TabIndex = 66;
+            this.lbxStudents.SelectedIndexChanged += new System.EventHandler(this.clickStudentList);
             // 
             // label13
             // 
@@ -407,6 +408,7 @@
             this.Controls.Add(this.gbxStudentSearch);
             this.Name = "SearchStudents";
             this.Text = "Find Students";
+            this.Load += new System.EventHandler(this.SearchStudents_Load);
             this.gbxStudentSearch.ResumeLayout(false);
             this.gbxStudentSearch.PerformLayout();
             this.gbxStudentInfo.ResumeLayout(false);
