@@ -37,11 +37,8 @@
             this.lstCourses = new System.Windows.Forms.ListBox();
             this.lblByCourse = new System.Windows.Forms.Label();
             this.gbxProfessorInfo = new System.Windows.Forms.GroupBox();
-            this.btnBack = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtFax = new System.Windows.Forms.TextBox();
             this.txtZipcode = new System.Windows.Forms.TextBox();
@@ -58,6 +55,7 @@
             this.lblDisplayState = new System.Windows.Forms.Label();
             this.lblDisplayZipCode = new System.Windows.Forms.Label();
             this.lblDisplayFax = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.gbxProfessorSearch.SuspendLayout();
             this.gbxProfessorInfo.SuspendLayout();
             this.SuspendLayout();
@@ -168,8 +166,6 @@
             // 
             this.gbxProfessorInfo.Controls.Add(this.textBox2);
             this.gbxProfessorInfo.Controls.Add(this.lblPhone);
-            this.gbxProfessorInfo.Controls.Add(this.textBox1);
-            this.gbxProfessorInfo.Controls.Add(this.label1);
             this.gbxProfessorInfo.Controls.Add(this.txtEmail);
             this.gbxProfessorInfo.Controls.Add(this.txtFax);
             this.gbxProfessorInfo.Controls.Add(this.txtZipcode);
@@ -193,21 +189,11 @@
             this.gbxProfessorInfo.TabStop = false;
             this.gbxProfessorInfo.Text = "Professor Information";
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(392, 320);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 73;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Control;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(112, 240);
+            this.textBox2.Location = new System.Drawing.Point(112, 216);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(100, 13);
@@ -216,36 +202,17 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(16, 240);
+            this.lblPhone.Location = new System.Drawing.Point(16, 216);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(41, 13);
             this.lblPhone.TabIndex = 142;
             this.lblPhone.Text = "Phone:";
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(112, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 13);
-            this.textBox1.TabIndex = 141;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
-            this.label1.TabIndex = 140;
-            this.label1.Text = "Gender:";
-            // 
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.SystemColors.Control;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Location = new System.Drawing.Point(112, 216);
+            this.txtEmail.Location = new System.Drawing.Point(112, 192);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(100, 13);
@@ -255,7 +222,7 @@
             // 
             this.txtFax.BackColor = System.Drawing.SystemColors.Control;
             this.txtFax.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFax.Location = new System.Drawing.Point(112, 192);
+            this.txtFax.Location = new System.Drawing.Point(112, 168);
             this.txtFax.Name = "txtFax";
             this.txtFax.ReadOnly = true;
             this.txtFax.Size = new System.Drawing.Size(100, 13);
@@ -265,7 +232,7 @@
             // 
             this.txtZipcode.BackColor = System.Drawing.SystemColors.Control;
             this.txtZipcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtZipcode.Location = new System.Drawing.Point(112, 168);
+            this.txtZipcode.Location = new System.Drawing.Point(112, 144);
             this.txtZipcode.Name = "txtZipcode";
             this.txtZipcode.ReadOnly = true;
             this.txtZipcode.Size = new System.Drawing.Size(100, 13);
@@ -275,7 +242,7 @@
             // 
             this.txtState.BackColor = System.Drawing.SystemColors.Control;
             this.txtState.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtState.Location = new System.Drawing.Point(112, 144);
+            this.txtState.Location = new System.Drawing.Point(112, 120);
             this.txtState.Name = "txtState";
             this.txtState.ReadOnly = true;
             this.txtState.Size = new System.Drawing.Size(100, 13);
@@ -285,7 +252,7 @@
             // 
             this.txtCity.BackColor = System.Drawing.SystemColors.Control;
             this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCity.Location = new System.Drawing.Point(112, 120);
+            this.txtCity.Location = new System.Drawing.Point(112, 96);
             this.txtCity.Name = "txtCity";
             this.txtCity.ReadOnly = true;
             this.txtCity.Size = new System.Drawing.Size(100, 13);
@@ -295,7 +262,7 @@
             // 
             this.txtAddress.BackColor = System.Drawing.SystemColors.Control;
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAddress.Location = new System.Drawing.Point(112, 96);
+            this.txtAddress.Location = new System.Drawing.Point(112, 72);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(100, 13);
@@ -342,7 +309,7 @@
             // lblDisplayEmail
             // 
             this.lblDisplayEmail.AutoSize = true;
-            this.lblDisplayEmail.Location = new System.Drawing.Point(19, 214);
+            this.lblDisplayEmail.Location = new System.Drawing.Point(19, 190);
             this.lblDisplayEmail.Name = "lblDisplayEmail";
             this.lblDisplayEmail.Size = new System.Drawing.Size(35, 13);
             this.lblDisplayEmail.TabIndex = 131;
@@ -351,7 +318,7 @@
             // lblDisplayCity
             // 
             this.lblDisplayCity.AutoSize = true;
-            this.lblDisplayCity.Location = new System.Drawing.Point(19, 118);
+            this.lblDisplayCity.Location = new System.Drawing.Point(19, 94);
             this.lblDisplayCity.Name = "lblDisplayCity";
             this.lblDisplayCity.Size = new System.Drawing.Size(27, 13);
             this.lblDisplayCity.TabIndex = 126;
@@ -360,7 +327,7 @@
             // lblAddressA
             // 
             this.lblAddressA.AutoSize = true;
-            this.lblAddressA.Location = new System.Drawing.Point(16, 96);
+            this.lblAddressA.Location = new System.Drawing.Point(16, 72);
             this.lblAddressA.Name = "lblAddressA";
             this.lblAddressA.Size = new System.Drawing.Size(48, 13);
             this.lblAddressA.TabIndex = 130;
@@ -369,7 +336,7 @@
             // lblDisplayState
             // 
             this.lblDisplayState.AutoSize = true;
-            this.lblDisplayState.Location = new System.Drawing.Point(19, 142);
+            this.lblDisplayState.Location = new System.Drawing.Point(19, 118);
             this.lblDisplayState.Name = "lblDisplayState";
             this.lblDisplayState.Size = new System.Drawing.Size(35, 13);
             this.lblDisplayState.TabIndex = 127;
@@ -378,7 +345,7 @@
             // lblDisplayZipCode
             // 
             this.lblDisplayZipCode.AutoSize = true;
-            this.lblDisplayZipCode.Location = new System.Drawing.Point(19, 166);
+            this.lblDisplayZipCode.Location = new System.Drawing.Point(19, 142);
             this.lblDisplayZipCode.Name = "lblDisplayZipCode";
             this.lblDisplayZipCode.Size = new System.Drawing.Size(49, 13);
             this.lblDisplayZipCode.TabIndex = 128;
@@ -387,11 +354,21 @@
             // lblDisplayFax
             // 
             this.lblDisplayFax.AutoSize = true;
-            this.lblDisplayFax.Location = new System.Drawing.Point(19, 190);
+            this.lblDisplayFax.Location = new System.Drawing.Point(19, 166);
             this.lblDisplayFax.Name = "lblDisplayFax";
             this.lblDisplayFax.Size = new System.Drawing.Size(27, 13);
             this.lblDisplayFax.TabIndex = 129;
             this.lblDisplayFax.Text = "Fax:";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(392, 320);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 73;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // SearchProfessors
             // 
@@ -428,8 +405,6 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lblPhone;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtFax;
         private System.Windows.Forms.TextBox txtZipcode;
