@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnLogin = new System.Windows.Forms.Button();
-            this.linkCreateAccount = new System.Windows.Forms.LinkLabel();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -50,17 +49,6 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // linkCreateAccount
-            // 
-            this.linkCreateAccount.AutoSize = true;
-            this.linkCreateAccount.Location = new System.Drawing.Point(45, 206);
-            this.linkCreateAccount.Name = "linkCreateAccount";
-            this.linkCreateAccount.Size = new System.Drawing.Size(224, 13);
-            this.linkCreateAccount.TabIndex = 12;
-            this.linkCreateAccount.TabStop = true;
-            this.linkCreateAccount.Text = "Don\'t have an account? Click here to sign up!";
-            this.linkCreateAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCreateAccount_LinkClicked);
             // 
             // txtPassword
             // 
@@ -154,7 +142,6 @@
             this.Controls.Add(this.btnTestProfessor);
             this.Controls.Add(this.btnTestRegistrar);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.linkCreateAccount);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblPassword);
@@ -170,7 +157,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.LinkLabel linkCreateAccount;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblPassword;
