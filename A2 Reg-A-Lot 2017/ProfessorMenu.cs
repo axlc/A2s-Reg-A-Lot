@@ -162,6 +162,7 @@ namespace A2_Reg_A_Lot_2017
             txtZipcode.Text = contactDetails[6];
             txtFax.Text = contactDetails[8];
             txtEmail.Text = contactDetails[9];
+            txtPhone.Text = contactDetails[7];
 
         }
     }
