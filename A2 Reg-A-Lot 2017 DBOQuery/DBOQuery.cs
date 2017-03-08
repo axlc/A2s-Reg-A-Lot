@@ -720,6 +720,38 @@ namespace A2_Reg_A_Lot_2017
             return null;
         }
 
+        public int GetProfessorByCourseID(int Course_ID)
+        {
+            int result = 0;
+            string commandString = string.Format("SELECT [User_ID]"              +
+                                                 "  FROM [UserCourses]"          +
+                                                 " WHERE [User_ID]"              +
+                                                 "    IN ("                      +
+                                                 "       SELECT [User_ID]"       +
+                                                 "       FROM [dbo].[Users]"     +
+                                                 "       WHERE [UserType] = '2'" +
+                                                 "       )"                      +
+                                                 "   AND [Course_ID] = '{0}';",
+                                                 Course_ID
+                                                );
+            Connection.Open();
+
+            using (SqlCommand selectProfessorIDByCourseID = Connection.CreateCommand())
+            {
+                selectProfessorIDByCourseID.CommandText = commandString;
+                using (SqlDataReader reader = selectProfessorIDByCourseID.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        result = reader.GetInt32(0);
+                    }
+                }
+            }
+
+            Connection.Close();
+            return result;
+        }
+
         /* public List<List<string>> GetAllContactDetails()
         {
             List<List<string>> contactDetails = new List<List<string>>();

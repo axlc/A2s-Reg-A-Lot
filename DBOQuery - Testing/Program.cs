@@ -21,7 +21,7 @@ namespace DBOQuery___Testing
             DBOQuery TestFunctions = new DBOQuery();
 
             // Decide which tests to perform by changing the boolean values. 
-            bool[] testsToPerform = new bool[13] {
+            bool[] testsToPerform = new bool[14] {
                 // Add New Users and Contact Details:
                 false,
                 
@@ -59,6 +59,9 @@ namespace DBOQuery___Testing
                 false,
 
                 // Get a list of courses without a professor
+                true,
+
+                // Get the professor who teaches a course by course_id
                 true
             };
 
@@ -575,6 +578,20 @@ namespace DBOQuery___Testing
                 {
                     Console.WriteLine("Course_ID: {0} has no professor to teach it.", course);
                 }
+                Console.ReadKey();
+            }
+
+            // Get a courses professor by the course id
+            if (testsToPerform[13])
+            {
+                int Course_ID1 = 5;
+                int Professor_ID1 = TestFunctions.GetProfessorByCourseID(Course_ID1);
+                List<string> ProfessorContactDetails1 = TestFunctions.GetContactDetails(Professor_ID1);
+                string ProfessorName1 = ProfessorContactDetails1[0] + " " + ProfessorContactDetails1[1];
+                Console.WriteLine("Professor of Course_ID: {0}\n" +
+                                  "    Name: {1}\n" +
+                                  " User_ID: {2}\n",
+                                  Course_ID1, ProfessorName1, Professor_ID1);
                 Console.ReadKey();
             }
         }
