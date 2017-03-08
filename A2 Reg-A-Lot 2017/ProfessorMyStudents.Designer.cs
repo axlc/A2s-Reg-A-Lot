@@ -39,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.gbxStudentInfo = new System.Windows.Forms.GroupBox();
-            this.btnBack = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -60,6 +59,7 @@
             this.lblDisplayState = new System.Windows.Forms.Label();
             this.lblDisplayZipCode = new System.Windows.Forms.Label();
             this.lblDisplayFax = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.gbxStudentInfo.SuspendLayout();
             this.SuspendLayout();
@@ -210,16 +210,6 @@
             this.gbxStudentInfo.TabIndex = 71;
             this.gbxStudentInfo.TabStop = false;
             this.gbxStudentInfo.Text = "Student Information";
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(384, 338);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 72;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // textBox2
             // 
@@ -411,6 +401,16 @@
             this.lblDisplayFax.TabIndex = 129;
             this.lblDisplayFax.Text = "Fax:";
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(384, 338);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 72;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // ProfessorMyStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,6 +423,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ProfessorMyStudents";
             this.Text = "My Students";
+            this.Load += new System.EventHandler(this.ProfessorMyStudents_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gbxStudentInfo.ResumeLayout(false);

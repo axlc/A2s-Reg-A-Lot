@@ -44,14 +44,20 @@ namespace A2_Reg_A_Lot_2017
         private void ProfessorAddCourse_Load(object sender, EventArgs e)
         {
             // tried to populate the course list for the professor -OT.
+            clbAllNewCourses.Items.Clear();
             DBOQuery query = new DBOQuery();
-            
+            List<List<string>> courses = query.GetAllCourses();
             foreach (var course in query.GetAllCourses())
             {
                 //courses.Add(course);
-                clbAllNewCourses.Items.Add(course);
+                clbAllNewCourses.Items.Add(course[1]);
             }
             
+        }
+
+        private void clbAllNewCourses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

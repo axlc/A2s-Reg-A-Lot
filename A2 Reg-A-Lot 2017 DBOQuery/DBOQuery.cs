@@ -670,6 +670,10 @@ namespace A2_Reg_A_Lot_2017
             Connection.Close();
             return;
         }
+        public List<string> GetAllStudents()
+        {
+            return null;
+        }
 
         /* public List<List<string>> GetAllContactDetails()
         {
