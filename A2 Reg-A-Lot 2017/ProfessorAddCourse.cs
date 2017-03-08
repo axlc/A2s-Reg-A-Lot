@@ -45,7 +45,6 @@ namespace A2_Reg_A_Lot_2017
         {
             // tried to populate the course list for the professor -OT.
             DBOQuery query = new DBOQuery();
-            List<List<string>> courses = new List<List<string>>();
             
             foreach (var course in query.GetAllCourses())
             {
