@@ -25,5 +25,20 @@ namespace A2_Reg_A_Lot_2017
             PreviousForm.Show();
             this.Close();
         }
+
+        private void ProfessorMyStudents_Load(object sender, EventArgs e)
+        {
+            // Attempted to get list of students from the database but...there is not getStudents method - OT
+            DBOQuery query = new DBOQuery();
+            int id = 0;
+            string fName;
+            string lName;
+
+            //foreach( string contact )
+            //List<string> contactDetails = query.GetContactDetails(1);
+            //string Name = contactDetails[0] + contactDetails[1];
+            
+
+        }
     }
 }

@@ -91,19 +91,11 @@
             // clbAllNewCourses
             // 
             this.clbAllNewCourses.FormattingEnabled = true;
-            this.clbAllNewCourses.Items.AddRange(new object[] {
-            "A Course 1",
-            "A Course 2",
-            "A Course 3",
-            "A Course 4",
-            "A Course 5",
-            "A Course 6",
-            "A Course 7",
-            "A Course 8"});
             this.clbAllNewCourses.Location = new System.Drawing.Point(9, 19);
             this.clbAllNewCourses.Name = "clbAllNewCourses";
             this.clbAllNewCourses.Size = new System.Drawing.Size(504, 109);
             this.clbAllNewCourses.TabIndex = 0;
+            this.clbAllNewCourses.SelectedIndexChanged += new System.EventHandler(this.clbAllNewCourses_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -127,6 +119,7 @@
             this.Controls.Add(this.label13);
             this.Name = "ProfessorAddCourse";
             this.Text = "Professor Registration";
+            this.Load += new System.EventHandler(this.ProfessorAddCourse_Load);
             this.gbxCourseDescription.ResumeLayout(false);
             this.gbxCourseDescription.PerformLayout();
             this.gboxProfessorCourseRegistration.ResumeLayout(false);

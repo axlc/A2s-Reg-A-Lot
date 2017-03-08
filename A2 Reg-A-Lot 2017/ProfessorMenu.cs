@@ -148,6 +148,8 @@ namespace A2_Reg_A_Lot_2017
 
         private void ProfessorMenu_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'project2DataSet.Courses' table. You can move, or remove it, as needed.
+            this.coursesTableAdapter.Fill(this.project2DataSet.Courses);
             DBOQuery Query = new DBOQuery();
             int UserID = CurrentUser.user_ID;
 
@@ -163,6 +165,8 @@ namespace A2_Reg_A_Lot_2017
             txtFax.Text = contactDetails[8];
             txtEmail.Text = contactDetails[9];
             txtPhone.Text = contactDetails[7];
+
+
 
         }
     }

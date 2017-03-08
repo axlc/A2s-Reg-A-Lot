@@ -1,6 +1,6 @@
 ﻿namespace A2_Reg_A_Lot_2017
 {
-    partial class CreateNewProfessor
+    partial class CreateNewRegistrar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gbxNewProfessorInfo = new System.Windows.Forms.GroupBox();
+            this.gbxNewStudentInfo = new System.Windows.Forms.GroupBox();
             this.txtZipcode = new System.Windows.Forms.MaskedTextBox();
             this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -51,55 +51,55 @@
             this.lblDisplayState = new System.Windows.Forms.Label();
             this.lblDisplayZipCode = new System.Windows.Forms.Label();
             this.lblDisplayFax = new System.Windows.Forms.Label();
-            this.gbxNewProfessorInfo.SuspendLayout();
+            this.gbxNewStudentInfo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gbxNewProfessorInfo
+            // gbxNewStudentInfo
             // 
-            this.gbxNewProfessorInfo.Controls.Add(this.txtZipcode);
-            this.gbxNewProfessorInfo.Controls.Add(this.txtPhone);
-            this.gbxNewProfessorInfo.Controls.Add(this.comboBox1);
-            this.gbxNewProfessorInfo.Controls.Add(this.txtEmail);
-            this.gbxNewProfessorInfo.Controls.Add(this.txtFax);
-            this.gbxNewProfessorInfo.Controls.Add(this.txtState);
-            this.gbxNewProfessorInfo.Controls.Add(this.txtCity);
-            this.gbxNewProfessorInfo.Controls.Add(this.txtAddress);
-            this.gbxNewProfessorInfo.Controls.Add(this.txtLastName);
-            this.gbxNewProfessorInfo.Controls.Add(this.txtFirstName);
-            this.gbxNewProfessorInfo.Controls.Add(this.btnCancel);
-            this.gbxNewProfessorInfo.Controls.Add(this.btnConfirm);
-            this.gbxNewProfessorInfo.Controls.Add(this.lblPhone);
-            this.gbxNewProfessorInfo.Controls.Add(this.label1);
-            this.gbxNewProfessorInfo.Controls.Add(this.lblFname);
-            this.gbxNewProfessorInfo.Controls.Add(this.label30);
-            this.gbxNewProfessorInfo.Controls.Add(this.lblDisplayEmail);
-            this.gbxNewProfessorInfo.Controls.Add(this.lblDisplayCity);
-            this.gbxNewProfessorInfo.Controls.Add(this.lblAddressA);
-            this.gbxNewProfessorInfo.Controls.Add(this.lblDisplayState);
-            this.gbxNewProfessorInfo.Controls.Add(this.lblDisplayZipCode);
-            this.gbxNewProfessorInfo.Controls.Add(this.lblDisplayFax);
-            this.gbxNewProfessorInfo.Location = new System.Drawing.Point(12, 12);
-            this.gbxNewProfessorInfo.Name = "gbxNewProfessorInfo";
-            this.gbxNewProfessorInfo.Size = new System.Drawing.Size(260, 330);
-            this.gbxNewProfessorInfo.TabIndex = 68;
-            this.gbxNewProfessorInfo.TabStop = false;
-            this.gbxNewProfessorInfo.Text = "Create New Professor";
+            this.gbxNewStudentInfo.Controls.Add(this.txtZipcode);
+            this.gbxNewStudentInfo.Controls.Add(this.txtPhone);
+            this.gbxNewStudentInfo.Controls.Add(this.comboBox1);
+            this.gbxNewStudentInfo.Controls.Add(this.txtEmail);
+            this.gbxNewStudentInfo.Controls.Add(this.txtFax);
+            this.gbxNewStudentInfo.Controls.Add(this.txtState);
+            this.gbxNewStudentInfo.Controls.Add(this.txtCity);
+            this.gbxNewStudentInfo.Controls.Add(this.txtAddress);
+            this.gbxNewStudentInfo.Controls.Add(this.txtLastName);
+            this.gbxNewStudentInfo.Controls.Add(this.txtFirstName);
+            this.gbxNewStudentInfo.Controls.Add(this.btnCancel);
+            this.gbxNewStudentInfo.Controls.Add(this.btnConfirm);
+            this.gbxNewStudentInfo.Controls.Add(this.lblPhone);
+            this.gbxNewStudentInfo.Controls.Add(this.label1);
+            this.gbxNewStudentInfo.Controls.Add(this.lblFname);
+            this.gbxNewStudentInfo.Controls.Add(this.label30);
+            this.gbxNewStudentInfo.Controls.Add(this.lblDisplayEmail);
+            this.gbxNewStudentInfo.Controls.Add(this.lblDisplayCity);
+            this.gbxNewStudentInfo.Controls.Add(this.lblAddressA);
+            this.gbxNewStudentInfo.Controls.Add(this.lblDisplayState);
+            this.gbxNewStudentInfo.Controls.Add(this.lblDisplayZipCode);
+            this.gbxNewStudentInfo.Controls.Add(this.lblDisplayFax);
+            this.gbxNewStudentInfo.Location = new System.Drawing.Point(11, 10);
+            this.gbxNewStudentInfo.Name = "gbxNewStudentInfo";
+            this.gbxNewStudentInfo.Size = new System.Drawing.Size(260, 330);
+            this.gbxNewStudentInfo.TabIndex = 70;
+            this.gbxNewStudentInfo.TabStop = false;
+            this.gbxNewStudentInfo.Text = "Create New Registrar";
             // 
             // txtZipcode
             // 
-            this.txtZipcode.Location = new System.Drawing.Point(98, 177);
+            this.txtZipcode.Location = new System.Drawing.Point(98, 175);
             this.txtZipcode.Mask = "00000-9999";
             this.txtZipcode.Name = "txtZipcode";
             this.txtZipcode.Size = new System.Drawing.Size(139, 20);
-            this.txtZipcode.TabIndex = 140;
+            this.txtZipcode.TabIndex = 138;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(98, 252);
+            this.txtPhone.Location = new System.Drawing.Point(98, 250);
             this.txtPhone.Mask = "(999) 000-0000";
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(139, 20);
-            this.txtPhone.TabIndex = 139;
+            this.txtPhone.TabIndex = 137;
             this.txtPhone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // comboBox1
@@ -174,7 +174,6 @@
             this.btnCancel.TabIndex = 125;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnConfirm
             // 
@@ -276,23 +275,25 @@
             this.lblDisplayFax.TabIndex = 105;
             this.lblDisplayFax.Text = "Fax:";
             // 
-            // CreateNewProfessor
+            // CreateNewRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(286, 351);
-            this.Controls.Add(this.gbxNewProfessorInfo);
-            this.Name = "CreateNewProfessor";
-            this.Text = "CreateNewProfessor";
-            this.gbxNewProfessorInfo.ResumeLayout(false);
-            this.gbxNewProfessorInfo.PerformLayout();
+            this.ClientSize = new System.Drawing.Size(283, 351);
+            this.Controls.Add(this.gbxNewStudentInfo);
+            this.Name = "CreateNewRegistrar";
+            this.Text = "CreateNewRegistrar";
+            this.gbxNewStudentInfo.ResumeLayout(false);
+            this.gbxNewStudentInfo.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gbxNewProfessorInfo;
+        private System.Windows.Forms.GroupBox gbxNewStudentInfo;
+        private System.Windows.Forms.MaskedTextBox txtZipcode;
+        private System.Windows.Forms.MaskedTextBox txtPhone;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtFax;
@@ -313,7 +314,5 @@
         private System.Windows.Forms.Label lblDisplayState;
         private System.Windows.Forms.Label lblDisplayZipCode;
         private System.Windows.Forms.Label lblDisplayFax;
-        private System.Windows.Forms.MaskedTextBox txtZipcode;
-        private System.Windows.Forms.MaskedTextBox txtPhone;
     }
 }

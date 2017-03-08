@@ -1,6 +1,6 @@
 ﻿namespace A2_Reg_A_Lot_2017
 {
-    partial class UpdateStudent
+    partial class UpdateRegistrar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.btnCreateRegistrar = new System.Windows.Forms.Button();
             this.gbxStudentInfo = new System.Windows.Forms.GroupBox();
             this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.txtZipcode = new System.Windows.Forms.MaskedTextBox();
@@ -49,24 +52,51 @@
             this.lblDisplayState = new System.Windows.Forms.Label();
             this.lblDisplayZipCode = new System.Windows.Forms.Label();
             this.lblDisplayFax = new System.Windows.Forms.Label();
-            this.lbxStudents = new System.Windows.Forms.ListBox();
+            this.btnEditRegistrar = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.lbxRegistrar = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
             this.gbxStudentSearch = new System.Windows.Forms.GroupBox();
             this.btnSearchStudents = new System.Windows.Forms.Button();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.lblByName = new System.Windows.Forms.Label();
             this.txtStudentName = new System.Windows.Forms.TextBox();
-            this.lstCourses = new System.Windows.Forms.ListBox();
             this.lblById = new System.Windows.Forms.Label();
-            this.lblByCourse = new System.Windows.Forms.Label();
-            this.btnCreateStudent = new System.Windows.Forms.Button();
-            this.btnEditStudent = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnConfirm = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.gbxStudentInfo.SuspendLayout();
             this.gbxStudentSearch.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(487, 320);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 138;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.Location = new System.Drawing.Point(406, 320);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirm.TabIndex = 137;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Visible = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // btnCreateRegistrar
+            // 
+            this.btnCreateRegistrar.Location = new System.Drawing.Point(118, 380);
+            this.btnCreateRegistrar.Name = "btnCreateRegistrar";
+            this.btnCreateRegistrar.Size = new System.Drawing.Size(75, 41);
+            this.btnCreateRegistrar.TabIndex = 136;
+            this.btnCreateRegistrar.Text = "Add New Registrar";
+            this.btnCreateRegistrar.UseVisualStyleBackColor = true;
+            this.btnCreateRegistrar.Click += new System.EventHandler(this.btnCreateRegistrar_Click);
             // 
             // gbxStudentInfo
             // 
@@ -90,12 +120,12 @@
             this.gbxStudentInfo.Controls.Add(this.lblDisplayState);
             this.gbxStudentInfo.Controls.Add(this.lblDisplayZipCode);
             this.gbxStudentInfo.Controls.Add(this.lblDisplayFax);
-            this.gbxStudentInfo.Location = new System.Drawing.Point(312, 40);
+            this.gbxStudentInfo.Location = new System.Drawing.Point(314, 41);
             this.gbxStudentInfo.Name = "gbxStudentInfo";
             this.gbxStudentInfo.Size = new System.Drawing.Size(250, 264);
-            this.gbxStudentInfo.TabIndex = 73;
+            this.gbxStudentInfo.TabIndex = 133;
             this.gbxStudentInfo.TabStop = false;
-            this.gbxStudentInfo.Text = "Student Information";
+            this.gbxStudentInfo.Text = "Registrar Information";
             // 
             // txtPhone
             // 
@@ -279,10 +309,31 @@
             this.lblDisplayFax.TabIndex = 165;
             this.lblDisplayFax.Text = "Fax:";
             // 
-            // lbxStudents
+            // btnEditRegistrar
             // 
-            this.lbxStudents.FormattingEnabled = true;
-            this.lbxStudents.Items.AddRange(new object[] {
+            this.btnEditRegistrar.Location = new System.Drawing.Point(321, 311);
+            this.btnEditRegistrar.Name = "btnEditRegistrar";
+            this.btnEditRegistrar.Size = new System.Drawing.Size(75, 40);
+            this.btnEditRegistrar.TabIndex = 135;
+            this.btnEditRegistrar.Text = "Edit Info";
+            this.btnEditRegistrar.UseVisualStyleBackColor = true;
+            this.btnEditRegistrar.Click += new System.EventHandler(this.btnEditRegistrar_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(487, 379);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(77, 40);
+            this.btnBack.TabIndex = 134;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // lbxRegistrar
+            // 
+            this.lbxRegistrar.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lbxRegistrar.FormattingEnabled = true;
+            this.lbxRegistrar.Items.AddRange(new object[] {
             "Student 1",
             "Student 2",
             "Student 3",
@@ -299,20 +350,20 @@
             "Student 14",
             "Student 15",
             "etc."});
-            this.lbxStudents.Location = new System.Drawing.Point(13, 174);
-            this.lbxStudents.Name = "lbxStudents";
-            this.lbxStudents.Size = new System.Drawing.Size(279, 199);
-            this.lbxStudents.TabIndex = 72;
+            this.lbxRegistrar.Location = new System.Drawing.Point(15, 175);
+            this.lbxRegistrar.Name = "lbxRegistrar";
+            this.lbxRegistrar.Size = new System.Drawing.Size(279, 199);
+            this.lbxRegistrar.TabIndex = 132;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(8, 8);
+            this.label13.Location = new System.Drawing.Point(10, 9);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(196, 25);
-            this.label13.TabIndex = 71;
-            this.label13.Text = "Manage Students";
+            this.label13.Size = new System.Drawing.Size(199, 25);
+            this.label13.TabIndex = 131;
+            this.label13.Text = "Manage Registrar";
             // 
             // gbxStudentSearch
             // 
@@ -320,152 +371,73 @@
             this.gbxStudentSearch.Controls.Add(this.txtId);
             this.gbxStudentSearch.Controls.Add(this.lblByName);
             this.gbxStudentSearch.Controls.Add(this.txtStudentName);
-            this.gbxStudentSearch.Controls.Add(this.lstCourses);
             this.gbxStudentSearch.Controls.Add(this.lblById);
-            this.gbxStudentSearch.Controls.Add(this.lblByCourse);
             this.gbxStudentSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxStudentSearch.Location = new System.Drawing.Point(13, 38);
+            this.gbxStudentSearch.Location = new System.Drawing.Point(15, 39);
             this.gbxStudentSearch.Name = "gbxStudentSearch";
             this.gbxStudentSearch.Size = new System.Drawing.Size(279, 128);
-            this.gbxStudentSearch.TabIndex = 70;
+            this.gbxStudentSearch.TabIndex = 130;
             this.gbxStudentSearch.TabStop = false;
             this.gbxStudentSearch.Text = "Search for a Student";
             // 
             // btnSearchStudents
             // 
-            this.btnSearchStudents.Location = new System.Drawing.Point(141, 94);
+            this.btnSearchStudents.Location = new System.Drawing.Point(145, 87);
             this.btnSearchStudents.Name = "btnSearchStudents";
             this.btnSearchStudents.Size = new System.Drawing.Size(75, 23);
             this.btnSearchStudents.TabIndex = 65;
             this.btnSearchStudents.Text = "Search";
             this.btnSearchStudents.UseVisualStyleBackColor = true;
             // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(115, 44);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(138, 20);
-            this.txtId.TabIndex = 8;
-            // 
             // lblByName
             // 
             this.lblByName.AutoSize = true;
-            this.lblByName.Location = new System.Drawing.Point(22, 22);
+            this.lblByName.Location = new System.Drawing.Point(21, 34);
             this.lblByName.Name = "lblByName";
             this.lblByName.Size = new System.Drawing.Size(87, 13);
             this.lblByName.TabIndex = 0;
             this.lblByName.Text = "Search by name:";
+            this.lblByName.Click += new System.EventHandler(this.lblByName_Click);
             // 
             // txtStudentName
             // 
-            this.txtStudentName.Location = new System.Drawing.Point(115, 19);
+            this.txtStudentName.Location = new System.Drawing.Point(114, 31);
             this.txtStudentName.Name = "txtStudentName";
             this.txtStudentName.Size = new System.Drawing.Size(138, 20);
             this.txtStudentName.TabIndex = 1;
             // 
-            // lstCourses
-            // 
-            this.lstCourses.FormattingEnabled = true;
-            this.lstCourses.Items.AddRange(new object[] {
-            "CourseName 1",
-            "CourseName 2",
-            "CourseName 3",
-            "CourseName 4",
-            "CourseName 5",
-            "CourseName 6",
-            "CourseName 7"});
-            this.lstCourses.Location = new System.Drawing.Point(115, 68);
-            this.lstCourses.Name = "lstCourses";
-            this.lstCourses.Size = new System.Drawing.Size(138, 17);
-            this.lstCourses.TabIndex = 7;
-            // 
             // lblById
             // 
             this.lblById.AutoSize = true;
-            this.lblById.Location = new System.Drawing.Point(22, 46);
+            this.lblById.Location = new System.Drawing.Point(21, 58);
             this.lblById.Name = "lblById";
             this.lblById.Size = new System.Drawing.Size(72, 13);
             this.lblById.TabIndex = 2;
             this.lblById.Text = "Search by ID:";
             // 
-            // lblByCourse
+            // txtId
             // 
-            this.lblByCourse.AutoSize = true;
-            this.lblByCourse.Location = new System.Drawing.Point(22, 69);
-            this.lblByCourse.Name = "lblByCourse";
-            this.lblByCourse.Size = new System.Drawing.Size(78, 13);
-            this.lblByCourse.TabIndex = 6;
-            this.lblByCourse.Text = "Filter by course";
+            this.txtId.Location = new System.Drawing.Point(114, 56);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(138, 20);
+            this.txtId.TabIndex = 8;
             // 
-            // btnCreateStudent
-            // 
-            this.btnCreateStudent.Location = new System.Drawing.Point(116, 379);
-            this.btnCreateStudent.Name = "btnCreateStudent";
-            this.btnCreateStudent.Size = new System.Drawing.Size(75, 41);
-            this.btnCreateStudent.TabIndex = 102;
-            this.btnCreateStudent.Text = "Add New Student";
-            this.btnCreateStudent.UseVisualStyleBackColor = true;
-            this.btnCreateStudent.Click += new System.EventHandler(this.btnCreateStudent_Click);
-            // 
-            // btnEditStudent
-            // 
-            this.btnEditStudent.Location = new System.Drawing.Point(319, 310);
-            this.btnEditStudent.Name = "btnEditStudent";
-            this.btnEditStudent.Size = new System.Drawing.Size(75, 40);
-            this.btnEditStudent.TabIndex = 101;
-            this.btnEditStudent.Text = "Edit Info";
-            this.btnEditStudent.UseVisualStyleBackColor = true;
-            this.btnEditStudent.Click += new System.EventHandler(this.btnEditStudent_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(485, 378);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(77, 40);
-            this.btnBack.TabIndex = 100;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(485, 319);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 129;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Visible = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.Location = new System.Drawing.Point(404, 319);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(75, 23);
-            this.btnConfirm.TabIndex = 128;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Visible = false;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
-            // 
-            // UpdateStudent
+            // UpdateRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(574, 430);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.btnCreateStudent);
+            this.Controls.Add(this.btnCreateRegistrar);
             this.Controls.Add(this.gbxStudentInfo);
-            this.Controls.Add(this.btnEditStudent);
+            this.Controls.Add(this.btnEditRegistrar);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.lbxStudents);
+            this.Controls.Add(this.lbxRegistrar);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.gbxStudentSearch);
-            this.Name = "UpdateStudent";
-            this.Text = "Add or Update Student";
-            this.Load += new System.EventHandler(this.UpdateStudent_Load);
+            this.Name = "UpdateRegistrar";
+            this.Text = "UpdateRegistrar";
             this.gbxStudentInfo.ResumeLayout(false);
             this.gbxStudentInfo.PerformLayout();
             this.gbxStudentSearch.ResumeLayout(false);
@@ -476,22 +448,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox gbxStudentInfo;
-        private System.Windows.Forms.ListBox lbxStudents;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.GroupBox gbxStudentSearch;
-        private System.Windows.Forms.Button btnSearchStudents;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Label lblByName;
-        private System.Windows.Forms.TextBox txtStudentName;
-        private System.Windows.Forms.ListBox lstCourses;
-        private System.Windows.Forms.Label lblById;
-        private System.Windows.Forms.Label lblByCourse;
-        private System.Windows.Forms.Button btnCreateStudent;
-        private System.Windows.Forms.Button btnEditStudent;
-        private System.Windows.Forms.Button btnBack;
+
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Button btnCreateRegistrar;
+        private System.Windows.Forms.GroupBox gbxStudentInfo;
+        private System.Windows.Forms.MaskedTextBox txtPhone;
+        private System.Windows.Forms.MaskedTextBox txtZipcode;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtFax;
@@ -510,7 +473,15 @@
         private System.Windows.Forms.Label lblDisplayState;
         private System.Windows.Forms.Label lblDisplayZipCode;
         private System.Windows.Forms.Label lblDisplayFax;
-        private System.Windows.Forms.MaskedTextBox txtPhone;
-        private System.Windows.Forms.MaskedTextBox txtZipcode;
+        private System.Windows.Forms.Button btnEditRegistrar;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ListBox lbxRegistrar;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox gbxStudentSearch;
+        private System.Windows.Forms.Button btnSearchStudents;
+        private System.Windows.Forms.Label lblByName;
+        private System.Windows.Forms.TextBox txtStudentName;
+        private System.Windows.Forms.Label lblById;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

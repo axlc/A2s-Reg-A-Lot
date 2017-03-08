@@ -73,11 +73,32 @@
     <Compile Include="CreateNewProfessor.Designer.cs">
       <DependentUpon>CreateNewProfessor.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateNewRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateNewRegistrar.Designer.cs">
+      <DependentUpon>CreateNewRegistrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateNewStudent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CreateNewStudent.Designer.cs">
       <DependentUpon>CreateNewStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Project2DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Project2DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Project2DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Project2DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Project2DataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="StudentBilling.cs">
       <SubType>Form</SubType>
@@ -90,6 +111,12 @@
     </Compile>
     <Compile Include="UpdateProfessor.Designer.cs">
       <DependentUpon>UpdateProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRegistrar.Designer.cs">
+      <DependentUpon>UpdateRegistrar.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateStudent.cs">
       <SubType>Form</SubType>
@@ -189,6 +216,9 @@
     <EmbeddedResource Include="CreateNewProfessor.resx">
       <DependentUpon>CreateNewProfessor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateNewRegistrar.resx">
+      <DependentUpon>CreateNewRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateNewStudent.resx">
       <DependentUpon>CreateNewStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateProfessor.resx">
       <DependentUpon>UpdateProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRegistrar.resx">
+      <DependentUpon>UpdateRegistrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateStudent.resx">
       <DependentUpon>UpdateStudent.cs</DependentUpon>
@@ -249,6 +282,39 @@
     <EmbeddedResource Include="StudentSelectCourse.resx">
       <DependentUpon>StudentSelectCourse.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Project2DataSet.xsc">
+      <DependentUpon>Project2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Project2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Project2DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Project2DataSet.xss">
+      <DependentUpon>Project2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Project2DataSet1.xsc">
+      <DependentUpon>Project2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Project2DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Project2DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Project2DataSet1.xss">
+      <DependentUpon>Project2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Project2DataSet2.xsc">
+      <DependentUpon>Project2DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Project2DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Project2DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Project2DataSet2.xss">
+      <DependentUpon>Project2DataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

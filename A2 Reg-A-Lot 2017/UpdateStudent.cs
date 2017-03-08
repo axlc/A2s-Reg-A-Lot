@@ -106,5 +106,10 @@ namespace A2_Reg_A_Lot_2017
             btnCancel.Visible = false;
             btnConfirm.Visible = false;
         }
+
+        private void UpdateStudent_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

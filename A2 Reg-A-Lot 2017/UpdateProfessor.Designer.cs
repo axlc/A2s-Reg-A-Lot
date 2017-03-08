@@ -30,6 +30,8 @@
         {
             this.btnBack = new System.Windows.Forms.Button();
             this.gbxProfessorInfo = new System.Windows.Forms.GroupBox();
+            this.txtPhone = new System.Windows.Forms.MaskedTextBox();
+            this.txtZipcode = new System.Windows.Forms.MaskedTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtFax = new System.Windows.Forms.TextBox();
@@ -60,8 +62,6 @@
             this.btnCreateProfessor = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.txtPhone = new System.Windows.Forms.MaskedTextBox();
-            this.txtZipcode = new System.Windows.Forms.MaskedTextBox();
             this.gbxProfessorInfo.SuspendLayout();
             this.gbxProfessorSearch.SuspendLayout();
             this.SuspendLayout();
@@ -104,6 +104,27 @@
             this.gbxProfessorInfo.TabIndex = 77;
             this.gbxProfessorInfo.TabStop = false;
             this.gbxProfessorInfo.Text = "Professor Information";
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPhone.Location = new System.Drawing.Point(100, 238);
+            this.txtPhone.Mask = "(999) 000-0000";
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.ReadOnly = true;
+            this.txtPhone.Size = new System.Drawing.Size(139, 13);
+            this.txtPhone.TabIndex = 182;
+            this.txtPhone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // txtZipcode
+            // 
+            this.txtZipcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtZipcode.Location = new System.Drawing.Point(100, 165);
+            this.txtZipcode.Mask = "00000-9999";
+            this.txtZipcode.Name = "txtZipcode";
+            this.txtZipcode.ReadOnly = true;
+            this.txtZipcode.Size = new System.Drawing.Size(139, 13);
+            this.txtZipcode.TabIndex = 183;
             // 
             // comboBox1
             // 
@@ -275,6 +296,7 @@
             this.lbxProfessors.Name = "lbxProfessors";
             this.lbxProfessors.Size = new System.Drawing.Size(279, 199);
             this.lbxProfessors.TabIndex = 76;
+            this.lbxProfessors.SelectedIndexChanged += new System.EventHandler(this.lbxProfessors_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -309,6 +331,7 @@
             this.btnSearchProfessors.TabIndex = 65;
             this.btnSearchProfessors.Text = "Search";
             this.btnSearchProfessors.UseVisualStyleBackColor = true;
+            this.btnSearchProfessors.Click += new System.EventHandler(this.btnSearchProfessors_Click);
             // 
             // lblByName
             // 
@@ -392,26 +415,6 @@
             this.btnConfirm.UseVisualStyleBackColor = true;
             this.btnConfirm.Visible = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPhone.Location = new System.Drawing.Point(100, 238);
-            this.txtPhone.Mask = "(999) 000-0000";
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.ReadOnly = true;
-            this.txtPhone.Size = new System.Drawing.Size(139, 13);
-            this.txtPhone.TabIndex = 182;
-            // 
-            // txtZipcode
-            // 
-            this.txtZipcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtZipcode.Location = new System.Drawing.Point(100, 165);
-            this.txtZipcode.Mask = "00000-9999";
-            this.txtZipcode.Name = "txtZipcode";
-            this.txtZipcode.ReadOnly = true;
-            this.txtZipcode.Size = new System.Drawing.Size(139, 13);
-            this.txtZipcode.TabIndex = 183;
             // 
             // UpdateProfessor
             // 
