@@ -122,6 +122,7 @@
             this.Controls.Add(this.label13);
             this.Name = "ProfessorCancelCourse";
             this.Text = "Cancel Course";
+            this.Load += new System.EventHandler(this.ProfessorCancelCourse_Load);
             this.gbxCourseDescription.ResumeLayout(false);
             this.gbxCourseDescription.PerformLayout();
             this.groupBox1.ResumeLayout(false);
