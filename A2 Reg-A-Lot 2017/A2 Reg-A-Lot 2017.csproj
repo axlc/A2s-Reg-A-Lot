@@ -85,6 +85,21 @@
     <Compile Include="CreateNewStudent.Designer.cs">
       <DependentUpon>CreateNewStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Project2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Project2DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Project2DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Project2DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Project2DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Project2DataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="StudentBilling.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +282,39 @@
     <EmbeddedResource Include="StudentSelectCourse.resx">
       <DependentUpon>StudentSelectCourse.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Project2DataSet.xsc">
+      <DependentUpon>Project2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Project2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Project2DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Project2DataSet.xss">
+      <DependentUpon>Project2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Project2DataSet1.xsc">
+      <DependentUpon>Project2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Project2DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Project2DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Project2DataSet1.xss">
+      <DependentUpon>Project2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Project2DataSet2.xsc">
+      <DependentUpon>Project2DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Project2DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Project2DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Project2DataSet2.xss">
+      <DependentUpon>Project2DataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -67,6 +67,8 @@ namespace A2_Reg_A_Lot_2017
 
         private void RegistrarMenu_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'project2DataSet1.Courses' table. You can move, or remove it, as needed.
+            this.coursesTableAdapter.Fill(this.project2DataSet1.Courses);
 
         }
 
