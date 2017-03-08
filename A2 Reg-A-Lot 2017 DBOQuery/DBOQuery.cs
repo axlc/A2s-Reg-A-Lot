@@ -228,6 +228,33 @@ namespace A2_Reg_A_Lot_2017
             // And we're done.
             return newRow_ID;
         }
+        //get course ID by Title
+        public int GetCourseIDbyTitle(String courseTitle)
+        {
+            int course_ID=0;
+            Connection.Open();
+
+            string commandString = string.Format("SELECT [Course_ID] " +
+                                                   "FROM [dbo].[Courses] " +
+                                                  "WHERE [CourseTitle]='{0}'; ",
+                                                  courseTitle);
+
+            using (SqlCommand selectCourseTitlebyCourseID = Connection.CreateCommand())
+            {
+                selectCourseTitlebyCourseID.CommandText = commandString;
+
+                using (SqlDataReader reader = selectCourseTitlebyCourseID.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        course_ID = reader.GetInt32(0);
+                    }
+                }
+            }
+
+            Connection.Close();
+            return course_ID;
+        }
 
         /// <summary>
         /// Check that a correct username and password were entered.

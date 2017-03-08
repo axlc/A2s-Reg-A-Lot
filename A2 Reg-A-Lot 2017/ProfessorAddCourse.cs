@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Reg_A_Lot_Class_Library;
 namespace A2_Reg_A_Lot_2017
 {
     public partial class ProfessorAddCourse : Form
@@ -23,9 +23,19 @@ namespace A2_Reg_A_Lot_2017
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
-        {
+        {   DBOQuery Query = new DBOQuery();
+            int UserID = CurrentUser.user_ID;
+           
+            String CourseTitle = clbAllNewCourses.Text;
+          int courseID = Query.GetCourseIDbyTitle(CourseTitle);
+MessageBox.Show(CourseTitle);
+            
+            MessageBox.Show(courseID.ToString());
+
+            Query.InsertIntoUserCourses(UserID,courseID);
+
             // A Professor has chosen to register for a new course to teach
-            MessageBox.Show("The selected course will be added to your courses.");
+            
             /* NEEDS:
             - Is this okay? Y/N Window 
             - To Add courses to Professor's list of courses.
