@@ -63,28 +63,11 @@
             // lbxProfessors
             // 
             this.lbxProfessors.FormattingEnabled = true;
-            this.lbxProfessors.Items.AddRange(new object[] {
-            "Professor Name 1",
-            "Professor Name 2",
-            "Professor Name 3",
-            "Professor Name 4",
-            "Professor Name 5",
-            "Professor Name 6",
-            "Professor Name 7",
-            "Professor Name 8",
-            "Professor Name 9",
-            "Professor Name 10",
-            "Professor Name 11",
-            "Professor Name 12",
-            "Professor Name 13",
-            "Professor Name 14",
-            "Professor Name 15",
-            "Professor Name 16",
-            "Professor Name 17"});
             this.lbxProfessors.Location = new System.Drawing.Point(17, 144);
             this.lbxProfessors.Name = "lbxProfessors";
             this.lbxProfessors.Size = new System.Drawing.Size(279, 199);
             this.lbxProfessors.TabIndex = 70;
+            this.lbxProfessors.SelectedIndexChanged += new System.EventHandler(this.clickProfessor);
             // 
             // label13
             // 
@@ -382,6 +365,7 @@
             this.Controls.Add(this.gbxProfessorSearch);
             this.Name = "SearchProfessors";
             this.Text = "SearchProfessors";
+            this.Load += new System.EventHandler(this.SearchProfessors_Load);
             this.gbxProfessorSearch.ResumeLayout(false);
             this.gbxProfessorSearch.PerformLayout();
             this.gbxProfessorInfo.ResumeLayout(false);
