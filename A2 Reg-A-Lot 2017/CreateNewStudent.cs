@@ -29,7 +29,7 @@ namespace A2_Reg_A_Lot_2017
             string FirstName = txtFirstName.Text;
             string LastName = txtLastName.Text;
             string AddressLine = txtAddress.Text;
-            string Gender = comboBox1.Text;
+            
             string AddressCity = txtCity.Text;
             string AddressState = txtState.Text;
             string AddressZipCode = txtZipcode.Text;
@@ -40,7 +40,7 @@ namespace A2_Reg_A_Lot_2017
             if (FirstName != "" & LastName != "")
             {
                 int newUserID = Query.InsertIntoUsers("TempPasswordForStudents", 1);
-                Query.InsertIntoContactDetails(newUserID, FirstName, LastName, AddressLine, Gender, AddressCity, AddressState, AddressZipCode, FaxNumber, Email, PhoneNumber);
+                Query.InsertIntoContactDetails(newUserID, FirstName, LastName, AddressLine, null, AddressCity, AddressState, AddressZipCode, FaxNumber, Email, PhoneNumber);
             }
 
         }
