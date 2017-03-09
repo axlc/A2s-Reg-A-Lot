@@ -21,7 +21,7 @@ namespace DBOQuery___Testing
             DBOQuery TestFunctions = new DBOQuery();
 
             // Decide which tests to perform by changing the boolean values. 
-            bool[] testsToPerform = new bool[15] {
+            bool[] testsToPerform = new bool[17] {
                 // Add New Users and Contact Details:
                 false,
                 
@@ -35,7 +35,7 @@ namespace DBOQuery___Testing
                 false,
 
                 // Get the contact details for a given User_ID
-                true,
+                false,
 
                 // Get the role for a given User_ID
                 false,
@@ -65,7 +65,13 @@ namespace DBOQuery___Testing
                 false,
 
                 // Get list of course ids by student id
-                false
+                false,
+
+                // Get a list of students enrolled in a particular professors classes
+                false,
+
+                // Get a lsit of students enrolled in a particular class
+                true
             };
 
             // Add New Users and Contact Details:
@@ -601,17 +607,51 @@ namespace DBOQuery___Testing
             // Get list of courses registered by a single user_id
             if (testsToPerform[14])
             {
-                int User_ID = 2;
-                List<int> EnrolledCourses = TestFunctions.GetRegisteredCoursesByUserID(User_ID);
+                List<int> User_IDs = new List<int>();
+                User_IDs.Add(23); // taught by 11
+                User_IDs.Add(24); // taught by 11
+                User_IDs.Add(25); // taught by 12
+                User_IDs.Add(26); // taught by 12
 
-                Console.WriteLine("User_ID {0}'s Registration Details: ", User_ID);
-                foreach(int course in EnrolledCourses)
-                {
-                    Console.WriteLine("  Course_ID: {0}\n" +
-                                      "Course_Name: {1}\n", 
-                                      course, TestFunctions.GetCourseTitleByID(course));
+                foreach (int User_ID in User_IDs)
+                { 
+                    List<int> EnrolledCourses = TestFunctions.GetRegisteredCoursesByUserID(User_ID);
+
+                    Console.WriteLine("User_ID {0}'s Registration Details: ", User_ID);
+                    foreach(int course in EnrolledCourses)
+                    {
+                        Console.WriteLine("  Course_ID: {0}\n" +
+                                          "Course_Name: {1}\n", 
+                                          course, TestFunctions.GetCourseTitleByID(course));
+                    }
                 }
                 Console.ReadKey();
+            }
+
+            // Get a list of students enrolled in a particular professors class
+            if (testsToPerform[15])
+            {
+                List<int> MyStudents = TestFunctions.GetStudentsByProfessorID(11);
+                foreach(int student in MyStudents)
+                {
+                    Console.WriteLine(student);
+                }
+                Console.ReadKey();
+            }
+
+            // Get a lsit of students enrolled in a particular class
+            if (testsToPerform[16])
+            {
+                int Course_ID = 1;
+                List<int> students = TestFunctions.GetStudentsByCourseID(Course_ID);
+
+                Console.WriteLine("Course_ID: 2 has these students: ");
+                foreach (int student in students)
+                {
+                    Console.WriteLine(student);
+                }
+
+                Console.ReadLine();
             }
         }
     }

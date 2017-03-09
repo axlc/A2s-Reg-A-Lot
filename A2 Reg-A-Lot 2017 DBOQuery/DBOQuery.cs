@@ -559,6 +559,7 @@ namespace A2_Reg_A_Lot_2017
             Connection.Close();
             return results;
         }
+
         public List<string> GetBillInformation(int user_ID)
         {
             List<string> results = new List<string>();
@@ -718,6 +719,7 @@ namespace A2_Reg_A_Lot_2017
             Connection.Close();
             return;
         }
+
         public List<string> GetAllStudents()
         {
             return null;
@@ -778,44 +780,51 @@ namespace A2_Reg_A_Lot_2017
             return results;
         }
 
-        /* public List<List<string>> GetAllContactDetails()
+        public List<int> GetStudentsByProfessorID(int User_ID)
         {
-            List<List<string>> contactDetails = new List<List<string>>();
+            List<int> results = new List<int>();
+            string commandString = string.Format("SELECT DISTINCT [User_ID]FROM[dbo].[UserCourses]WHERE[Course_ID]in(SELECT[Course_ID]FROM [UserCourses]WHERE[User_ID]='{0}')AND[User_ID]NOT IN(SELECT[User_ID]FROM[Users] WHERE[UserType]='2');", User_ID);
+
             Connection.Open();
-
-            string commandString = string.Format("SELECT * " +
-                                                   "FROM [dbo].[Courses]; ");
-
-            using (SqlCommand selectAllCourses = Connection.CreateCommand())
+            using (SqlCommand SelectStudentsByProfessorID = Connection.CreateCommand())
             {
-                selectAllCourses.CommandText = commandString;
-
-                using (SqlDataReader reader = selectAllCourses.ExecuteReader())
+                SelectStudentsByProfessorID.CommandText = commandString;
+                using (SqlDataReader reader = SelectStudentsByProfessorID.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        List<string> courseDetails = new List<string>();
-
-                        courseDetails.Add(reader.GetInt32(0).ToString());
-                        courseDetails.Add(reader.GetString(1));
-                        courseDetails.Add(reader.GetString(2));
-                        courseDetails.Add(reader.GetString(3));
-                        courseDetails.Add(reader.GetString(4));
-
-                        TimeSpan startTime = reader.GetTimeSpan(5);
-                        courseDetails.Add(startTime.ToString());
-
-                        TimeSpan duration = reader.GetTimeSpan(6);
-                        courseDetails.Add(duration.ToString());
-
-                        courseDetails.Add(reader.GetDouble(7).ToString());
-                        courseDetails.Add(reader.GetString(8));
-
-                        courses.Add(courseDetails);
+                        int course = reader.GetInt32(0);
+                        results.Add(course);
                     }
                 }
             }
-            return contactDetails;
-        }*/
+            Connection.Close();
+
+
+            return results;
+        }
+
+        public List<int> GetStudentsByCourseID(int Course_ID)
+        {
+            List<int> results = new List<int>();
+            string commandString = string.Format("SELECT[User_ID]FROM[dbo].[UserCourses]WHERE[Course_ID]='{0}'AND[User_ID]NOT IN(SELECT[User_ID]from[Users]where[UserType] = '2'); ", Course_ID);
+
+            Connection.Open();
+            using (SqlCommand SelectStudentsByCourseID = Connection.CreateCommand())
+            {
+                SelectStudentsByCourseID.CommandText = commandString;
+                using (SqlDataReader reader = SelectStudentsByCourseID.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int course = reader.GetInt32(0);
+                        results.Add(course);
+                    }
+                }
+            }
+            Connection.Close();
+
+            return results;
+        }
     }
 }
