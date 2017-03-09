@@ -312,27 +312,11 @@
             // 
             this.lbxRegistrar.ForeColor = System.Drawing.SystemColors.WindowText;
             this.lbxRegistrar.FormattingEnabled = true;
-            this.lbxRegistrar.Items.AddRange(new object[] {
-            "Student 1",
-            "Student 2",
-            "Student 3",
-            "Student 4",
-            "Student 5",
-            "Student 6",
-            "Student 7",
-            "Student 8",
-            "Student 9",
-            "Student 10",
-            "Student 11",
-            "Student 12",
-            "Student 13",
-            "Student 14",
-            "Student 15",
-            "etc."});
             this.lbxRegistrar.Location = new System.Drawing.Point(15, 175);
             this.lbxRegistrar.Name = "lbxRegistrar";
             this.lbxRegistrar.Size = new System.Drawing.Size(279, 199);
             this.lbxRegistrar.TabIndex = 132;
+            this.lbxRegistrar.SelectedIndexChanged += new System.EventHandler(this.clickProfessorList);
             // 
             // label13
             // 
@@ -417,6 +401,7 @@
             this.Controls.Add(this.gbxStudentSearch);
             this.Name = "UpdateRegistrar";
             this.Text = "UpdateRegistrar";
+            this.Load += new System.EventHandler(this.UpdateRegistrar_Load);
             this.gbxStudentInfo.ResumeLayout(false);
             this.gbxStudentInfo.PerformLayout();
             this.gbxStudentSearch.ResumeLayout(false);

@@ -73,7 +73,7 @@ namespace A2_Reg_A_Lot_2017
             StudentId = query.GetListOfRoles(1);
             string fname;
             string lname;
-            
+
             
             foreach (int number in StudentId)
             {
@@ -83,9 +83,7 @@ namespace A2_Reg_A_Lot_2017
                 lname = contactDetails[1];
                 string name = fname + " " + lname;
                 lbxStudents.Items.Add(name);
-                
             }
-
         }
 
         private void clickStudentList(object sender, EventArgs e)

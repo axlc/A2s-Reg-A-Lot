@@ -15,10 +15,12 @@ namespace A2_Reg_A_Lot_2017
     public partial class UpdateRegistrar : Form
     {
         public Form PreviousForm { get; set; }
+        public List<int> RegistrarId { get; private set; }
 
         public UpdateRegistrar()
         {
             InitializeComponent();
+            RegistrarId = new List<int>();
         }
 
         private void lblByName_Click(object sender, EventArgs e)
@@ -111,6 +113,46 @@ namespace A2_Reg_A_Lot_2017
             //On click, it will hide Confirm & Cancel buttons:
             btnCancel.Visible = false;
             btnConfirm.Visible = false;
+        }
+
+        private void UpdateRegistrar_Load(object sender, EventArgs e)
+        {
+            DBOQuery query = new DBOQuery();
+
+
+            RegistrarId = query.GetListOfRoles(3);
+            string fname;
+            string lname;
+
+
+            foreach (int number in RegistrarId)
+            {
+                List<string> contactDetails = query.GetContactDetails(number);
+                //studentId.Add(number);
+                fname = contactDetails[0];
+                lname = contactDetails[1];
+                string name = fname + " " + lname;
+                lbxRegistrar.Items.Add(name);
+            }
+        }
+
+        private void clickProfessorList(object sender, EventArgs e)
+        {
+            DBOQuery Query = new DBOQuery();
+
+
+
+            List<string> contactDetails = Query.GetContactDetails(RegistrarId[lbxRegistrar.SelectedIndex]);
+            string Name = contactDetails[0] + contactDetails[1];
+            txtFirstName.Text = contactDetails[0];
+            txtLastName.Text = contactDetails[1];
+            txtAddress.Text = contactDetails[2];
+            txtCity.Text = contactDetails[4];
+            txtState.Text = contactDetails[5];
+            txtZipcode.Text = contactDetails[6];
+            txtFax.Text = contactDetails[8];
+            txtEmail.Text = contactDetails[9];
+            txtPhone.Text = contactDetails[7];
         }
     }
 }

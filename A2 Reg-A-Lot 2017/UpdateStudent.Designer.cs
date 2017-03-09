@@ -261,27 +261,11 @@
             // lbxStudents
             // 
             this.lbxStudents.FormattingEnabled = true;
-            this.lbxStudents.Items.AddRange(new object[] {
-            "Student 1",
-            "Student 2",
-            "Student 3",
-            "Student 4",
-            "Student 5",
-            "Student 6",
-            "Student 7",
-            "Student 8",
-            "Student 9",
-            "Student 10",
-            "Student 11",
-            "Student 12",
-            "Student 13",
-            "Student 14",
-            "Student 15",
-            "etc."});
             this.lbxStudents.Location = new System.Drawing.Point(13, 174);
             this.lbxStudents.Name = "lbxStudents";
             this.lbxStudents.Size = new System.Drawing.Size(279, 199);
             this.lbxStudents.TabIndex = 72;
+            this.lbxStudents.SelectedIndexChanged += new System.EventHandler(this.clickStudentList);
             // 
             // label13
             // 
