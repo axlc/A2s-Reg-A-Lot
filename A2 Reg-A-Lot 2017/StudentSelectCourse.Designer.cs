@@ -35,24 +35,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.rtbCourseDescription = new System.Windows.Forms.RichTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.clbCourseCart = new System.Windows.Forms.CheckedListBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.project2DataSet2 = new A2_Reg_A_Lot_2017.Project2DataSet2();
-            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.coursesTableAdapter = new A2_Reg_A_Lot_2017.Project2DataSet2TableAdapters.CoursesTableAdapter();
             this.columnCourseTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnSection = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnProfessor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,11 +50,29 @@
             this.courseDurationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.courseTuitionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.courseDepartmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.project2DataSet2 = new A2_Reg_A_Lot_2017.Project2DataSet2();
+            this.clbCourseCart = new System.Windows.Forms.CheckedListBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.coursesTableAdapter = new A2_Reg_A_Lot_2017.Project2DataSet2TableAdapters.CoursesTableAdapter();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.project2DataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.project2DataSet2)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label13
@@ -159,6 +159,118 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(643, 151);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // columnCourseTitle
+            // 
+            this.columnCourseTitle.DataPropertyName = "CourseTitle";
+            this.columnCourseTitle.HeaderText = "Course Title";
+            this.columnCourseTitle.Name = "columnCourseTitle";
+            this.columnCourseTitle.ReadOnly = true;
+            // 
+            // columnSection
+            // 
+            this.columnSection.DataPropertyName = "CourseSection";
+            this.columnSection.HeaderText = "Section";
+            this.columnSection.Name = "columnSection";
+            this.columnSection.ReadOnly = true;
+            // 
+            // columnProfessor
+            // 
+            this.columnProfessor.HeaderText = "Professor";
+            this.columnProfessor.Name = "columnProfessor";
+            this.columnProfessor.ReadOnly = true;
+            // 
+            // columnSchedule
+            // 
+            this.columnSchedule.HeaderText = "Schedule";
+            this.columnSchedule.Name = "columnSchedule";
+            this.columnSchedule.ReadOnly = true;
+            // 
+            // columnStartDate
+            // 
+            this.columnStartDate.HeaderText = "Start Date";
+            this.columnStartDate.Name = "columnStartDate";
+            this.columnStartDate.ReadOnly = true;
+            // 
+            // columnCourseSeats
+            // 
+            this.columnCourseSeats.HeaderText = "Seats";
+            this.columnCourseSeats.Name = "columnCourseSeats";
+            this.columnCourseSeats.ReadOnly = true;
+            // 
+            // courseIDDataGridViewTextBoxColumn
+            // 
+            this.courseIDDataGridViewTextBoxColumn.DataPropertyName = "Course_ID";
+            this.courseIDDataGridViewTextBoxColumn.HeaderText = "Course_ID";
+            this.courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
+            this.courseIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // courseTitleDataGridViewTextBoxColumn
+            // 
+            this.courseTitleDataGridViewTextBoxColumn.DataPropertyName = "CourseTitle";
+            this.courseTitleDataGridViewTextBoxColumn.HeaderText = "CourseTitle";
+            this.courseTitleDataGridViewTextBoxColumn.Name = "courseTitleDataGridViewTextBoxColumn";
+            this.courseTitleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // courseCodeDataGridViewTextBoxColumn
+            // 
+            this.courseCodeDataGridViewTextBoxColumn.DataPropertyName = "CourseCode";
+            this.courseCodeDataGridViewTextBoxColumn.HeaderText = "CourseCode";
+            this.courseCodeDataGridViewTextBoxColumn.Name = "courseCodeDataGridViewTextBoxColumn";
+            this.courseCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // courseSectionDataGridViewTextBoxColumn
+            // 
+            this.courseSectionDataGridViewTextBoxColumn.DataPropertyName = "CourseSection";
+            this.courseSectionDataGridViewTextBoxColumn.HeaderText = "CourseSection";
+            this.courseSectionDataGridViewTextBoxColumn.Name = "courseSectionDataGridViewTextBoxColumn";
+            this.courseSectionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // courseDescriptionDataGridViewTextBoxColumn
+            // 
+            this.courseDescriptionDataGridViewTextBoxColumn.DataPropertyName = "CourseDescription";
+            this.courseDescriptionDataGridViewTextBoxColumn.HeaderText = "CourseDescription";
+            this.courseDescriptionDataGridViewTextBoxColumn.Name = "courseDescriptionDataGridViewTextBoxColumn";
+            this.courseDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // courseStartTimeDataGridViewTextBoxColumn
+            // 
+            this.courseStartTimeDataGridViewTextBoxColumn.DataPropertyName = "CourseStartTime";
+            this.courseStartTimeDataGridViewTextBoxColumn.HeaderText = "CourseStartTime";
+            this.courseStartTimeDataGridViewTextBoxColumn.Name = "courseStartTimeDataGridViewTextBoxColumn";
+            this.courseStartTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // courseDurationDataGridViewTextBoxColumn
+            // 
+            this.courseDurationDataGridViewTextBoxColumn.DataPropertyName = "CourseDuration";
+            this.courseDurationDataGridViewTextBoxColumn.HeaderText = "CourseDuration";
+            this.courseDurationDataGridViewTextBoxColumn.Name = "courseDurationDataGridViewTextBoxColumn";
+            this.courseDurationDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // courseTuitionDataGridViewTextBoxColumn
+            // 
+            this.courseTuitionDataGridViewTextBoxColumn.DataPropertyName = "CourseTuition";
+            this.courseTuitionDataGridViewTextBoxColumn.HeaderText = "CourseTuition";
+            this.courseTuitionDataGridViewTextBoxColumn.Name = "courseTuitionDataGridViewTextBoxColumn";
+            this.courseTuitionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // courseDepartmentDataGridViewTextBoxColumn
+            // 
+            this.courseDepartmentDataGridViewTextBoxColumn.DataPropertyName = "CourseDepartment";
+            this.courseDepartmentDataGridViewTextBoxColumn.HeaderText = "CourseDepartment";
+            this.courseDepartmentDataGridViewTextBoxColumn.Name = "courseDepartmentDataGridViewTextBoxColumn";
+            this.courseDepartmentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // coursesBindingSource
+            // 
+            this.coursesBindingSource.DataMember = "Courses";
+            this.coursesBindingSource.DataSource = this.project2DataSet2;
+            // 
+            // project2DataSet2
+            // 
+            this.project2DataSet2.DataSetName = "Project2DataSet2";
+            this.project2DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // clbCourseCart
             // 
@@ -327,120 +439,9 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // project2DataSet2
-            // 
-            this.project2DataSet2.DataSetName = "Project2DataSet2";
-            this.project2DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // coursesBindingSource
-            // 
-            this.coursesBindingSource.DataMember = "Courses";
-            this.coursesBindingSource.DataSource = this.project2DataSet2;
-            // 
             // coursesTableAdapter
             // 
             this.coursesTableAdapter.ClearBeforeFill = true;
-            // 
-            // columnCourseTitle
-            // 
-            this.columnCourseTitle.DataPropertyName = "CourseTitle";
-            this.columnCourseTitle.HeaderText = "Course Title";
-            this.columnCourseTitle.Name = "columnCourseTitle";
-            this.columnCourseTitle.ReadOnly = true;
-            // 
-            // columnSection
-            // 
-            this.columnSection.DataPropertyName = "CourseSection";
-            this.columnSection.HeaderText = "Section";
-            this.columnSection.Name = "columnSection";
-            this.columnSection.ReadOnly = true;
-            // 
-            // columnProfessor
-            // 
-            this.columnProfessor.HeaderText = "Professor";
-            this.columnProfessor.Name = "columnProfessor";
-            this.columnProfessor.ReadOnly = true;
-            // 
-            // columnSchedule
-            // 
-            this.columnSchedule.HeaderText = "Schedule";
-            this.columnSchedule.Name = "columnSchedule";
-            this.columnSchedule.ReadOnly = true;
-            // 
-            // columnStartDate
-            // 
-            this.columnStartDate.HeaderText = "Start Date";
-            this.columnStartDate.Name = "columnStartDate";
-            this.columnStartDate.ReadOnly = true;
-            // 
-            // columnCourseSeats
-            // 
-            this.columnCourseSeats.HeaderText = "Seats";
-            this.columnCourseSeats.Name = "columnCourseSeats";
-            this.columnCourseSeats.ReadOnly = true;
-            // 
-            // courseIDDataGridViewTextBoxColumn
-            // 
-            this.courseIDDataGridViewTextBoxColumn.DataPropertyName = "Course_ID";
-            this.courseIDDataGridViewTextBoxColumn.HeaderText = "Course_ID";
-            this.courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
-            this.courseIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // courseTitleDataGridViewTextBoxColumn
-            // 
-            this.courseTitleDataGridViewTextBoxColumn.DataPropertyName = "CourseTitle";
-            this.courseTitleDataGridViewTextBoxColumn.HeaderText = "CourseTitle";
-            this.courseTitleDataGridViewTextBoxColumn.Name = "courseTitleDataGridViewTextBoxColumn";
-            this.courseTitleDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // courseCodeDataGridViewTextBoxColumn
-            // 
-            this.courseCodeDataGridViewTextBoxColumn.DataPropertyName = "CourseCode";
-            this.courseCodeDataGridViewTextBoxColumn.HeaderText = "CourseCode";
-            this.courseCodeDataGridViewTextBoxColumn.Name = "courseCodeDataGridViewTextBoxColumn";
-            this.courseCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // courseSectionDataGridViewTextBoxColumn
-            // 
-            this.courseSectionDataGridViewTextBoxColumn.DataPropertyName = "CourseSection";
-            this.courseSectionDataGridViewTextBoxColumn.HeaderText = "CourseSection";
-            this.courseSectionDataGridViewTextBoxColumn.Name = "courseSectionDataGridViewTextBoxColumn";
-            this.courseSectionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // courseDescriptionDataGridViewTextBoxColumn
-            // 
-            this.courseDescriptionDataGridViewTextBoxColumn.DataPropertyName = "CourseDescription";
-            this.courseDescriptionDataGridViewTextBoxColumn.HeaderText = "CourseDescription";
-            this.courseDescriptionDataGridViewTextBoxColumn.Name = "courseDescriptionDataGridViewTextBoxColumn";
-            this.courseDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // courseStartTimeDataGridViewTextBoxColumn
-            // 
-            this.courseStartTimeDataGridViewTextBoxColumn.DataPropertyName = "CourseStartTime";
-            this.courseStartTimeDataGridViewTextBoxColumn.HeaderText = "CourseStartTime";
-            this.courseStartTimeDataGridViewTextBoxColumn.Name = "courseStartTimeDataGridViewTextBoxColumn";
-            this.courseStartTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // courseDurationDataGridViewTextBoxColumn
-            // 
-            this.courseDurationDataGridViewTextBoxColumn.DataPropertyName = "CourseDuration";
-            this.courseDurationDataGridViewTextBoxColumn.HeaderText = "CourseDuration";
-            this.courseDurationDataGridViewTextBoxColumn.Name = "courseDurationDataGridViewTextBoxColumn";
-            this.courseDurationDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // courseTuitionDataGridViewTextBoxColumn
-            // 
-            this.courseTuitionDataGridViewTextBoxColumn.DataPropertyName = "CourseTuition";
-            this.courseTuitionDataGridViewTextBoxColumn.HeaderText = "CourseTuition";
-            this.courseTuitionDataGridViewTextBoxColumn.Name = "courseTuitionDataGridViewTextBoxColumn";
-            this.courseTuitionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // courseDepartmentDataGridViewTextBoxColumn
-            // 
-            this.courseDepartmentDataGridViewTextBoxColumn.DataPropertyName = "CourseDepartment";
-            this.courseDepartmentDataGridViewTextBoxColumn.HeaderText = "CourseDepartment";
-            this.courseDepartmentDataGridViewTextBoxColumn.Name = "courseDepartmentDataGridViewTextBoxColumn";
-            this.courseDepartmentDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // StudentSelectCourse
             // 
@@ -458,10 +459,10 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.project2DataSet2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.project2DataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

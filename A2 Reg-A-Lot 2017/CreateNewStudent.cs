@@ -40,8 +40,9 @@ namespace A2_Reg_A_Lot_2017
             if (FirstName != "" & LastName != "")
             {
                 int newUserID = Query.InsertIntoUsers("TempPasswordForStudents", 1);
-                Query.InsertIntoContactDetails(newUserID, FirstName, LastName, AddressLine, null, AddressCity, AddressState, AddressZipCode, FaxNumber, Email, PhoneNumber);
+                Query.InsertIntoContactDetails(newUserID, FirstName, LastName, AddressLine, string.Empty, AddressCity, AddressState, AddressZipCode, PhoneNumber, FaxNumber, Email);
             }
+            PreviousForm.Show();
 
         }
 

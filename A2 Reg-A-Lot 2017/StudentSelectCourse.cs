@@ -68,5 +68,10 @@ namespace A2_Reg_A_Lot_2017
             this.coursesTableAdapter.Fill(this.project2DataSet2.Courses);
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

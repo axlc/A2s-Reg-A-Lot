@@ -372,7 +372,10 @@ namespace A2_Reg_A_Lot_2017
                     while (reader.Read())
                     {
                         for (int i = 0; i < 10; i++)
-                            queryResults.Add(reader.GetString(i));
+                            if (!reader.IsDBNull(i))
+                                queryResults.Add(reader.GetString(i));
+                            else
+                                queryResults.Add("");
                     }
                 }
             }

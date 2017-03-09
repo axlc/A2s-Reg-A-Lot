@@ -35,7 +35,7 @@ namespace DBOQuery___Testing
                 false,
 
                 // Get the contact details for a given User_ID
-                false,
+                true,
 
                 // Get the role for a given User_ID
                 false,
@@ -59,13 +59,13 @@ namespace DBOQuery___Testing
                 false,
 
                 // Get a list of courses without a professor
-                true,
+                false,
 
                 // Get the professor who teaches a course by course_id
-                true,
+                false,
 
                 // Get list of course ids by student id
-                true
+                false
             };
 
             // Add New Users and Contact Details:
@@ -438,7 +438,7 @@ namespace DBOQuery___Testing
                 labels.Add("Email");
 
                 int i = 0;
-                foreach (string contactDetail in TestFunctions.GetContactDetails(5))
+                foreach (string contactDetail in TestFunctions.GetContactDetails(8))
                 {
                     Console.WriteLine("{0}: {1}", labels[i++], contactDetail);
                 }
