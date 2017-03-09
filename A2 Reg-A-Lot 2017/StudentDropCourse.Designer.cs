@@ -91,6 +91,7 @@
             this.Controls.Add(this.gbxLMyCourses);
             this.Name = "StudentDropCourse";
             this.Text = "Drop Course";
+            this.Load += new System.EventHandler(this.StudentDropCourse_Load);
             this.gbxLMyCourses.ResumeLayout(false);
             this.ResumeLayout(false);
 

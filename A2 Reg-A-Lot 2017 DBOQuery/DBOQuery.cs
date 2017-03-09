@@ -272,7 +272,7 @@ namespace A2_Reg_A_Lot_2017
 
             Connection.Close();
             return course_ID;
-        }
+        } 
 
         /// <summary>
         /// Check that a correct username and password were entered.

@@ -13,27 +13,22 @@ namespace A2_Reg_A_Lot_2017
 {
     public partial class ProfessorCancelCourse : Form
     {
-        public Form PreviousForm {get;set;}
+        public Form PreviousForm { get; set; }
+        public List<int> CourseID { get; set; }
+        int UserID = CurrentUser.user_ID;
+        DBOQuery Query = new DBOQuery();
         public ProfessorCancelCourse()
         {
             InitializeComponent();
+            CourseID = new List<int>();
         }
 
         private void btnCancelCourseP_Click(object sender, EventArgs e)
         {
-            DBOQuery Query = new DBOQuery();
-            int UserID = CurrentUser.user_ID;
-            String CourseTitle = clbProfessorCourses.Text;
-
-            int courseID = Query.GetCourseIDbyTitle(CourseTitle);
-            MessageBox.Show(CourseTitle);
-
-            MessageBox.Show(courseID.ToString());
-
+            int courseID = CourseID[clbProfessorCourses.SelectedIndex];
             Query.CancelRegistrationbyUserIDandCourseID(UserID, courseID);
-
-            //Cancel a selected course. The courses that should be listed are ones registered to the specific professor.
-            MessageBox.Show("A course from this Professor's personal list will be canceled.");
+            MessageBox.Show("The Courses were dropped.");
+            UpdateList();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -47,15 +42,28 @@ namespace A2_Reg_A_Lot_2017
 
         private void ProfessorCancelCourse_Load(object sender, EventArgs e)
         {
-            // tried to populate the course list for the professor -OT.
+            UpdateList();
+            
+        }
+
+        public void UpdateList()
+        {
+
+            clbProfessorCourses.Items.Clear();
+            int UserID = CurrentUser.user_ID;
             clbProfessorCourses.Items.Clear();
             DBOQuery query = new DBOQuery();
-            List<List<string>> courses = query.GetAllCourses();
-            foreach (var course in query.GetAllCourses())
+            CourseID = query.GetRegisteredCoursesByUserID(UserID);
+
+            foreach (int course in CourseID)
             {
-                //courses.Add(course);
-                clbProfessorCourses.Items.Add(course[1]);
+                clbProfessorCourses.Items.Add(query.GetCourseTitleByID(course));
+
+
             }
+
         }
+
+
     }
 }
