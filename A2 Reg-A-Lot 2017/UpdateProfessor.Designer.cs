@@ -269,8 +269,6 @@
             // lbxProfessors
             // 
             this.lbxProfessors.FormattingEnabled = true;
-            this.lbxProfessors.Items.AddRange(new object[] {
-            "Should list all Professors"});
             this.lbxProfessors.Location = new System.Drawing.Point(13, 143);
             this.lbxProfessors.Name = "lbxProfessors";
             this.lbxProfessors.Size = new System.Drawing.Size(279, 199);
@@ -411,6 +409,7 @@
             this.Controls.Add(this.gbxProfessorSearch);
             this.Name = "UpdateProfessor";
             this.Text = "Add or Update Professor";
+            this.Load += new System.EventHandler(this.UpdateProfessor_Load);
             this.gbxProfessorInfo.ResumeLayout(false);
             this.gbxProfessorInfo.PerformLayout();
             this.gbxProfessorSearch.ResumeLayout(false);

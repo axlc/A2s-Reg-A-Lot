@@ -14,10 +14,12 @@ namespace A2_Reg_A_Lot_2017
     public partial class UpdateStudent : Form
     {
         public Form PreviousForm { get; set; }
+        public List<int> StudentId { get; private set; }
 
         public UpdateStudent()
         {
             InitializeComponent();
+            StudentId = new List<int>();
         }
 
         private void btnEditStudent_Click(object sender, EventArgs e)
@@ -109,7 +111,43 @@ namespace A2_Reg_A_Lot_2017
 
         private void UpdateStudent_Load(object sender, EventArgs e)
         {
+            DBOQuery query = new DBOQuery();
 
+
+            StudentId = query.GetListOfRoles(1);
+            string fname;
+            string lname;
+
+
+            foreach (int number in StudentId)
+            {
+                List<string> contactDetails = query.GetContactDetails(number);
+                //studentId.Add(number);
+                fname = contactDetails[0];
+                lname = contactDetails[1];
+                string name = fname + " " + lname;
+                lbxStudents.Items.Add(name);
+
+            }
+        }
+
+        private void clickStudentList(object sender, EventArgs e)
+        {
+            DBOQuery Query = new DBOQuery();
+
+
+
+            List<string> contactDetails = Query.GetContactDetails(StudentId[lbxStudents.SelectedIndex]);
+            string Name = contactDetails[0] + contactDetails[1];
+            txtFirstName.Text = contactDetails[0];
+            txtLastName.Text = contactDetails[1];
+            txtAddress.Text = contactDetails[2];
+            txtCity.Text = contactDetails[4];
+            txtState.Text = contactDetails[5];
+            txtZipcode.Text = contactDetails[6];
+            txtFax.Text = contactDetails[8];
+            txtEmail.Text = contactDetails[9];
+            txtPhone.Text = contactDetails[7];
         }
     }
 }
