@@ -752,6 +752,29 @@ namespace A2_Reg_A_Lot_2017
             return result;
         }
 
+        public List<int> GetRegisteredCoursesByUserID(int User_ID)
+        {
+            List<int> results = new List<int>();
+            string commandString = string.Format("SELECT [Course_ID] FROM [UserCourses] WHERE [User_ID]='{0}';", User_ID);
+
+            Connection.Open();
+            using (SqlCommand SelectEnrolledCoursesByStudentID = Connection.CreateCommand())
+            {
+                SelectEnrolledCoursesByStudentID.CommandText = commandString;
+                using (SqlDataReader reader = SelectEnrolledCoursesByStudentID.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int course = reader.GetInt32(0);
+                        results.Add(course);
+                    }
+                }
+            }
+            Connection.Close();
+
+            return results;
+        }
+
         /* public List<List<string>> GetAllContactDetails()
         {
             List<List<string>> contactDetails = new List<List<string>>();
